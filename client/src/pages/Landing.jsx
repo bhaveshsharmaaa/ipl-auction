@@ -42,7 +42,7 @@ export default function Landing() {
             <div className="stat-label">Teams per Lobby</div>
           </div>
           <div className="hero-stat">
-            <div className="stat-value">₹100 Cr</div>
+            <div className="stat-value">₹120 Cr</div>
             <div className="stat-label">Budget per Team</div>
           </div>
           <div className="hero-stat">
