@@ -25,7 +25,7 @@ const playerSchema = new mongoose.Schema({
   },
   tier: {
     type: String,
-    enum: ['Marquee', 'A', 'B', 'C'],
+    enum: ['Legend', 'Marquee', 'A', 'B', 'C'],
     default: 'C'
   },
   image: { type: String, default: '' }

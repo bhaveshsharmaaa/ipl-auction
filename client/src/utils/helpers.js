@@ -48,6 +48,7 @@ export function getRoleEmoji(role) {
  */
 export function getTierBadgeClass(tier) {
   switch (tier) {
+    case 'Legend': return 'badge-legend';
     case 'Marquee': return 'badge-gold';
     case 'A': return 'badge-purple';
     case 'B': return 'badge-blue';

@@ -268,6 +268,20 @@ export default function Lobby() {
               {lobby.teams.length} {"/"} {lobby.maxTeams} Franchises Joined
             </span>
           </div>
+          {lobby.auctionType && (
+            <div style={{ marginTop: 10, display: 'flex', justifyContent: 'center' }}>
+              <span style={{
+                fontSize: 10, fontWeight: 800, padding: '4px 14px',
+                borderRadius: 'var(--radius-full)',
+                background: lobby.auctionType === 'mega' ? 'rgba(255,215,0,0.15)' : lobby.auctionType === 'small' ? 'rgba(76,175,80,0.15)' : 'rgba(124,45,255,0.15)',
+                color: lobby.auctionType === 'mega' ? 'var(--gold-400)' : lobby.auctionType === 'small' ? 'var(--success-400)' : 'var(--primary-400)',
+                border: `1px solid ${lobby.auctionType === 'mega' ? 'rgba(255,215,0,0.3)' : lobby.auctionType === 'small' ? 'rgba(76,175,80,0.3)' : 'rgba(124,45,255,0.3)'}`,
+                textTransform: 'uppercase', letterSpacing: '1px'
+              }}>
+                {lobby.auctionType === 'mega' ? '🏆 MEGA AUCTION' : lobby.auctionType === 'small' ? '🏏 SMALL AUCTION' : '🏟️ MINI AUCTION'}
+              </span>
+            </div>
+          )}
         </div>
 
         <div className="draft-team-list">

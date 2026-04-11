@@ -30,6 +30,7 @@ async function seed() {
     // Summary
     const summary = {
       total: players.length,
+      legend: players.filter(p => p.tier === 'Legend').length,
       marquee: players.filter(p => p.tier === 'Marquee').length,
       tierA: players.filter(p => p.tier === 'A').length,
       tierB: players.filter(p => p.tier === 'B').length,

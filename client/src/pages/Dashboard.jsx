@@ -15,10 +15,10 @@ export default function Dashboard() {
   const [isPublic, setIsPublic] = useState(true);
   const [bidTimer, setBidTimer] = useState(10);
   const [maxTeams, setMaxTeams] = useState(10);
-  const [auctionType, setAuctionType] = useState('small');
   const [creating, setCreating] = useState(false);
   const [joining, setJoining] = useState(false);
   const [confirmPrompt, setConfirmPrompt] = useState(null);
+  const [auctionType, setAuctionType] = useState('mini');
 
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -252,7 +252,20 @@ export default function Dashboard() {
                         {getInitial(lobby.admin?.username)}
                       </div>
                       <div>
-                        <h4>{lobby.name}</h4>
+                        <h4>{lobby.name}
+                          {lobby.auctionType && (
+                            <span style={{
+                              fontSize: 9, fontWeight: 800, marginLeft: 8,
+                              padding: '2px 8px', borderRadius: 'var(--radius-full)',
+                              background: lobby.auctionType === 'mega' ? 'rgba(255,215,0,0.15)' : lobby.auctionType === 'small' ? 'rgba(76,175,80,0.15)' : 'rgba(124,45,255,0.15)',
+                              color: lobby.auctionType === 'mega' ? 'var(--gold-400)' : lobby.auctionType === 'small' ? 'var(--success-400)' : 'var(--primary-400)',
+                              border: `1px solid ${lobby.auctionType === 'mega' ? 'rgba(255,215,0,0.3)' : lobby.auctionType === 'small' ? 'rgba(76,175,80,0.3)' : 'rgba(124,45,255,0.3)'}`,
+                              textTransform: 'uppercase', letterSpacing: '0.5px'
+                            }}>
+                              {lobby.auctionType === 'mega' ? '🏆 MEGA' : lobby.auctionType === 'small' ? '🏏 SMALL' : '🏟️ MINI'}
+                            </span>
+                          )}
+                        </h4>
                         <div className="lobby-meta">
                           <span>👥 {lobby.teams.filter(t => t.user || t.isAI).length}/{lobby.maxTeams}</span>
                           <span>🏏 By {lobby.admin?.username}</span>
@@ -359,6 +372,38 @@ export default function Dashboard() {
                 </div>
 
                 <div className="input-group">
+                  <label>🏏 Auction Type</label>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+                    {[
+                      { key: 'small', label: 'Small', icon: '🏏', players: '150', desc: 'Quick match' },
+                      { key: 'mini', label: 'Mini', icon: '🏟️', players: '300', desc: 'Standard' },
+                      { key: 'mega', label: 'Mega', icon: '🏆', players: '650', desc: 'Full auction' }
+                    ].map(t => (
+                      <div
+                        key={t.key}
+                        onClick={() => setAuctionType(t.key)}
+                        style={{
+                          padding: '14px 10px',
+                          borderRadius: 'var(--radius-lg)',
+                          border: auctionType === t.key ? '2px solid var(--primary-400)' : '2px solid var(--glass-border)',
+                          background: auctionType === t.key ? 'rgba(124, 45, 255, 0.15)' : 'rgba(255,255,255,0.03)',
+                          cursor: 'pointer',
+                          textAlign: 'center',
+                          transition: 'all 0.2s ease',
+                          transform: auctionType === t.key ? 'scale(1.03)' : 'scale(1)',
+                          boxShadow: auctionType === t.key ? '0 0 20px rgba(124,45,255,0.2)' : 'none'
+                        }}
+                      >
+                        <div style={{ fontSize: 24, marginBottom: 4 }}>{t.icon}</div>
+                        <div style={{ fontWeight: 800, fontSize: 13, marginBottom: 2 }}>{t.label}</div>
+                        <div style={{ fontSize: 11, color: 'var(--primary-400)', fontWeight: 700 }}>{t.players} Players</div>
+                        <div style={{ fontSize: 10, color: 'var(--text-tertiary)', marginTop: 2 }}>{t.desc}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="input-group">
                   <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span>⏱️ Bid Timer</span>
                     <span className="timer-value-badge">{bidTimer}s</span>
@@ -375,29 +420,6 @@ export default function Dashboard() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--text-tertiary)', fontWeight: 500 }}>
                     <span>⚡ 5s (Fast)</span>
                     <span>🐢 30s (Relaxed)</span>
-                  </div>
-                </div>
-
-                <div className="input-group">
-                  <label>Auction Type</label>
-                  <div className="auction-type-grid">
-                    {[
-                      { id: 'small', label: 'Small', desc: '150 Players', icon: '🏏' },
-                      { id: 'mini', label: 'Mini', desc: '300 Players', icon: '🏟️' },
-                      { id: 'mega', label: 'Mega', desc: '500 Players', icon: '🏆' }
-                    ].map(type => (
-                      <div 
-                        key={type.id}
-                        className={`auction-type-card ${auctionType === type.id ? 'active' : ''}`}
-                        onClick={() => setAuctionType(type.id)}
-                      >
-                        <div className="type-icon">{type.icon}</div>
-                        <div className="type-info">
-                          <span className="type-label">{type.label}</span>
-                          <span className="type-desc">{type.desc}</span>
-                        </div>
-                      </div>
-                    ))}
                   </div>
                 </div>
 

@@ -33,6 +33,11 @@ const lobbySchema = new mongoose.Schema({
     default: 'waiting'
   },
   maxTeams: { type: Number, default: 10 },
+  auctionType: {
+    type: String,
+    enum: ['small', 'mini', 'mega'],
+    default: 'mini'
+  },
   settings: {
     budget: { type: Number, default: 12000 },
     maxPlayers: { type: Number, default: 25 },
@@ -46,12 +51,7 @@ const lobbySchema = new mongoose.Schema({
     username: String,
     text: String,
     timestamp: { type: Date, default: Date.now }
-  }],
-  auctionType: {
-    type: String,
-    enum: ['small', 'mini', 'mega'],
-    default: 'small'
-  }
+  }]
 }, { timestamps: true });
 
 

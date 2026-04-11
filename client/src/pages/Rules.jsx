@@ -94,6 +94,7 @@ export default function Rules() {
         <div className="rule-section glass-card">
           <h3>📊 Player Tiers</h3>
           <ul>
+            <li><strong>👑 Legend:</strong> Retired superstars and all-time greats with a fixed base price (₹2 Cr). They appear first in the auction.</li>
             <li><strong>⭐ Marquee:</strong> Top-tier superstars with the highest base prices (₹2 Cr).</li>
             <li><strong>🟣 Tier A:</strong> Established international players (₹1-1.5 Cr base).</li>
             <li><strong>🔵 Tier B:</strong> Experienced domestic and international players (₹50L-1 Cr base).</li>

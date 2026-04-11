@@ -18,12 +18,15 @@ router.post('/', auth, async (req, res) => {
     const firstFranchise = IPL_FRANCHISES[Math.floor(Math.random() * IPL_FRANCHISES.length)];
     const requestedMaxTeams = maxTeams ? parseInt(maxTeams) : 10;
     
+    const validTypes = ['small', 'mini', 'mega'];
+    const resolvedAuctionType = validTypes.includes(auctionType) ? auctionType : 'mini';
+
     const lobby = await Lobby.create({
       name: name.trim(),
       isPublic: isPublic !== false,
       maxTeams: Math.min(10, Math.max(2, requestedMaxTeams)),
+      auctionType: resolvedAuctionType,
       admin: req.user._id,
-      auctionType: auctionType || 'small',
       teams: [{
         user: req.user._id,
         teamName: firstFranchise.name,

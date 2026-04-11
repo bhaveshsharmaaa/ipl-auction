@@ -35,13 +35,13 @@ export function setupAuctionHandlers(io, socket) {
 
       // Get all players and organize them
       const allPlayers = await Player.find({});
-      let orderedPlayers = organizePlayerPool(allPlayers);
-      
-      // Slice player pool based on auctionType
-      const playerLimit = lobby.auctionType === 'mega' ? 500 : (lobby.auctionType === 'mini' ? 300 : 150);
-      orderedPlayers = orderedPlayers.slice(0, playerLimit);
-      
-      const playerIds = orderedPlayers.map(p => p._id);
+      const orderedPlayers = organizePlayerPool(allPlayers);
+
+      // Limit player pool based on auction type
+      const auctionLimits = { small: 150, mini: 300, mega: 650 };
+      const poolLimit = auctionLimits[lobby.auctionType] || 300;
+      const limitedPlayers = orderedPlayers.slice(0, Math.min(poolLimit, orderedPlayers.length));
+      const playerIds = limitedPlayers.map(p => p._id);
 
       // Create auction state
       let auctionState = await AuctionState.findOne({ lobby: lobbyId });

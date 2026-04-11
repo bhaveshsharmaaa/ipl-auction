@@ -68,7 +68,7 @@ export function shouldAuctionEnd(playerPool, teams, lobbySettings) {
  * Organize players by tier for auction order
  */
 export function organizePlayerPool(players) {
-  const tierOrder = { 'Marquee': 0, 'A': 1, 'B': 2, 'C': 3 };
+  const tierOrder = { 'Legend': 0, 'Marquee': 1, 'A': 2, 'B': 3, 'C': 4 };
 
   // Sort by tier, then shuffle within each tier
   const grouped = {};
@@ -79,7 +79,7 @@ export function organizePlayerPool(players) {
   });
 
   const ordered = [];
-  ['Marquee', 'A', 'B', 'C'].forEach(tier => {
+  ['Legend', 'Marquee', 'A', 'B', 'C'].forEach(tier => {
     if (grouped[tier]) {
       // Shuffle within tier
       const shuffled = grouped[tier].sort(() => Math.random() - 0.5);
