@@ -81,7 +81,8 @@ export default function Auction() {
 
     socket.on('auction:timerStart', ({ duration, timerEnd }) => {
       setTimerDuration(duration);
-      timerEndRef.current = new Date(timerEnd);
+      // Fix clock sync: Use completely local time relative to duration
+      timerEndRef.current = new Date(Date.now() + duration * 1000);
       startTimerCountdown();
       setShowPlayerIntro(false); // Hide intro when bidding starts
     });
