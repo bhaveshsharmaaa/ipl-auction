@@ -95,7 +95,6 @@ router.get('/completed', auth, async (req, res) => {
     const lobbies = await Lobby.find({
       status: 'completed',
       $or: [
-        { isPublic: true },
         { admin: req.user?._id },
         { 'teams.user': req.user?._id }
       ]
