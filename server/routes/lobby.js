@@ -9,7 +9,7 @@ const router = express.Router();
 // POST /api/lobby — Create a new lobby
 router.post('/', auth, async (req, res) => {
   try {
-    const { name, isPublic, maxTeams, settings } = req.body;
+    const { name, isPublic, maxTeams, settings, auctionType } = req.body;
 
     if (!name || name.trim().length < 2) {
       return res.status(400).json({ message: 'Lobby name must be at least 2 characters' });
@@ -23,6 +23,7 @@ router.post('/', auth, async (req, res) => {
       isPublic: isPublic !== false,
       maxTeams: Math.min(10, Math.max(2, requestedMaxTeams)),
       admin: req.user._id,
+      auctionType: auctionType || 'small',
       teams: [{
         user: req.user._id,
         teamName: firstFranchise.name,

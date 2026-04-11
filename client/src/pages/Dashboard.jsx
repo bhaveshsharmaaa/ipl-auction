@@ -15,6 +15,7 @@ export default function Dashboard() {
   const [isPublic, setIsPublic] = useState(true);
   const [bidTimer, setBidTimer] = useState(10);
   const [maxTeams, setMaxTeams] = useState(10);
+  const [auctionType, setAuctionType] = useState('small');
   const [creating, setCreating] = useState(false);
   const [joining, setJoining] = useState(false);
   const [confirmPrompt, setConfirmPrompt] = useState(null);
@@ -46,6 +47,7 @@ export default function Dashboard() {
         name: lobbyName, 
         isPublic,
         maxTeams,
+        auctionType,
         settings: { bidTimer }
       });
       toast.success('Lobby created!');
@@ -373,6 +375,29 @@ export default function Dashboard() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--text-tertiary)', fontWeight: 500 }}>
                     <span>⚡ 5s (Fast)</span>
                     <span>🐢 30s (Relaxed)</span>
+                  </div>
+                </div>
+
+                <div className="input-group">
+                  <label>Auction Type</label>
+                  <div className="auction-type-grid">
+                    {[
+                      { id: 'small', label: 'Small', desc: '150 Players', icon: '🏏' },
+                      { id: 'mini', label: 'Mini', desc: '300 Players', icon: '🏟️' },
+                      { id: 'mega', label: 'Mega', desc: '500 Players', icon: '🏆' }
+                    ].map(type => (
+                      <div 
+                        key={type.id}
+                        className={`auction-type-card ${auctionType === type.id ? 'active' : ''}`}
+                        onClick={() => setAuctionType(type.id)}
+                      >
+                        <div className="type-icon">{type.icon}</div>
+                        <div className="type-info">
+                          <span className="type-label">{type.label}</span>
+                          <span className="type-desc">{type.desc}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
 

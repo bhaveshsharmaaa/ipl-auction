@@ -828,9 +828,6 @@ export default function Auction() {
             )}
 
             <div style={{ marginTop: 24, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
-              <p style={{ fontSize: 13, color: 'var(--text-tertiary)', fontWeight: 600 }}>
-                Next player in 2 seconds...
-              </p>
             </div>
           </div>
         </div>

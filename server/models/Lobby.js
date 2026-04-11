@@ -46,7 +46,12 @@ const lobbySchema = new mongoose.Schema({
     username: String,
     text: String,
     timestamp: { type: Date, default: Date.now }
-  }]
+  }],
+  auctionType: {
+    type: String,
+    enum: ['small', 'mini', 'mega'],
+    default: 'small'
+  }
 }, { timestamps: true });
 
 

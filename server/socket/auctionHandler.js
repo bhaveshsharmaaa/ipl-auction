@@ -35,7 +35,12 @@ export function setupAuctionHandlers(io, socket) {
 
       // Get all players and organize them
       const allPlayers = await Player.find({});
-      const orderedPlayers = organizePlayerPool(allPlayers);
+      let orderedPlayers = organizePlayerPool(allPlayers);
+      
+      // Slice player pool based on auctionType
+      const playerLimit = lobby.auctionType === 'mega' ? 500 : (lobby.auctionType === 'mini' ? 300 : 150);
+      orderedPlayers = orderedPlayers.slice(0, playerLimit);
+      
       const playerIds = orderedPlayers.map(p => p._id);
 
       // Create auction state
