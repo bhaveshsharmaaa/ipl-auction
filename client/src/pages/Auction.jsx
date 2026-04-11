@@ -76,7 +76,7 @@ export default function Auction() {
       setCurrentBidder(bidder);
       setBidderTeamName(teamName);
       setNextBidAmount(nextBid);
-      setBidHistory(prev => [{ user: bidder._id, username: bidder.username, amount, timestamp: new Date() }, ...prev]);
+      setBidHistory(prev => [{ user: bidder._id, username: bidder.username, teamName, isAI: bidder.isAI, amount, timestamp: new Date() }, ...prev]);
     });
 
     socket.on('auction:timerStart', ({ duration, timerEnd }) => {
@@ -173,6 +173,7 @@ export default function Auction() {
         setPlayerPool(auction.playerPool || []);
         setSoldPlayers(auction.soldPlayers || []);
         setUnsoldPlayers(auction.unsoldPlayers || []);
+        setBidHistory(auction.bidHistory || []);
 
         if (auction.currentBid > 0) {
           setNextBidAmount(auction.currentBid + getIncrement(auction.currentBid));
@@ -733,7 +734,7 @@ export default function Auction() {
                       <img src={franchise.logo} alt={bidderTeamName} style={{ width: 20, height: 20, objectFit: 'contain' }} />
                     );
                   })()}
-                  <span>Highest Bidder: <strong style={{ color: 'var(--accent-400)' }}>{bidderTeamName || currentBidder.username}</strong></span>
+                  <span>Highest Bidder: <strong style={{ color: 'var(--accent-400)' }}>{bidderTeamName || currentBidder.username} ({currentBidder.username})</strong></span>
                 </div>
               )}
 
@@ -782,7 +783,12 @@ export default function Auction() {
                 ) : (
                   bidHistory.map((b, i) => (
                     <div key={i} className="bid-history-item">
-                      <span className="bidder">{b.username}</span>
+                      <span className="bidder">
+                        {b.teamName || b.username}
+                        <span style={{ opacity: 0.7, fontSize: '0.85em', marginLeft: '6px', fontWeight: 500 }}>
+                          ({b.username})
+                        </span>
+                      </span>
                       <span className="bid-amt">{formatPrice(b.amount)}</span>
                     </div>
                   ))

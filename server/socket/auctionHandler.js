@@ -88,10 +88,10 @@ export function setupAuctionHandlers(io, socket) {
   // Place a bid
   socket.on('auction:bid', async ({ lobbyId }) => {
     try {
-      const lobby = await Lobby.findById(lobbyId).populate('teams.players');
+      const lobby = await Lobby.findById(lobbyId).populate('teams.user', 'username').populate('teams.players');
       if (!lobby) return;
 
-      const team = lobby.teams.find(t => !t.isAI && t.user && t.user.toString() === socket.user._id.toString());
+      const team = lobby.teams.find(t => !t.isAI && t.user && (t.user._id || t.user).toString() === socket.user._id.toString());
       if (!team) return socket.emit('error', { message: 'You are not in this lobby' });
 
       await processBid(io, lobbyId, team, false, socket);
@@ -204,7 +204,7 @@ export function setupAuctionHandlers(io, socket) {
 // Extracted bid processing logic so AI bots can trigger it seamlessly
 export async function processBid(io, lobbyId, team, isBot = false, socket = null) {
   try {
-    const lobby = await Lobby.findById(lobbyId).populate('teams.players');
+    const lobby = await Lobby.findById(lobbyId).populate('teams.user', 'username').populate('teams.players');
     if (!lobby) return;
 
     const auctionState = await AuctionState.findOne({ lobby: lobbyId }).populate('currentPlayer');
@@ -222,7 +222,7 @@ export async function processBid(io, lobbyId, team, isBot = false, socket = null
     }
 
     // Can't bid on yourself if you're already the highest bidder
-    const bidderId = team.isAI ? team._id : team.user;
+    const bidderId = team.isAI ? team._id : (team.user?._id || team.user);
     if (auctionState.currentBidder && auctionState.currentBidder.toString() === bidderId.toString()) {
       if (!isBot && socket) socket.emit('error', { message: 'You are already the highest bidder' });
       return;
@@ -238,11 +238,13 @@ export async function processBid(io, lobbyId, team, isBot = false, socket = null
     // Place bid
     auctionState.currentBid = bidAmount;
     auctionState.currentBidder = bidderId;
-    const bidderUsername = team.isAI ? team.teamName : (socket ? socket.user.username : team.teamName);
+    const bidderUsername = team.isAI ? 'AI' : (team.user?.username || (socket && socket.user ? socket.user.username : 'User'));
     
     auctionState.bidHistory.push({
       user: bidderId,
       username: bidderUsername,
+      teamName: team.teamName,
+      isAI: !!team.isAI,
       amount: bidAmount,
       timestamp: new Date()
     });
@@ -253,7 +255,8 @@ export async function processBid(io, lobbyId, team, isBot = false, socket = null
     io.to(`lobby:${lobbyId}`).emit('auction:bidUpdate', {
       bidder: {
         _id: bidderId,
-        username: bidderUsername
+        username: bidderUsername,
+        isAI: !!team.isAI
       },
       bidderTeamName: team.teamName,
       bidderTeamColor: team.teamColor,
@@ -325,7 +328,7 @@ async function handleTimerExpiry(io, lobbyId) {
       // SOLD!
       const buyerTeam = lobby.teams.find(t => 
         (t.isAI && t._id.toString() === auctionState.currentBidder.toString()) || 
-        (!t.isAI && t.user && t.user._id.toString() === auctionState.currentBidder.toString())
+        (!t.isAI && t.user && (t.user._id || t.user).toString() === auctionState.currentBidder.toString())
       );
 
       if (buyerTeam) {

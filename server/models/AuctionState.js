@@ -9,6 +9,8 @@ const auctionStateSchema = new mongoose.Schema({
   bidHistory: [{
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     username: String,
+    teamName: String,
+    isAI: { type: Boolean, default: false },
     amount: Number,
     timestamp: { type: Date, default: Date.now }
   }],
