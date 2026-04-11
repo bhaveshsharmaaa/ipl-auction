@@ -91,27 +91,27 @@ router.get('/', auth, async (req, res) => {
 // GET /api/lobby/completed — List completed lobbies for the user
 router.get('/completed', auth, async (req, res) => {
   try {
-    console.log('Fetching completed lobbies for user:', req.user?._id);
+    const userId = req.user?._id;
+    if (!userId) return res.json([]);
+
+    console.log('Fetching completed lobbies for user:', userId);
+    
     const lobbies = await Lobby.find({
       status: 'completed',
       $or: [
-        { admin: req.user?._id },
-        { 'teams.user': req.user?._id }
+        { admin: userId },
+        { 'teams.user': userId }
       ]
     })
       .populate('admin', 'username avatar')
       .populate('teams.user', 'username avatar')
       .sort({ updatedAt: -1 });
 
-    console.log(`Found ${lobbies.length} completed lobbies`);
+    console.log(`Matched ${lobbies.length} lobbies for ${userId}:`, lobbies.map(l => l.name));
     res.json(lobbies);
   } catch (error) {
     console.error('List completed lobbies error:', error);
-    res.status(500).json({ 
-      message: 'Server error', 
-      error: error.message,
-      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined 
-    });
+    res.status(500).json({ message: 'Server error' });
   }
 });
 
