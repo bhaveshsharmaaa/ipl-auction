@@ -4,7 +4,12 @@ export default function Rules() {
   return (
     <div className="page">
       <div className="rules-page container">
-        <h1>📖 IPL Auction Rules</h1>
+        <h1>IPL Auction Game Rules — How the Auction Works</h1>
+        <p className="rules-intro">
+          Learn the complete rules of the <strong>IPL Auction Game</strong>. Our online <strong>IPL auction simulator</strong> follows
+          authentic Indian Premier League auction mechanics — from budget management and squad limits to bid increments
+          and post-auction team evaluation. Master these rules to build the ultimate IPL squad.
+        </p>
 
         <div className="rule-section glass-card">
           <h3>💰 Budget & Squad</h3>

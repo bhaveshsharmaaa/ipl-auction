@@ -34,6 +34,8 @@ export default function Navbar() {
             </>
           ) : (
             <>
+              <NavLink to="/about" className="nav-link">About</NavLink>
+              <NavLink to="/rules" className="nav-link">Rules</NavLink>
               <NavLink to="/login" className="nav-link">Login</NavLink>
               <Link to="/signup" className="btn btn-primary btn-sm">Sign Up</Link>
             </>

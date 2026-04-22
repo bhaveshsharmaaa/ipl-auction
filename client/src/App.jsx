@@ -11,6 +11,7 @@ import Lobby from './pages/Lobby';
 import Auction from './pages/Auction';
 import Results from './pages/Results';
 import Rules from './pages/Rules';
+import About from './pages/About';
 import CompletedAuctions from './pages/CompletedAuctions';
 
 function ProtectedRoute({ children }) {
@@ -39,6 +40,7 @@ function AppRoutes() {
         <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
         <Route path="/signup" element={<PublicRoute><Signup /></PublicRoute>} />
         <Route path="/rules" element={<Rules />} />
+        <Route path="/about" element={<About />} />
 
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/lobby/:id" element={<ProtectedRoute><Lobby /></ProtectedRoute>} />

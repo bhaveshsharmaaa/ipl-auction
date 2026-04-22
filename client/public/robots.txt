@@ -1,5 +1,15 @@
 User-agent: *
 Allow: /
+Allow: /about
+Allow: /rules
+Allow: /login
+Allow: /signup
+
 Disallow: /api/
-Disallow: /admin/
+Disallow: /dashboard
+Disallow: /lobby/
+Disallow: /auction/
+Disallow: /results/
+Disallow: /completed
+
 Sitemap: https://ipl-auction-umber.vercel.app/sitemap.xml
