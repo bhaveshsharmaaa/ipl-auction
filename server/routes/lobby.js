@@ -57,33 +57,58 @@ router.post('/', auth, async (req, res) => {
   }
 });
 
+// GET /api/lobby/admin/all — Admin: list ALL lobbies (any status)
+router.get('/admin/all', auth, async (req, res) => {
+  try {
+    if (!req.user.isAdmin) {
+      return res.status(403).json({ message: 'Admin access required' });
+    }
+
+    const lobbies = await Lobby.find({})
+      .populate('admin', 'username avatar')
+      .populate('teams.user', 'username avatar')
+      .sort({ createdAt: -1 });
+
+    res.json(lobbies);
+  } catch (error) {
+    console.error('Admin list all lobbies error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 // GET /api/lobby — List public lobbies + User's active lobbies
 router.get('/', auth, async (req, res) => {
   try {
     console.log('Fetching lobbies for user:', req.user._id);
-    const lobbies = await Lobby.find({
-      $or: [
-        { 
-          status: 'waiting', 
-          isPublic: true,
-          $expr: { $lt: [{ $size: "$teams" }, "$maxTeams"] }
-        },
-        { 
-          status: 'in-progress', 
-          isPublic: true,
+
+    // Super admin sees ALL non-completed lobbies
+    const query = req.user.isAdmin
+      ? { status: { $ne: 'completed' } }
+      : {
           $or: [
-            { teams: { $elemMatch: { user: null, isAI: false } } },
-            { $expr: { $lt: [{ $size: "$teams" }, "$maxTeams"] } }
+            { 
+              status: 'waiting', 
+              isPublic: true,
+              $expr: { $lt: [{ $size: "$teams" }, "$maxTeams"] }
+            },
+            { 
+              status: 'in-progress', 
+              isPublic: true,
+              $or: [
+                { teams: { $elemMatch: { user: null, isAI: false } } },
+                { $expr: { $lt: [{ $size: "$teams" }, "$maxTeams"] } }
+              ]
+            },
+            { admin: req.user._id, status: { $ne: 'completed' } },
+            { 'teams.user': req.user._id, status: { $ne: 'completed' } }
           ]
-        },
-        { admin: req.user._id, status: { $ne: 'completed' } },
-        { 'teams.user': req.user._id, status: { $ne: 'completed' } }
-      ]
-    })
+        };
+
+    const lobbies = await Lobby.find(query)
       .populate('admin', 'username avatar')
       .populate('teams.user', 'username avatar')
       .sort({ createdAt: -1 })
-      .limit(50);
+      .limit(100);
 
     res.json(lobbies);
   } catch (error) {
@@ -272,7 +297,7 @@ router.delete('/:id/leave', auth, async (req, res) => {
   }
 });
 
-// DELETE /api/lobby/:id — Admin only: Forcibly destroy a lobby
+// DELETE /api/lobby/:id — Lobby admin OR super-admin: Forcibly destroy a lobby
 router.delete('/:id', auth, async (req, res) => {
   try {
     const lobby = await Lobby.findById(req.params.id);
@@ -282,18 +307,24 @@ router.delete('/:id', auth, async (req, res) => {
       return res.status(404).json({ message: 'Lobby not found' });
     }
 
-    if (lobby.admin.toString() !== req.user._id.toString()) {
-      return res.status(403).json({ message: 'Only the admin can delete this lobby' });
+    const isLobbyAdmin = lobby.admin.toString() === req.user._id.toString();
+    const isSuperAdmin = req.user.isAdmin === true;
+
+    if (!isLobbyAdmin && !isSuperAdmin) {
+      return res.status(403).json({ message: 'Only the lobby admin or super-admin can delete this lobby' });
     }
 
     await Lobby.findByIdAndDelete(lobby._id);
     
     if (io) {
       io.to(`lobby:${lobby._id}`).emit('lobby:deleted', { 
-        message: '🚨 Admin has deleted the lobby' 
+        message: isSuperAdmin && !isLobbyAdmin 
+          ? '🚨 Super Admin has deleted the lobby' 
+          : '🚨 Admin has deleted the lobby' 
       });
     }
 
+    console.log(`Lobby ${lobby.name} (${lobby._id}) deleted by ${isSuperAdmin ? 'SUPER-ADMIN' : 'lobby admin'}: ${req.user.username}`);
     res.json({ message: 'Lobby destroyed successfully' });
   } catch (error) {
     console.error('Delete lobby error:', error);

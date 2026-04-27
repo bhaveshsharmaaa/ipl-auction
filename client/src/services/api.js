@@ -35,6 +35,7 @@ api.interceptors.response.use(
 export const authAPI = {
   signup: (data) => api.post('/auth/signup', data),
   login: (data) => api.post('/auth/login', data),
+  adminLogin: (data) => api.post('/auth/admin-login', data),
   getMe: () => api.get('/auth/me'),
 };
 
@@ -42,6 +43,7 @@ export const authAPI = {
 export const lobbyAPI = {
   create: (data) => api.post('/lobby', data),
   list: () => api.get('/lobby'),
+  adminListAll: () => api.get('/lobby/admin/all'),
   completed: () => api.get('/lobby/completed'),
   delete: (id) => api.delete(`/lobby/${id}`),
   get: (id) => api.get(`/lobby/${id}`),

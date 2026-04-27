@@ -34,7 +34,8 @@ router.post('/signup', async (req, res) => {
         _id: user._id,
         username: user.username,
         email: user.email,
-        avatar: user.avatar
+        avatar: user.avatar,
+        isAdmin: user.isAdmin || false
       }
     });
   } catch (error) {
@@ -73,7 +74,8 @@ router.post('/login', async (req, res) => {
         _id: user._id,
         username: user.username,
         email: user.email,
-        avatar: user.avatar
+        avatar: user.avatar,
+        isAdmin: user.isAdmin || false
       }
     });
   } catch (error) {
@@ -81,9 +83,64 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// POST /api/auth/admin-login — Special admin login (auto-seeds admin user)
+const ADMIN_USERNAME = 'admin';
+const ADMIN_PASSWORD = 'admin123098123098';
+
+router.post('/admin-login', async (req, res) => {
+  try {
+    const { username, password } = req.body;
+
+    if (username !== ADMIN_USERNAME || password !== ADMIN_PASSWORD) {
+      return res.status(401).json({ message: 'Invalid admin credentials' });
+    }
+
+    // Find or create the admin user
+    let adminUser = await User.findOne({ username: ADMIN_USERNAME });
+
+    if (!adminUser) {
+      adminUser = await User.create({
+        username: ADMIN_USERNAME,
+        email: 'admin@iplauction.com',
+        password: ADMIN_PASSWORD,
+        isAdmin: true,
+        avatar: '#FF3B30'
+      });
+      console.log('🔑 Admin user auto-created');
+    } else if (!adminUser.isAdmin) {
+      adminUser.isAdmin = true;
+      await adminUser.save();
+    }
+
+    const token = generateToken(adminUser._id);
+
+    res.json({
+      token,
+      user: {
+        _id: adminUser._id,
+        username: adminUser.username,
+        email: adminUser.email,
+        avatar: adminUser.avatar,
+        isAdmin: true
+      }
+    });
+  } catch (error) {
+    console.error('Admin login error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 // GET /api/auth/me
 router.get('/me', auth, async (req, res) => {
-  res.json({ user: req.user });
+  res.json({
+    user: {
+      _id: req.user._id,
+      username: req.user.username,
+      email: req.user.email,
+      avatar: req.user.avatar,
+      isAdmin: req.user.isAdmin || false
+    }
+  });
 });
 
 export default router;

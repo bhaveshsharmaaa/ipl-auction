@@ -24,6 +24,8 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const toast = useToast();
 
+  const isAdmin = user?.isAdmin === true;
+
   useEffect(() => {
     fetchLobbies();
   }, []);
@@ -73,13 +75,72 @@ export default function Dashboard() {
     }
   };
 
+  // Helper: can current user delete this lobby?
+  const canDelete = (lobby) => {
+    return isAdmin || lobby.admin?._id === user?._id;
+  };
+
+  // Shared delete handler
+  const handleDeleteLobby = (lobby) => {
+    setConfirmPrompt({
+      title: isAdmin && lobby.admin?._id !== user?._id ? '🔑 Admin Delete Lobby?' : 'Delete Lobby?',
+      message: isAdmin && lobby.admin?._id !== user?._id
+        ? `🚨 You are using SUPER ADMIN privileges to delete "${lobby.name}" created by ${lobby.admin?.username || 'unknown'}. This cannot be undone.`
+        : '🚨 Are you sure you want to delete this lobby completely? All configuration and teams will be lost. This cannot be undone.',
+      confirmText: 'Delete Forever',
+      confirmStyle: 'btn-danger',
+      onConfirm: async () => {
+        try {
+          await lobbyAPI.delete(lobby._id);
+          fetchLobbies();
+          toast.success('Lobby deleted');
+        } catch (err) {
+          toast.error(err.response?.data?.message || 'Failed to delete lobby');
+        }
+        setConfirmPrompt(null);
+      }
+    });
+  };
+
   return (
     <div className="page">
       <div className="container">
         <div className="page-header">
-          <h1>👋 Welcome, {user?.username}</h1>
-          <p>Create a new auction lobby or join an existing one</p>
+          <h1>
+            {isAdmin ? '🔑' : '👋'} Welcome, {user?.username}
+            {isAdmin && (
+              <span style={{
+                fontSize: 11, fontWeight: 900, marginLeft: 12,
+                padding: '3px 10px', borderRadius: 'var(--radius-full)',
+                background: 'rgba(255,59,48,0.15)', color: '#FF3B30',
+                border: '1px solid rgba(255,59,48,0.3)',
+                textTransform: 'uppercase', letterSpacing: '1px',
+                verticalAlign: 'middle'
+              }}>
+                SUPER ADMIN
+              </span>
+            )}
+          </h1>
+          <p>{isAdmin ? 'You have admin privileges — you can delete any lobby' : 'Create a new auction lobby or join an existing one'}</p>
         </div>
+
+        {/* Admin Banner */}
+        {isAdmin && (
+          <div className="glass-card" style={{
+            marginBottom: 24, padding: '16px 20px',
+            borderLeft: '3px solid #FF3B30',
+            background: 'linear-gradient(135deg, rgba(255,59,48,0.08), transparent)',
+            display: 'flex', alignItems: 'center', gap: 12
+          }}>
+            <span style={{ fontSize: 24 }}>🛡️</span>
+            <div>
+              <div style={{ fontWeight: 800, fontSize: 14, color: '#FF3B30' }}>Admin Mode Active</div>
+              <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>
+                You can see and delete all lobbies across the platform. Total lobbies visible: {lobbies.length}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Action Cards */}
         <div className="dashboard-grid">
@@ -162,29 +223,13 @@ export default function Dashboard() {
                         </div>
                       </div>
                       <div style={{ display: 'flex', gap: 8 }}>
-                        {lobby.admin?._id === user?._id && (
+                        {canDelete(lobby) && (
                           <button
                             className="btn btn-danger btn-sm"
-                            onClick={() => {
-                              setConfirmPrompt({
-                                title: 'Delete Lobby?',
-                                message: '🚨 Are you sure you want to delete this lobby completely? All configuration and teams will be lost. This cannot be undone.',
-                                confirmText: 'Delete Forever',
-                                confirmStyle: 'btn-danger',
-                                onConfirm: async () => {
-                                  try {
-                                    await lobbyAPI.delete(lobby._id);
-                                    fetchLobbies();
-                                    toast.success('Lobby deleted');
-                                  } catch (err) {
-                                    toast.error('Failed to delete lobby');
-                                  }
-                                  setConfirmPrompt(null);
-                                }
-                              });
-                            }}
+                            onClick={() => handleDeleteLobby(lobby)}
+                            title={isAdmin && lobby.admin?._id !== user?._id ? 'Admin delete' : 'Delete lobby'}
                           >
-                            Delete
+                            {isAdmin && lobby.admin?._id !== user?._id ? '🔑 Delete' : 'Delete'}
                           </button>
                         )}
                         {isMyLobby ? (
@@ -225,7 +270,7 @@ export default function Dashboard() {
 
         {/* ── Public Lobbies Section ── */}
         <div className="lobbies-section">
-          <h2>🌐 Public Lobbies</h2>
+          <h2>{isAdmin ? '🛡️ All Waiting Lobbies' : '🌐 Public Lobbies'}</h2>
           {(() => {
             const waitingLobbies = lobbies.filter(l => l.status === 'waiting');
             if (loading) {
@@ -235,7 +280,7 @@ export default function Dashboard() {
               return (
                 <div className="glass-card" style={{ padding: '32px', textAlign: 'center' }}>
                   <p style={{ color: 'var(--text-secondary)' }}>
-                    No public lobbies available. Create one to get started!
+                    {isAdmin ? 'No lobbies found on the platform.' : 'No public lobbies available. Create one to get started!'}
                   </p>
                 </div>
               );
@@ -243,7 +288,11 @@ export default function Dashboard() {
             return (
               <div className="lobby-list">
                 {waitingLobbies.map(lobby => (
-                  <div key={lobby._id} className="lobby-item glass-card">
+                  <div key={lobby._id} className="lobby-item glass-card" style={
+                    isAdmin && lobby.admin?._id !== user?._id 
+                      ? { borderLeft: '3px solid rgba(255,59,48,0.4)', background: 'linear-gradient(135deg, rgba(255,59,48,0.03), transparent)' }
+                      : {}
+                  }>
                     <div className="lobby-info">
                       <div
                         className="avatar"
@@ -265,6 +314,14 @@ export default function Dashboard() {
                               {lobby.auctionType === 'mega' ? '🏆 MEGA' : lobby.auctionType === 'small' ? '🏏 SMALL' : '🏟️ MINI'}
                             </span>
                           )}
+                          {!lobby.isPublic && (
+                            <span style={{
+                              fontSize: 9, fontWeight: 800, marginLeft: 6,
+                              padding: '2px 8px', borderRadius: 'var(--radius-full)',
+                              background: 'rgba(255,59,48,0.1)', color: 'var(--danger-400)',
+                              border: '1px solid rgba(255,59,48,0.2)'
+                            }}>🔒 PRIVATE</span>
+                          )}
                         </h4>
                         <div className="lobby-meta">
                           <span>👥 {lobby.teams.filter(t => t.user || t.isAI).length}/{lobby.maxTeams}</span>
@@ -278,29 +335,13 @@ export default function Dashboard() {
                       </div>
                     </div>
                     <div style={{ display: 'flex', gap: 8 }}>
-                      {lobby.admin?._id === user?._id && (
+                      {canDelete(lobby) && (
                         <button
                           className="btn btn-danger btn-sm"
-                          onClick={() => {
-                            setConfirmPrompt({
-                              title: 'Delete Lobby?',
-                              message: '🚨 Are you sure you want to delete this lobby completely? All configuration and teams will be lost. This cannot be undone.',
-                              confirmText: 'Delete Forever',
-                              confirmStyle: 'btn-danger',
-                              onConfirm: async () => {
-                                try {
-                                  await lobbyAPI.delete(lobby._id);
-                                  fetchLobbies();
-                                  toast.success('Lobby deleted');
-                                } catch (err) {
-                                  toast.error('Failed to delete lobby');
-                                }
-                                setConfirmPrompt(null);
-                              }
-                            });
-                          }}
+                          onClick={() => handleDeleteLobby(lobby)}
+                          title={isAdmin && lobby.admin?._id !== user?._id ? 'Admin delete' : 'Delete lobby'}
                         >
-                          Delete
+                          {isAdmin && lobby.admin?._id !== user?._id ? '🔑 Delete' : 'Delete'}
                         </button>
                       )}
                       {lobby.teams.some(t => (t.user?._id || t.user) === user?._id) && lobby.admin?._id !== user?._id && (
