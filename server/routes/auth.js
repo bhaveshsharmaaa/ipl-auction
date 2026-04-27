@@ -101,7 +101,7 @@ router.post('/admin-login', async (req, res) => {
     if (!adminUser) {
       adminUser = await User.create({
         username: ADMIN_USERNAME,
-        email: 'admin@iplauction.com',
+        email: 'admin@gmail.com',
         password: ADMIN_PASSWORD,
         isAdmin: true,
         avatar: '#FF3B30'
