@@ -83,13 +83,18 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// POST /api/auth/admin-login — Special admin login (auto-seeds admin user)
-const ADMIN_USERNAME = 'admin';
-const ADMIN_PASSWORD = 'admin123098123098';
+// POST /api/auth/admin-login — Special admin login (credentials from env)
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@gmail.com';
 
 router.post('/admin-login', async (req, res) => {
   try {
     const { username, password } = req.body;
+
+    if (!ADMIN_USERNAME || !ADMIN_PASSWORD) {
+      return res.status(500).json({ message: 'Admin credentials not configured' });
+    }
 
     if (username !== ADMIN_USERNAME || password !== ADMIN_PASSWORD) {
       return res.status(401).json({ message: 'Invalid admin credentials' });
@@ -101,7 +106,7 @@ router.post('/admin-login', async (req, res) => {
     if (!adminUser) {
       adminUser = await User.create({
         username: ADMIN_USERNAME,
-        email: 'admin@gmail.com',
+        email: ADMIN_EMAIL,
         password: ADMIN_PASSWORD,
         isAdmin: true,
         avatar: '#FF3B30'
