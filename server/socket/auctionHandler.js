@@ -133,7 +133,7 @@ export function setupAuctionHandlers(io, socket) {
       const lobby = await Lobby.findById(lobbyId);
       if (!lobby || lobby.admin.toString() !== socket.user._id.toString()) return;
 
-      const clampedDuration = Math.min(30, Math.max(5, parseInt(duration) || 10));
+      const clampedDuration = Math.min(30, Math.max(10, parseInt(duration) || 10));
       lobby.settings.bidTimer = clampedDuration;
       await lobby.save();
 

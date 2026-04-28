@@ -451,7 +451,7 @@ export default function Dashboard() {
                   </label>
                   <input
                     type="range"
-                    min="5"
+                    min="10"
                     max="30"
                     step="1"
                     value={bidTimer}
@@ -459,7 +459,7 @@ export default function Dashboard() {
                     className="slider"
                   />
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--text-tertiary)', fontWeight: 500 }}>
-                    <span>⚡ 5s (Fast)</span>
+                    <span>⚡ 10s (Fast)</span>
                     <span>🐢 30s (Relaxed)</span>
                   </div>
                 </div>
