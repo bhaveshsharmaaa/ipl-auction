@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/((?!sitemap\\.xml|robots\\.txt|favicon\\.png|favicon\\.svg|og-image\\.png|icons\\.svg).*)",
+      "source": "/((?!sitemap\\.xml|robots\\.txt|favicon\\.png|favicon\\.svg|og-image\\.jpg|og-image\\.png|manifest\\.json|icons\\.svg).*)",
       "destination": "/index.html"
     }
   ]
