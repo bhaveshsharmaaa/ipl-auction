@@ -201,6 +201,9 @@ export default function Landing() {
             <Link to="/about" className="btn btn-outline btn-lg">
               Learn More About the Game
             </Link>
+            <Link to="/guide" className="btn btn-outline btn-lg">
+              📈 Strategy Guide
+            </Link>
           </div>
         </section>
       </article>

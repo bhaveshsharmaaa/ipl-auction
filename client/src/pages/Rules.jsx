@@ -107,9 +107,12 @@ export default function Rules() {
           </ul>
         </div>
 
-        <div style={{ textAlign: 'center', marginTop: 40 }}>
+        <div style={{ textAlign: 'center', marginTop: 40, display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link to="/dashboard" className="btn btn-gold btn-lg">
             🏏 Start an Auction
+          </Link>
+          <Link to="/guide" className="btn btn-outline btn-lg">
+            📈 Strategy Guide
           </Link>
         </div>
       </div>

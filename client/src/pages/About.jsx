@@ -138,9 +138,12 @@ export default function About() {
           <Link to="/signup" className="btn btn-gold btn-lg">
             🏏 Start Playing Now — It's Free
           </Link>
-          <div style={{ marginTop: 16 }}>
+          <div style={{ marginTop: 16, display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/rules" className="btn btn-outline btn-lg">
               📖 Read the Full Auction Rules
+            </Link>
+            <Link to="/guide" className="btn btn-outline btn-lg">
+              📈 Strategy Guide
             </Link>
           </div>
         </section>
