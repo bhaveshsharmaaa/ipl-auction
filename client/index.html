@@ -6,6 +6,11 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#1a0b3b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="IPL Auction" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ipl-auction-umber.vercel.app/" />
@@ -80,7 +85,41 @@
     }
     </script>
 
-    <!-- JSON-LD Structured Data: FAQPage -->
+    <!-- JSON-LD Structured Data: VideoGame -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "IPL Auction Game",
+      "alternateName": ["IPL Auction Simulator", "IPL Draft Game", "Cricket Auction Game"],
+      "description": "The #1 free online IPL Auction Game. Play real-time multiplayer cricket auctions with 100+ players, AI bots, and live bidding.",
+      "url": "https://ipl-auction-umber.vercel.app/",
+      "genre": ["Sports", "Strategy", "Simulation"],
+      "gamePlatform": ["Web Browser", "Mobile Browser"],
+      "applicationCategory": "Game",
+      "operatingSystem": "Any",
+      "numberOfPlayers": {
+        "@type": "QuantitativeValue",
+        "minValue": 1,
+        "maxValue": 10
+      },
+      "playMode": ["MultiPlayer", "SinglePlayer"],
+      "inLanguage": "en",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Bhavesh Sharma",
+        "url": "https://github.com/bhaveshsharmaaa"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage (10 Q&As) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -107,7 +146,7 @@
           "name": "Is IPL Auction Game free to play?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes! IPL Auction Game is completely free to play. No downloads required — just open the website in your browser and start building your dream IPL team immediately."
+            "text": "Yes! IPL Auction Game is completely free to play. No downloads required, no in-app purchases, no subscriptions — just open the website in your browser and start building your dream IPL team immediately."
           }
         },
         {
@@ -115,7 +154,7 @@
           "name": "Can I play IPL Auction with my friends?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely! Create a private auction lobby and share the lobby code with friends. Up to 10 teams can join a single auction. Empty slots can be filled with smart AI bots that bid strategically."
+            "text": "Absolutely! Create a private auction lobby and share the 6-character lobby code with friends. Up to 10 teams can join a single auction. Empty slots can be filled with smart AI bots that bid strategically."
           }
         },
         {
@@ -124,6 +163,46 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "The game features 100+ real cricket players across 5 tiers: Legend (retired greats like MS Dhoni, AB de Villiers), Marquee (superstars like Virat Kohli, Jasprit Bumrah), Tier A, Tier B, and Tier C. Players include both Indian and overseas cricketers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does IPL Auction Game work on mobile phones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! IPL Auction Game is fully responsive and works on any modern mobile browser — Chrome, Safari, Firefox, and Edge. No app download needed. Just open the website on your phone and start playing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What auction formats are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three formats: Small Auction (150 players, quick matches), Mini Auction (300 players, standard experience), and Mega Auction (650 players, the full IPL mega auction experience requiring hours of strategic bidding)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the auction winner decided?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After the auction ends, each team is automatically scored on a 100-point scale across six dimensions: Star Power (25 pts), Squad Balance (20 pts), Budget Efficiency (15 pts), Batting Strength (15 pts), Bowling Strength (15 pts), and Overseas Mix (10 pts). The team with the highest total score wins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I play IPL Auction Game against AI bots?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Our AI bots bid strategically — they evaluate player stats, assess squad composition needs, track remaining budget, and make smart decisions. You can fill any empty franchise slot with an AI bot for a challenging auction experience even in solo mode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do bid increments work in IPL Auction Game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bid increments scale with price, just like the real IPL auction: ₹5 Lakhs (under ₹1 Cr), ₹10 Lakhs (₹1-2 Cr), ₹20 Lakhs (₹2-5 Cr), ₹25 Lakhs (₹5-10 Cr), and ₹50 Lakhs (above ₹10 Cr). A countdown timer resets with each new bid."
           }
         }
       ]
@@ -137,39 +216,67 @@
     <!-- Noscript fallback for search engine crawlers -->
     <noscript>
       <div style="max-width:800px;margin:40px auto;padding:20px;font-family:system-ui,sans-serif;color:#333;">
-        <h1>IPL Auction Game 2026 - Free Online Multiplayer Cricket Auction Simulator</h1>
-        <p>Welcome to the <strong>IPL Auction Game</strong>, the #1 free online <strong>IPL Auction Simulator</strong>. Build your dream IPL team by bidding on 100+ real cricket players in real-time multiplayer auctions.</p>
+        <h1>IPL Auction Game 2026 — Play the #1 Free Online Multiplayer Cricket Auction Simulator</h1>
+        <p>Welcome to the <strong>IPL Auction Game</strong>, the #1 free online <strong>IPL Auction Simulator</strong>. Build your dream IPL team by bidding on 100+ real cricket players in real-time multiplayer auctions. Compete with friends or AI bots — completely free, no downloads required.</p>
 
-        <h2>Play IPL Auction Online — Free</h2>
-        <p>Experience the thrill of the <strong>IPL mega auction</strong> from your browser. Compete with friends or challenge smart AI bots. Each team starts with a budget of ₹120 Crore to assemble a balanced squad of batsmen, bowlers, all-rounders, and wicketkeepers.</p>
+        <h2>What is IPL Auction Game?</h2>
+        <p><strong>IPL Auction Game</strong> is the most immersive, free-to-play <strong>online IPL auction simulator</strong> available on the web. Step into the shoes of an IPL franchise owner and experience the thrill of the <strong>IPL mega auction</strong> live from your browser. Our <strong>multiplayer cricket auction</strong> platform lets you bid against friends and intelligent AI bots in real-time, managing a <strong>₹120 Crore budget</strong> to assemble the perfect squad from a pool of <strong>100+ real cricket players</strong>.</p>
+        <p>Unlike basic fantasy cricket apps or simple draft tools, our <strong>IPL Auction Simulator</strong> delivers a fully real-time, multiplayer experience. Every bid happens live, every decision is timed, and every rupee counts. Whether you're a die-hard IPL fan wanting to relive the <strong>IPL 2026 auction</strong> drama or a cricket strategist, this is your game.</p>
+
+        <h2>How to Play IPL Auction Game Online</h2>
+        <ol>
+          <li><strong>Create a free account</strong> — Sign up in seconds with just your email. No downloads, no payments required.</li>
+          <li><strong>Create or join an auction lobby</strong> — Start a private lobby and share the 6-character code with friends, or join a public one. Up to 10 IPL franchises can compete.</li>
+          <li><strong>Pick your IPL franchise</strong> — Choose from all 10 official teams: CSK, MI, RCB, KKR, DC, PBKS, RR, SRH, GT, and LSG.</li>
+          <li><strong>Bid in real-time</strong> — Players are presented one-by-one starting from Legend tier. Place bids within the countdown timer. Automatic bid increments follow authentic IPL auction rules.</li>
+          <li><strong>Build the strongest squad</strong> — After all players are auctioned, each team is scored across star power, squad balance, batting/bowling strength, budget efficiency, and overseas mix. The highest-rated team wins!</li>
+        </ol>
 
         <h2>Key Features of Our IPL Auction Game</h2>
         <ul>
-          <li><strong>Real-Time Multiplayer Bidding</strong> — Powered by WebSocket technology for instant bid updates</li>
-          <li><strong>100+ Real Cricket Players</strong> — Including Virat Kohli, MS Dhoni, Jasprit Bumrah, and more</li>
-          <li><strong>Smart AI Opponents</strong> — AI franchises that bid strategically based on player value</li>
-          <li><strong>Authentic IPL Rules</strong> — Budget caps, overseas limits, squad size constraints</li>
-          <li><strong>Post-Auction Analytics</strong> — Team ratings, squad balance scores, and performance analysis</li>
-          <li><strong>10 IPL Franchises</strong> — Choose from all 10 official IPL teams</li>
+          <li><strong>Real-Time Multiplayer Bidding</strong> — Powered by WebSocket technology for instant bid updates across all players</li>
+          <li><strong>100+ Real Cricket Players</strong> — Including Virat Kohli, MS Dhoni, Jasprit Bumrah, AB de Villiers, and more</li>
+          <li><strong>Smart AI Opponents</strong> — AI franchises that bid strategically based on player value, squad needs, and budget</li>
+          <li><strong>Authentic IPL Rules</strong> — ₹120 Cr budget, max 25 players, max 8 overseas, dynamic bid increments</li>
+          <li><strong>Post-Auction Analytics</strong> — Team ratings scored on 100-point scale across 6 dimensions</li>
+          <li><strong>10 IPL Franchises</strong> — Chennai Super Kings, Mumbai Indians, Royal Challengers Bengaluru, Kolkata Knight Riders, Delhi Capitals, Punjab Kings, Rajasthan Royals, Sunrisers Hyderabad, Gujarat Titans, Lucknow Super Giants</li>
+          <li><strong>Three Auction Formats</strong> — Small (150 players), Mini (300 players), and Mega (650 players)</li>
+          <li><strong>5 Player Tiers</strong> — Legend, Marquee, Tier A, Tier B, and Tier C</li>
+          <li><strong>Mobile Friendly</strong> — Works on any modern mobile browser, no app download needed</li>
+          <li><strong>100% Free Forever</strong> — No in-app purchases, no subscriptions, no ads</li>
         </ul>
 
-        <h2>How to Play IPL Auction Game</h2>
-        <ol>
-          <li>Create a free account or sign in</li>
-          <li>Create or join an auction lobby</li>
-          <li>Pick your IPL franchise (CSK, MI, RCB, etc.)</li>
-          <li>Bid strategically on players within your ₹120 Cr budget</li>
-          <li>Build the strongest squad and win!</li>
-        </ol>
+        <h2>IPL Auction Game Strategy Tips</h2>
+        <p><strong>Don't blow your budget early.</strong> The temptation to splash ₹15+ Crore on Virat Kohli or Jasprit Bumrah is immense, but overspending on marquee players leaves you vulnerable later. Aim to spend no more than 40% in Legend and Marquee tiers.</p>
+        <p><strong>Target squad balance.</strong> The evaluation algorithm rewards balanced squads. Aim for 5–7 batsmen, 5–7 bowlers, 3–5 all-rounders, and 2 wicketkeepers.</p>
+        <p><strong>Watch the overseas count.</strong> You can only have 8 overseas players. Every foreign slot is precious — ensure each one significantly outperforms the Indian alternative.</p>
+        <p><strong>Know the increments.</strong> Below ₹1 Crore, bids increase by ₹5 Lakhs. Above ₹10 Crore, each jump is ₹50 Lakhs. Understanding these helps you predict bidding wars.</p>
 
-        <h2>Frequently Asked Questions</h2>
-        <p><strong>What is IPL Auction Game?</strong> IPL Auction Game is a free, online multiplayer cricket auction simulator where you can build your dream IPL team by bidding on real cricket players.</p>
-        <p><strong>Is IPL Auction Game free?</strong> Yes, completely free! No downloads, no payments — just play in your browser.</p>
-        <p><strong>Can I play with friends?</strong> Yes! Create a private lobby and share the code. Up to 10 teams per auction.</p>
+        <h2>Post-Auction Team Scoring</h2>
+        <ul>
+          <li><strong>Star Power (25 pts)</strong> — Quality of marquee and top-tier acquisitions</li>
+          <li><strong>Squad Balance (20 pts)</strong> — Distribution across batsmen, bowlers, all-rounders, and wicketkeepers</li>
+          <li><strong>Budget Efficiency (15 pts)</strong> — Cricketing value extracted per crore spent</li>
+          <li><strong>Batting Strength (15 pts)</strong> — Aggregate averages and strike rates of top 7 batsmen</li>
+          <li><strong>Bowling Strength (15 pts)</strong> — Wickets tally and economy rates of top 6 bowlers</li>
+          <li><strong>Overseas Mix (10 pts)</strong> — Quality and diversity of international acquisitions</li>
+        </ul>
+
+        <h2>Frequently Asked Questions about IPL Auction Game</h2>
+        <p><strong>What is IPL Auction Game?</strong> IPL Auction Game is a free, online multiplayer cricket auction simulator where you can build your dream IPL team by bidding on 100+ real cricket players with authentic IPL rules.</p>
+        <p><strong>Is IPL Auction Game free?</strong> Yes, completely free! No downloads, no in-app purchases, no subscriptions — just play in your browser.</p>
+        <p><strong>Can I play with friends?</strong> Yes! Create a private lobby and share the 6-character code. Up to 10 teams per auction. Fill empty slots with AI bots.</p>
+        <p><strong>Does it work on mobile?</strong> Yes! The game is fully responsive and works on any modern mobile browser — Chrome, Safari, Firefox, and Edge.</p>
+        <p><strong>What auction formats are available?</strong> Three formats: Small (150 players), Mini (300 players), and Mega (650 players).</p>
+        <p><strong>How is the winner decided?</strong> After the auction, each team is scored on a 100-point scale across Star Power, Squad Balance, Budget Efficiency, Batting Strength, Bowling Strength, and Overseas Mix.</p>
+        <p><strong>Can I play against AI?</strong> Yes! Our AI bots bid strategically based on player stats, squad needs, and budget. They provide a challenging experience even in solo mode.</p>
+        <p><strong>How do bid increments work?</strong> Increments scale with price: ₹5L (under ₹1 Cr), ₹10L (₹1–2 Cr), ₹20L (₹2–5 Cr), ₹25L (₹5–10 Cr), ₹50L (above ₹10 Cr).</p>
+        <p><strong>How many players are in the game?</strong> Over 100 real cricket players across 5 tiers — from retired legends like MS Dhoni to emerging domestic talent.</p>
+        <p><strong>Is there a mobile app?</strong> No app needed! The game runs entirely in your browser. Bookmark the site for quick access on any device.</p>
 
         <p>Please enable JavaScript to play the IPL Auction Game.</p>
 
-        <p><a href="/rules">Read IPL Auction Rules</a> | <a href="/about">About IPL Auction Game</a> | <a href="/signup">Create Free Account</a></p>
+        <p><a href="/rules">Read IPL Auction Rules</a> | <a href="/about">About IPL Auction Game</a> | <a href="/signup">Create Free Account</a> | <a href="/login">Sign In</a></p>
       </div>
     </noscript>
   </body>

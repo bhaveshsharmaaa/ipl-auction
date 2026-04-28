@@ -12,4 +12,6 @@ Disallow: /auction/
 Disallow: /results/
 Disallow: /completed
 
+Crawl-delay: 1
+
 Sitemap: https://ipl-auction-umber.vercel.app/sitemap.xml

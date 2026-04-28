@@ -1,0 +1,20 @@
+{
+  "name": "IPL Auction Game - Free Online Multiplayer Simulator",
+  "short_name": "IPL Auction",
+  "description": "Play the #1 free IPL Auction Game online. Bid on 100+ real players, compete with friends & AI in real-time multiplayer auctions. No download needed.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a1a",
+  "theme_color": "#1a0b3b",
+  "orientation": "any",
+  "categories": ["games", "sports", "entertainment"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
