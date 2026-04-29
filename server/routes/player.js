@@ -4,8 +4,8 @@ import auth from '../middleware/auth.js';
 
 const router = express.Router();
 
-// GET /api/players — List all players with optional filters (public)
-router.get('/', async (req, res) => {
+// GET /api/players — List all players with optional filters
+router.get('/', auth, async (req, res) => {
   try {
     const { role, tier, overseas, search, page = 1, limit = 50 } = req.query;
 
