@@ -209,20 +209,19 @@ export default function Results() {
                         <div style={{ flex: 1, height: 1, background: 'linear-gradient(90deg, var(--primary-500), transparent)', opacity: 0.3 }} />
                       </div>
                       
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 8 }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 6 }}>
                         {team.bestXI && team.bestXI.length > 0 ? (
                           team.bestXI.map((player, idx) => (
-                            <div key={idx} style={{ padding: '8px 12px', background: 'rgba(255,255,255,0.03)', borderRadius: 6, display: 'flex', alignItems: 'center', gap: 10, border: '1px solid rgba(255,255,255,0.05)' }}>
-                               <span style={{ fontSize: 10, fontWeight: 800, color: 'var(--text-tertiary)', width: 18, textAlign: 'center', flexShrink: 0 }}>#{idx + 1}</span>
-                               <span style={{ fontSize: 14 }}>{getRoleEmoji(player.role)}</span>
+                            <div key={idx} style={{ padding: '10px 14px', background: 'rgba(255,255,255,0.03)', borderRadius: 8, display: 'flex', alignItems: 'center', gap: 10, border: '1px solid rgba(255,255,255,0.05)' }}>
+                               <span style={{ fontSize: 11, fontWeight: 800, color: 'var(--text-tertiary)', width: 22, textAlign: 'center', flexShrink: 0, opacity: 0.6 }}>#{idx + 1}</span>
+                               <span style={{ fontSize: 16, flexShrink: 0 }}>{getRoleEmoji(player.role)}</span>
                                <div style={{ flex: 1, minWidth: 0 }}>
-                                 <div style={{ fontSize: 13, fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center', gap: 4 }}>
+                                 <div style={{ fontSize: 13, fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                    {player.name}
-                                   {player.isOverseas && <span title="Overseas" style={{ fontSize: 10 }}>🌍</span>}
+                                   {player.isOverseas && <span title="Overseas" style={{ fontSize: 10, marginLeft: 4 }}>🌍</span>}
                                  </div>
-                                 <div style={{ fontSize: 10, color: 'var(--text-tertiary)', textTransform: 'uppercase', display: 'flex', gap: 6 }}>
-                                   <span>{player.role}</span>
-                                   {player.specialization && <span style={{ opacity: 0.6 }}>• {player.specialization}</span>}
+                                 <div style={{ fontSize: 10, color: 'var(--text-tertiary)', textTransform: 'uppercase', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                   {player.role}{player.specialization ? ` • ${player.specialization}` : ''}
                                  </div>
                                </div>
                             </div>
