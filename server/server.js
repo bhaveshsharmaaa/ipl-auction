@@ -25,6 +25,7 @@ import lobbyRoutes from './routes/lobby.js';
 import playerRoutes from './routes/player.js';
 import auctionRoutes from './routes/auction.js';
 
+
 const app = express();
 const httpServer = createServer(app);
 
@@ -68,6 +69,7 @@ app.use('/api/auth', limiter, authRoutes); // Apply rate limit to auth
 app.use('/api/lobby', lobbyRoutes);
 app.use('/api/players', playerRoutes);
 app.use('/api/auction', auctionRoutes);
+
 
 // Health check
 app.get('/api/health', (req, res) => {

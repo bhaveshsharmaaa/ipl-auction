@@ -120,6 +120,8 @@ export default function Lobby() {
       return;
     }
     socket?.emit('auction:start', { lobbyId: id });
+    // Navigate immediately — don't wait for server round-trip
+    navigate(`/auction/${id}`);
   };
 
   const handleLeave = () => {

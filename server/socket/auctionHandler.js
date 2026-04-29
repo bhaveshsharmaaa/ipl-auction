@@ -33,8 +33,12 @@ export function setupAuctionHandlers(io, socket) {
         return socket.emit('error', { message: 'Need at least 1 human player to start' });
       }
 
-      // Get all players and organize them
-      const allPlayers = await Player.find({});
+      // Get all players and organize them — run in parallel with any cleanup
+      const [allPlayers, existingState] = await Promise.all([
+        Player.find({}, '_id tier role basePrice isOverseas name'),
+        AuctionState.findOne({ lobby: lobbyId }, '_id')
+      ]);
+
       const orderedPlayers = organizePlayerPool(allPlayers);
 
       // Limit player pool based on auction type
@@ -43,38 +47,35 @@ export function setupAuctionHandlers(io, socket) {
       const limitedPlayers = orderedPlayers.slice(0, Math.min(poolLimit, orderedPlayers.length));
       const playerIds = limitedPlayers.map(p => p._id);
 
-      // Create auction state
-      let auctionState = await AuctionState.findOne({ lobby: lobbyId });
-      if (auctionState) {
-        await AuctionState.deleteOne({ _id: auctionState._id });
-      }
+      // Delete old state + create new state + update lobby status in parallel
+      const [auctionState, populatedLobby] = await Promise.all([
+        (async () => {
+          if (existingState) await AuctionState.deleteOne({ _id: existingState._id });
+          return AuctionState.create({
+            lobby: lobbyId,
+            playerPool: playerIds,
+            currentPlayer: playerIds[0],
+            currentBid: 0,
+            currentBidder: null,
+            bidHistory: [],
+            soldPlayers: [],
+            unsoldPlayers: [],
+            currentPlayerIndex: 0,
+            round: 1,
+            status: 'player-bidding'
+          });
+        })(),
+        Lobby.findByIdAndUpdate(
+          lobbyId,
+          { status: 'in-progress' },
+          { new: true }
+        ).populate('admin', 'username avatar').populate('teams.user', 'username avatar')
+      ]);
 
-      auctionState = await AuctionState.create({
-        lobby: lobbyId,
-        playerPool: playerIds,
-        currentPlayer: playerIds[0],
-        currentBid: 0,
-        currentBidder: null,
-        bidHistory: [],
-        soldPlayers: [],
-        unsoldPlayers: [],
-        currentPlayerIndex: 0,
-        round: 1,
-        status: 'player-bidding'
-      });
-
-      // Update lobby status
-      lobby.status = 'in-progress';
-      await lobby.save();
-
-      // Populate for broadcast
+      // Populate auction state and emit — run populate + emit together
       const populatedState = await AuctionState.findById(auctionState._id)
         .populate('currentPlayer')
         .populate('playerPool');
-
-      const populatedLobby = await Lobby.findById(lobbyId)
-        .populate('admin', 'username avatar')
-        .populate('teams.user', 'username avatar');
 
       io.to(`lobby:${lobbyId}`).emit('auction:started', {
         auction: populatedState,
@@ -209,60 +210,61 @@ export function setupAuctionHandlers(io, socket) {
 // Extracted bid processing logic so AI bots can trigger it seamlessly
 export async function processBid(io, lobbyId, team, isBot = false, socket = null) {
   try {
-    const lobby = await Lobby.findById(lobbyId).populate('teams.user', 'username').populate('teams.players');
-    if (!lobby) return;
+    // Fetch only what we need with lean() for speed
+    const [lobby, auctionState] = await Promise.all([
+      Lobby.findById(lobbyId, 'settings teams').populate('teams.user', 'username').populate('teams.players', 'role isOverseas').lean(),
+      AuctionState.findOne({ lobby: lobbyId }).populate('currentPlayer')
+    ]);
+    if (!lobby || !auctionState || auctionState.status !== 'player-bidding') return;
 
-    const auctionState = await AuctionState.findOne({ lobby: lobbyId }).populate('currentPlayer');
-    if (!auctionState || auctionState.status !== 'player-bidding') return;
-
-    // Calculate bid amount
     const currentPlayer = auctionState.currentPlayer;
-    let bidAmount;
-
-    if (auctionState.currentBid === 0) {
-      bidAmount = currentPlayer.basePrice;
-    } else {
-      const increment = getBidIncrement(auctionState.currentBid);
-      bidAmount = auctionState.currentBid + increment;
-    }
+    const bidderId = team.isAI ? team._id : (team.user?._id || team.user);
 
     // Can't bid on yourself if you're already the highest bidder
-    const bidderId = team.isAI ? team._id : (team.user?._id || team.user);
     if (auctionState.currentBidder && auctionState.currentBidder.toString() === bidderId.toString()) {
       if (!isBot && socket) socket.emit('error', { message: 'You are already the highest bidder' });
       return;
     }
 
-    // Validate bid
-    const validation = validateBid(team, currentPlayer, bidAmount, lobby.settings);
+    // Calculate bid amount
+    const bidAmount = auctionState.currentBid === 0
+      ? currentPlayer.basePrice
+      : auctionState.currentBid + getBidIncrement(auctionState.currentBid);
+
+    // Validate bid against lobby settings
+    const lobbyTeam = lobby.teams.find(t => t._id.toString() === team._id.toString());
+    const validation = validateBid(lobbyTeam || team, currentPlayer, bidAmount, lobby.settings);
     if (!validation.valid) {
       if (!isBot && socket) socket.emit('error', { message: validation.errors[0] });
       return;
     }
 
-    // Place bid
-    auctionState.currentBid = bidAmount;
-    auctionState.currentBidder = bidderId;
-    const bidderUsername = team.isAI ? 'AI' : (team.user?.username || (socket && socket.user ? socket.user.username : 'User'));
-    
-    auctionState.bidHistory.push({
+    const bidderUsername = team.isAI ? 'AI' : (team.user?.username || (socket?.user?.username || 'User'));
+    const bidEntry = {
       user: bidderId,
       username: bidderUsername,
       teamName: team.teamName,
       isAI: !!team.isAI,
       amount: bidAmount,
       timestamp: new Date()
-    });
+    };
 
-    await auctionState.save();
-
-    // Broadcast bid update
-    io.to(`lobby:${lobbyId}`).emit('auction:bidUpdate', {
-      bidder: {
-        _id: bidderId,
-        username: bidderUsername,
-        isAI: !!team.isAI
+    // Atomic update — no read-modify-write race conditions
+    const updated = await AuctionState.findOneAndUpdate(
+      { lobby: lobbyId, status: 'player-bidding', currentBid: auctionState.currentBid },
+      {
+        $set: { currentBid: bidAmount, currentBidder: bidderId },
+        $push: { bidHistory: { $each: [bidEntry], $position: 0 } }
       },
+      { new: false } // We don't need the updated doc back
+    );
+
+    // If update failed (concurrent bid won), silently drop
+    if (!updated) return;
+
+    // Broadcast bid update immediately (no waiting on any other DB op)
+    io.to(`lobby:${lobbyId}`).emit('auction:bidUpdate', {
+      bidder: { _id: bidderId, username: bidderUsername, isAI: !!team.isAI },
       bidderTeamName: team.teamName,
       bidderTeamColor: team.teamColor,
       amount: bidAmount,
@@ -270,7 +272,7 @@ export async function processBid(io, lobbyId, team, isBot = false, socket = null
       player: currentPlayer
     });
 
-    // Reset timer
+    // Reset timer (async — doesn't block broadcast)
     startBidTimer(io, lobbyId, lobby.settings.bidTimer);
 
   } catch (error) {
@@ -284,24 +286,21 @@ function startBidTimer(io, lobbyId, duration) {
 
   const timerEnd = new Date(Date.now() + duration * 1000);
 
-  // Update timer end in DB
-  AuctionState.findOneAndUpdate(
-    { lobby: lobbyId },
-    { timerEnd },
-    { new: true }
-  ).then(() => {
-    io.to(`lobby:${lobbyId}`).emit('auction:timerStart', {
-      duration,
-      timerEnd: timerEnd.toISOString()
-    });
+  // Emit to clients IMMEDIATELY — don't wait for DB write
+  io.to(`lobby:${lobbyId}`).emit('auction:timerStart', {
+    duration,
+    timerEnd: timerEnd.toISOString()
   });
+
+  // Persist timer end in background (fire-and-forget)
+  AuctionState.findOneAndUpdate({ lobby: lobbyId }, { timerEnd }).catch(() => {});
 
   const timer = setTimeout(() => {
     handleTimerExpiry(io, lobbyId);
   }, duration * 1000);
 
   auctionTimers.set(lobbyId.toString(), timer);
-  
+
   // Triggers bot thinking loop
   scheduleBotBids(io, lobbyId);
 }
@@ -441,7 +440,7 @@ async function handleTimerExpiry(io, lobbyId) {
 
       const nextPlayer = await Player.findById(auctionState.playerPool[nextPlayerIndex]);
 
-      // 2-second delay showing SOLD/UNSOLD before presenting next player
+      // 2s to show SOLD/UNSOLD result, then reveal next player
       setTimeout(() => {
         io.to(`lobby:${lobbyId}`).emit('auction:newPlayer', {
           player: nextPlayer,
@@ -449,11 +448,11 @@ async function handleTimerExpiry(io, lobbyId) {
           total: auctionState.playerPool.length
         });
 
-        // 2-second delay showing the cinematic Intro Modal before starting the bid timer
+        // 2s for UP NEXT player intro, then start bidding
         setTimeout(() => {
           startBidTimer(io, lobbyId, lobby.settings.bidTimer);
-        }, 3000);
-      }, 3000);
+        }, 2000);
+      }, 2000);
     }
 
   } catch (error) {

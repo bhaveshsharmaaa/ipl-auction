@@ -39,6 +39,7 @@ export default function Auction() {
   const [isDestroyed, setIsDestroyed] = useState(false);
   const [showAdminModal, setShowAdminModal] = useState(false);
   const [pauseNotification, setPauseNotification] = useState(null);
+  const [bidPending, setBidPending] = useState(false); // optimistic bid lock
 
 
 
@@ -76,7 +77,13 @@ export default function Auction() {
       setCurrentBidder(bidder);
       setBidderTeamName(teamName);
       setNextBidAmount(nextBid);
-      setBidHistory(prev => [{ user: bidder._id, username: bidder.username, teamName, isAI: bidder.isAI, amount, timestamp: new Date() }, ...prev]);
+      setBidHistory(prev => {
+        // Remove any optimistic entry with the same bidder+amount to avoid duplicates
+        const deduped = prev.filter(b =>
+          !(b.amount === amount && (b.user === bidder._id || b.user?.toString() === bidder._id?.toString()))
+        );
+        return [{ user: bidder._id, username: bidder.username, teamName, isAI: bidder.isAI, amount, timestamp: new Date() }, ...deduped];
+      });
     });
 
     socket.on('auction:timerStart', ({ duration, timerEnd }) => {
@@ -155,7 +162,9 @@ export default function Auction() {
     };
   }, [socket, id]);
 
-  const initAuction = async () => {
+  const initAuction = async (attempt = 0) => {
+    const MAX_RETRIES = 6;
+    const RETRY_DELAY = 1000; // 1s between retries
     try {
       const [lobbyRes, auctionRes] = await Promise.all([
         lobbyAPI.get(id),
@@ -164,6 +173,17 @@ export default function Auction() {
 
       setLobby(lobbyRes.data);
       const auction = auctionRes.data;
+
+      // If auction not ready yet (server still creating it), retry
+      if (!auction || !auction.status) {
+        if (attempt < MAX_RETRIES) {
+          setTimeout(() => initAuction(attempt + 1), RETRY_DELAY);
+          return;
+        }
+        toast.error('Auction is taking too long to start. Please try again.');
+        navigate('/dashboard');
+        return;
+      }
 
       if (auction.currentPlayer) {
         setCurrentPlayer(auction.currentPlayer);
@@ -191,7 +211,7 @@ export default function Auction() {
 
       // REDIRECTION GUARD: If user has no team during an active auction, redirect to Lobby selection
       // But only if the lobby is still in-progress (not completed/waiting)
-      const hasTeam = lobbyRes.data.teams.some(t => 
+      const hasTeam = lobbyRes.data.teams.some(t =>
         t.user && ((t.user._id || t.user) === user?._id)
       );
       if (!hasTeam && lobbyRes.data.status === 'in-progress') {
@@ -203,9 +223,16 @@ export default function Auction() {
         }
       }
     } catch (err) {
+      // Auction state may not exist yet if we navigated before the server finished — retry
+      if (attempt < MAX_RETRIES) {
+        setTimeout(() => initAuction(attempt + 1), RETRY_DELAY);
+        return;
+      }
       toast.error('Failed to load auction');
       navigate('/dashboard');
     } finally {
+      // Clear loading once — after the first attempt completes (retries run in background)
+      // The spinner stays on until state is populated by successful init or socket events
       setLoading(false);
     }
   };
@@ -238,9 +265,33 @@ export default function Auction() {
   }
 
   const handleBid = useCallback(() => {
-    if (!socket || !id) return;
+    if (!socket || !id || bidPending) return;
+
+    // Optimistic update: immediately reflect the bid locally
+    const nextAmount = nextBidAmount;
+    const optimisticBidder = { _id: user?._id, username: user?.username };
+    const myTeamLocal = lobby?.teams?.find(t => !t.isAI && t.user && (t.user?._id || t.user) === user?._id);
+    const optimisticTeamName = myTeamLocal?.teamName || user?.username || 'You';
+
+    setCurrentBid(nextAmount);
+    setCurrentBidder(optimisticBidder);
+    setBidderTeamName(optimisticTeamName);
+    setNextBidAmount(prev => prev + getIncrement(nextAmount));
+    setBidHistory(prev => [{
+      user: user?._id,
+      username: user?.username,
+      teamName: optimisticTeamName,
+      isAI: false,
+      amount: nextAmount,
+      timestamp: new Date()
+    }, ...prev]);
+
+    // Lock button briefly to prevent double-tap (server will confirm or correct)
+    setBidPending(true);
+    setTimeout(() => setBidPending(false), 800);
+
     socket.emit('auction:bid', { lobbyId: id });
-  }, [socket, id]);
+  }, [socket, id, bidPending, nextBidAmount, user, lobby]);
 
   const handlePause = () => socket?.emit('auction:pause', { lobbyId: id });
   const handleResume = () => socket?.emit('auction:resume', { lobbyId: id });
@@ -486,11 +537,11 @@ export default function Auction() {
                   className="btn btn-outline btn-sm" 
                   style={{ padding: '0 8px', fontSize: 16, height: 28, minHeight: 28 }}
                   onClick={() => {
-                    const val = Math.max(5, timerDuration - 1);
+                    const val = Math.max(10, timerDuration - 1);
                     setTimerDuration(val);
                     socket?.emit('auction:setTimer', { lobbyId: id, duration: val });
                   }}
-                  disabled={timerDuration <= 5}
+                  disabled={timerDuration <= 10}
                 >-</button>
                 <span className="timer-value-badge" style={{ fontSize: 13, padding: '2px 8px', userSelect: 'none', width: 40, textAlign: 'center' }}>{timerDuration}s</span>
                 <button 
@@ -745,13 +796,15 @@ export default function Auction() {
               <button
                 className="bid-button"
                 onClick={handleBid}
-                disabled={isHighestBidder || isPaused || !currentPlayer || timer <= 0}
+                disabled={isHighestBidder || isPaused || !currentPlayer || timer <= 0 || bidPending}
               >
                 {isPaused 
                   ? '⏸ AUCTION PAUSED'
                   : isHighestBidder
                     ? '✅ You are the highest bidder'
-                    : `🏏 BID ${formatPrice(nextBidAmount)}`
+                    : bidPending
+                      ? '⚡ Placing bid...'
+                      : `🏏 BID ${formatPrice(nextBidAmount)}`
                 }
               </button>
             </div>

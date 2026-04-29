@@ -18,6 +18,7 @@ const About = lazy(() => import('./pages/About'));
 const Guide = lazy(() => import('./pages/Guide'));
 const CompletedAuctions = lazy(() => import('./pages/CompletedAuctions'));
 
+
 function PageLoader() {
   return <div className="page-loader"><div className="spinner"></div></div>;
 }
@@ -57,6 +58,7 @@ function AppRoutes() {
           <Route path="/auction/:id" element={<ProtectedRoute><Auction /></ProtectedRoute>} />
           <Route path="/results/:id" element={<ProtectedRoute><Results /></ProtectedRoute>} />
           <Route path="/completed" element={<ProtectedRoute><CompletedAuctions /></ProtectedRoute>} />
+
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
