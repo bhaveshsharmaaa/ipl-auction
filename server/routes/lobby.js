@@ -117,6 +117,9 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
+import { evaluateTeams } from '../services/evaluator.js';
+import AuctionState from '../models/AuctionState.js';
+
 // GET /api/lobby/completed — List completed lobbies for the user
 router.get('/completed', auth, async (req, res) => {
   try {
@@ -125,19 +128,36 @@ router.get('/completed', auth, async (req, res) => {
 
     console.log('Fetching completed lobbies for user:', userId);
     
-    const lobbies = await Lobby.find({
-      status: 'completed',
-      $or: [
+    let query = { status: 'completed' };
+    
+    if (!req.user.isAdmin) {
+      query.$or = [
         { admin: userId },
         { 'teams.user': userId }
-      ]
-    })
+      ];
+    }
+
+    const lobbies = await Lobby.find(query)
       .populate('admin', 'username avatar')
       .populate('teams.user', 'username avatar')
+      .populate('teams.players')
       .sort({ updatedAt: -1 });
 
-    console.log(`Matched ${lobbies.length} lobbies for ${userId}:`, lobbies.map(l => l.name));
-    res.json(lobbies);
+    const results = await Promise.all(lobbies.map(async (lobby) => {
+      try {
+        const auction = await AuctionState.findOne({ lobby: lobby._id }).populate('soldPlayers.player');
+        if (auction) {
+          const evaluation = evaluateTeams(lobby, auction);
+          return { ...lobby.toObject(), bestTeam: evaluation.bestTeam };
+        }
+      } catch (e) {
+        console.error('Error evaluating team for lobby', lobby._id, e);
+      }
+      return lobby.toObject();
+    }));
+
+    console.log(`Matched ${results.length} lobbies for ${userId}:`, results.map(l => l.name));
+    res.json(results);
   } catch (error) {
     console.error('List completed lobbies error:', error);
     res.status(500).json({ message: 'Server error' });

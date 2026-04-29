@@ -69,10 +69,23 @@ export default function CompletedAuctions() {
                       {getInitial(lobby.admin?.username)}
                     </div>
                     <div>
-                      <h4>{lobby.name}</h4>
+                      <h4 style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                        {lobby.name}
+                        {lobby.bestTeam && (
+                          <span style={{ 
+                            fontSize: 10, fontWeight: 800, padding: '2px 8px', borderRadius: 'var(--radius-full)',
+                            background: 'rgba(255,215,0,0.15)', color: 'var(--gold-400)', border: '1px solid rgba(255,215,0,0.3)'
+                          }}>
+                            🏆 {lobby.bestTeam.teamName} WON
+                          </span>
+                        )}
+                      </h4>
                       <div className="lobby-meta">
                         <span>👥 {lobby.teams.length}/{lobby.maxTeams}</span>
                         <span>🏏 By {lobby.admin?.username}</span>
+                        {lobby.bestTeam && (
+                          <span>🌟 Top Score: {lobby.bestTeam.totalScore}/100</span>
+                        )}
                         <span style={{ color: 'var(--text-tertiary)' }}>
                           ● Completed
                         </span>
