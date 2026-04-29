@@ -201,17 +201,29 @@ export default function Results() {
                     <div style={{ marginTop: 20 }}>
                       <div style={{ fontSize: 13, fontWeight: 800, color: 'var(--primary-300)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
                         <span>🏏 Best Playing XI</span>
+                        {team.bestXI && team.bestXI.length > 0 && (
+                          <span style={{ fontSize: 10, fontWeight: 600, background: 'rgba(96,165,250,0.15)', color: '#60a5fa', padding: '2px 8px', borderRadius: 10, letterSpacing: '0.5px' }}>
+                            🌍 {team.bestXI.filter(p => p.isOverseas).length}/4 Overseas
+                          </span>
+                        )}
                         <div style={{ flex: 1, height: 1, background: 'linear-gradient(90deg, var(--primary-500), transparent)', opacity: 0.3 }} />
                       </div>
                       
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 8 }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 8 }}>
                         {team.bestXI && team.bestXI.length > 0 ? (
                           team.bestXI.map((player, idx) => (
                             <div key={idx} style={{ padding: '8px 12px', background: 'rgba(255,255,255,0.03)', borderRadius: 6, display: 'flex', alignItems: 'center', gap: 10, border: '1px solid rgba(255,255,255,0.05)' }}>
+                               <span style={{ fontSize: 10, fontWeight: 800, color: 'var(--text-tertiary)', width: 18, textAlign: 'center', flexShrink: 0 }}>#{idx + 1}</span>
                                <span style={{ fontSize: 14 }}>{getRoleEmoji(player.role)}</span>
-                               <div style={{ flex: 1 }}>
-                                 <div style={{ fontSize: 13, fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{player.name}</div>
-                                 <div style={{ fontSize: 10, color: 'var(--text-tertiary)', textTransform: 'uppercase' }}>{player.role}</div>
+                               <div style={{ flex: 1, minWidth: 0 }}>
+                                 <div style={{ fontSize: 13, fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center', gap: 4 }}>
+                                   {player.name}
+                                   {player.isOverseas && <span title="Overseas" style={{ fontSize: 10 }}>🌍</span>}
+                                 </div>
+                                 <div style={{ fontSize: 10, color: 'var(--text-tertiary)', textTransform: 'uppercase', display: 'flex', gap: 6 }}>
+                                   <span>{player.role}</span>
+                                   {player.specialization && <span style={{ opacity: 0.6 }}>• {player.specialization}</span>}
+                                 </div>
                                </div>
                             </div>
                           ))
@@ -222,7 +234,7 @@ export default function Results() {
                     </div>
 
                     <div style={{ fontSize: 12, color: 'var(--text-tertiary)', marginTop: 20, paddingTop: 16, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-                      🌍 Overseas: {team.overseasCount} • 💰 Remaining: {formatPrice(team.budgetRemaining)}
+                      🌍 Overseas in Squad: {team.overseasCount} • 💰 Remaining: {formatPrice(team.budgetRemaining)}
                     </div>
                   </div>
                 )}
