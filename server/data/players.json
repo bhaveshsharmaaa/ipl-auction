@@ -18,7 +18,8 @@
       "catches": 109,
       "fifties": 50,
       "hundreds": 7
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Virat%20Kohli&backgroundColor=1a1a2e"
   },
   {
     "name": "Rohit Sharma",
@@ -39,7 +40,8 @@
       "catches": 102,
       "fifties": 42,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rohit%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Jasprit Bumrah",
@@ -60,7 +62,8 @@
       "catches": 18,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jasprit%20Bumrah&backgroundColor=1a1a2e"
   },
   {
     "name": "MS Dhoni",
@@ -81,7 +84,8 @@
       "catches": 120,
       "fifties": 24,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=MS%20Dhoni&backgroundColor=1a1a2e"
   },
   {
     "name": "Rashid Khan",
@@ -102,7 +106,8 @@
       "catches": 32,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rashid%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "Suryakumar Yadav",
@@ -123,7 +128,8 @@
       "catches": 52,
       "fifties": 24,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Suryakumar%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Rishabh Pant",
@@ -144,7 +150,8 @@
       "catches": 65,
       "fifties": 18,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rishabh%20Pant&backgroundColor=1a1a2e"
   },
   {
     "name": "Shreyas Iyer",
@@ -165,7 +172,8 @@
       "catches": 48,
       "fifties": 20,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shreyas%20Iyer&backgroundColor=1a1a2e"
   },
   {
     "name": "Jos Buttler",
@@ -186,7 +194,8 @@
       "catches": 33,
       "fifties": 16,
       "hundreds": 6
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jos%20Buttler&backgroundColor=1a1a2e"
   },
   {
     "name": "KL Rahul",
@@ -207,7 +216,8 @@
       "catches": 42,
       "fifties": 33,
       "hundreds": 4
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=KL%20Rahul&backgroundColor=1a1a2e"
   },
   {
     "name": "Ravindra Jadeja",
@@ -228,7 +238,8 @@
       "catches": 87,
       "fifties": 5,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ravindra%20Jadeja&backgroundColor=1a1a2e"
   },
   {
     "name": "Hardik Pandya",
@@ -249,7 +260,8 @@
       "catches": 45,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Hardik%20Pandya&backgroundColor=1a1a2e"
   },
   {
     "name": "Shubman Gill",
@@ -270,7 +282,8 @@
       "catches": 39,
       "fifties": 18,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shubman%20Gill&backgroundColor=1a1a2e"
   },
   {
     "name": "Yashasvi Jaiswal",
@@ -291,7 +304,8 @@
       "catches": 16,
       "fifties": 8,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yashasvi%20Jaiswal&backgroundColor=1a1a2e"
   },
   {
     "name": "Sanju Samson",
@@ -312,7 +326,8 @@
       "catches": 55,
       "fifties": 17,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sanju%20Samson&backgroundColor=1a1a2e"
   },
   {
     "name": "Ruturaj Gaikwad",
@@ -333,7 +348,8 @@
       "catches": 26,
       "fifties": 15,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ruturaj%20Gaikwad&backgroundColor=1a1a2e"
   },
   {
     "name": "Heinrich Klaasen",
@@ -354,7 +370,8 @@
       "catches": 13,
       "fifties": 7,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Heinrich%20Klaasen&backgroundColor=1a1a2e"
   },
   {
     "name": "Pat Cummins",
@@ -375,7 +392,8 @@
       "catches": 12,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pat%20Cummins&backgroundColor=1a1a2e"
   },
   {
     "name": "Mitchell Starc",
@@ -396,7 +414,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mitchell%20Starc&backgroundColor=1a1a2e"
   },
   {
     "name": "Kagiso Rabada",
@@ -417,7 +436,8 @@
       "catches": 12,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kagiso%20Rabada&backgroundColor=1a1a2e"
   },
   {
     "name": "Ravichandran Ashwin",
@@ -438,7 +458,8 @@
       "catches": 2,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ravichandran%20Ashwin&backgroundColor=1a1a2e"
   },
   {
     "name": "Yuzvendra Chahal",
@@ -459,7 +480,8 @@
       "catches": 18,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yuzvendra%20Chahal&backgroundColor=1a1a2e"
   },
   {
     "name": "Mohammed Siraj",
@@ -480,7 +502,8 @@
       "catches": 22,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mohammed%20Siraj&backgroundColor=1a1a2e"
   },
   {
     "name": "Mohammed Shami",
@@ -501,7 +524,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mohammed%20Shami&backgroundColor=1a1a2e"
   },
   {
     "name": "Kuldeep Yadav",
@@ -522,7 +546,8 @@
       "catches": 41,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kuldeep%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Axar Patel",
@@ -543,7 +568,8 @@
       "catches": 2,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Axar%20Patel&backgroundColor=1a1a2e"
   },
   {
     "name": "Ishan Kishan",
@@ -564,7 +590,8 @@
       "catches": 14,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ishan%20Kishan&backgroundColor=1a1a2e"
   },
   {
     "name": "Devdutt Padikkal",
@@ -585,7 +612,8 @@
       "catches": 63,
       "fifties": 8,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Devdutt%20Padikkal&backgroundColor=1a1a2e"
   },
   {
     "name": "Arshdeep Singh",
@@ -606,7 +634,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Arshdeep%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Harshal Patel",
@@ -627,7 +656,8 @@
       "catches": 24,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harshal%20Patel&backgroundColor=1a1a2e"
   },
   {
     "name": "Washington Sundar",
@@ -648,7 +678,8 @@
       "catches": 8,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Washington%20Sundar&backgroundColor=1a1a2e"
   },
   {
     "name": "Venkatesh Iyer",
@@ -669,7 +700,8 @@
       "catches": 27,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Venkatesh%20Iyer&backgroundColor=1a1a2e"
   },
   {
     "name": "Tilak Varma",
@@ -690,7 +722,8 @@
       "catches": 7,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tilak%20Varma&backgroundColor=1a1a2e"
   },
   {
     "name": "Rinku Singh",
@@ -711,7 +744,8 @@
       "catches": 26,
       "fifties": 16,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rinku%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Abhishek Sharma",
@@ -732,7 +766,8 @@
       "catches": 20,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Abhishek%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Nitish Kumar Reddy",
@@ -753,7 +788,8 @@
       "catches": 16,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nitish%20Kumar%20Reddy&backgroundColor=1a1a2e"
   },
   {
     "name": "David Warner",
@@ -774,7 +810,8 @@
       "catches": 33,
       "fifties": 10,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=David%20Warner&backgroundColor=1a1a2e"
   },
   {
     "name": "Glenn Maxwell",
@@ -795,7 +832,8 @@
       "catches": 87,
       "fifties": 21,
       "hundreds": 4
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Glenn%20Maxwell&backgroundColor=1a1a2e"
   },
   {
     "name": "Trent Boult",
@@ -816,7 +854,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Trent%20Boult&backgroundColor=1a1a2e"
   },
   {
     "name": "Quinton de Kock",
@@ -837,7 +876,8 @@
       "catches": 15,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Quinton%20de%20Kock&backgroundColor=1a1a2e"
   },
   {
     "name": "Faf du Plessis",
@@ -858,7 +898,8 @@
       "catches": 3,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Faf%20du%20Plessis&backgroundColor=1a1a2e"
   },
   {
     "name": "Kane Williamson",
@@ -879,7 +920,8 @@
       "catches": 21,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kane%20Williamson&backgroundColor=1a1a2e"
   },
   {
     "name": "Liam Livingstone",
@@ -900,7 +942,8 @@
       "catches": 63,
       "fifties": 14,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Liam%20Livingstone&backgroundColor=1a1a2e"
   },
   {
     "name": "David Miller",
@@ -921,7 +964,8 @@
       "catches": 55,
       "fifties": 11,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=David%20Miller&backgroundColor=1a1a2e"
   },
   {
     "name": "Marcus Stoinis",
@@ -942,7 +986,8 @@
       "catches": 7,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Marcus%20Stoinis&backgroundColor=1a1a2e"
   },
   {
     "name": "Sam Curran",
@@ -963,7 +1008,8 @@
       "catches": 45,
       "fifties": 13,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sam%20Curran&backgroundColor=1a1a2e"
   },
   {
     "name": "Marco Jansen",
@@ -984,7 +1030,8 @@
       "catches": 42,
       "fifties": 8,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Marco%20Jansen&backgroundColor=1a1a2e"
   },
   {
     "name": "Josh Hazlewood",
@@ -1005,7 +1052,8 @@
       "catches": 57,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Josh%20Hazlewood&backgroundColor=1a1a2e"
   },
   {
     "name": "Rachin Ravindra",
@@ -1026,7 +1074,8 @@
       "catches": 29,
       "fifties": 11,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rachin%20Ravindra&backgroundColor=1a1a2e"
   },
   {
     "name": "Travis Head",
@@ -1047,7 +1096,8 @@
       "catches": 18,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Travis%20Head&backgroundColor=1a1a2e"
   },
   {
     "name": "Phil Salt",
@@ -1068,7 +1118,8 @@
       "catches": 18,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Phil%20Salt&backgroundColor=1a1a2e"
   },
   {
     "name": "Jonny Bairstow",
@@ -1089,7 +1140,8 @@
       "catches": 15,
       "fifties": 18,
       "hundreds": 4
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jonny%20Bairstow&backgroundColor=1a1a2e"
   },
   {
     "name": "Wanindu Hasaranga",
@@ -1110,7 +1162,8 @@
       "catches": 52,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Wanindu%20Hasaranga&backgroundColor=1a1a2e"
   },
   {
     "name": "Anrich Nortje",
@@ -1131,7 +1184,8 @@
       "catches": 38,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anrich%20Nortje&backgroundColor=1a1a2e"
   },
   {
     "name": "Mitchell Marsh",
@@ -1152,7 +1206,8 @@
       "catches": 53,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mitchell%20Marsh&backgroundColor=1a1a2e"
   },
   {
     "name": "Harry Brook",
@@ -1173,7 +1228,8 @@
       "catches": 32,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harry%20Brook&backgroundColor=1a1a2e"
   },
   {
     "name": "Devon Conway",
@@ -1194,7 +1250,8 @@
       "catches": 11,
       "fifties": 8,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Devon%20Conway&backgroundColor=1a1a2e"
   },
   {
     "name": "Lockie Ferguson",
@@ -1215,7 +1272,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Lockie%20Ferguson&backgroundColor=1a1a2e"
   },
   {
     "name": "Gerald Coetzee",
@@ -1236,7 +1294,8 @@
       "catches": 43,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gerald%20Coetzee&backgroundColor=1a1a2e"
   },
   {
     "name": "Nandre Burger",
@@ -1257,7 +1316,8 @@
       "catches": 40,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nandre%20Burger&backgroundColor=1a1a2e"
   },
   {
     "name": "Spencer Johnson",
@@ -1278,7 +1338,8 @@
       "catches": 29,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Spencer%20Johnson&backgroundColor=1a1a2e"
   },
   {
     "name": "Maheesh Theekshana",
@@ -1299,7 +1360,8 @@
       "catches": 25,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Maheesh%20Theekshana&backgroundColor=1a1a2e"
   },
   {
     "name": "Adam Zampa",
@@ -1320,7 +1382,8 @@
       "catches": 11,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Adam%20Zampa&backgroundColor=1a1a2e"
   },
   {
     "name": "Jake Fraser-McGurk",
@@ -1341,7 +1404,8 @@
       "catches": 61,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jake%20Fraser-McGurk&backgroundColor=1a1a2e"
   },
   {
     "name": "Shardul Thakur",
@@ -1362,7 +1426,8 @@
       "catches": 56,
       "fifties": 15,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shardul%20Thakur&backgroundColor=1a1a2e"
   },
   {
     "name": "Krunal Pandya",
@@ -1383,7 +1448,8 @@
       "catches": 44,
       "fifties": 10,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Krunal%20Pandya&backgroundColor=1a1a2e"
   },
   {
     "name": "Deepak Chahar",
@@ -1404,7 +1470,8 @@
       "catches": 40,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Deepak%20Chahar&backgroundColor=1a1a2e"
   },
   {
     "name": "Bhuvneshwar Kumar",
@@ -1425,7 +1492,8 @@
       "catches": 25,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Bhuvneshwar%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Khaleel Ahmed",
@@ -1446,7 +1514,8 @@
       "catches": 51,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Khaleel%20Ahmed&backgroundColor=1a1a2e"
   },
   {
     "name": "Avesh Khan",
@@ -1467,7 +1536,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Avesh%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "Prasidh Krishna",
@@ -1488,7 +1558,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prasidh%20Krishna&backgroundColor=1a1a2e"
   },
   {
     "name": "Rahul Chahar",
@@ -1509,7 +1580,8 @@
       "catches": 20,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rahul%20Chahar&backgroundColor=1a1a2e"
   },
   {
     "name": "Mukesh Kumar",
@@ -1530,7 +1602,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mukesh%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Akash Deep",
@@ -1551,7 +1624,8 @@
       "catches": 26,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akash%20Deep&backgroundColor=1a1a2e"
   },
   {
     "name": "T Natarajan",
@@ -1572,7 +1646,8 @@
       "catches": 11,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=T%20Natarajan&backgroundColor=1a1a2e"
   },
   {
     "name": "Rahul Tripathi",
@@ -1593,7 +1668,8 @@
       "catches": 23,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rahul%20Tripathi&backgroundColor=1a1a2e"
   },
   {
     "name": "Nitish Rana",
@@ -1614,7 +1690,8 @@
       "catches": 12,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nitish%20Rana&backgroundColor=1a1a2e"
   },
   {
     "name": "Prithvi Shaw",
@@ -1635,7 +1712,8 @@
       "catches": 25,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prithvi%20Shaw&backgroundColor=1a1a2e"
   },
   {
     "name": "Ajinkya Rahane",
@@ -1656,7 +1734,8 @@
       "catches": 6,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ajinkya%20Rahane&backgroundColor=1a1a2e"
   },
   {
     "name": "Mayank Agarwal",
@@ -1677,7 +1756,8 @@
       "catches": 17,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mayank%20Agarwal&backgroundColor=1a1a2e"
   },
   {
     "name": "Karun Nair",
@@ -1698,7 +1778,8 @@
       "catches": 39,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Karun%20Nair&backgroundColor=1a1a2e"
   },
   {
     "name": "Manish Pandey",
@@ -1719,7 +1800,8 @@
       "catches": 18,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Manish%20Pandey&backgroundColor=1a1a2e"
   },
   {
     "name": "Sai Sudharsan",
@@ -1740,7 +1822,8 @@
       "catches": 36,
       "fifties": 12,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sai%20Sudharsan&backgroundColor=1a1a2e"
   },
   {
     "name": "Shivam Dube",
@@ -1761,7 +1844,8 @@
       "catches": 46,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shivam%20Dube&backgroundColor=1a1a2e"
   },
   {
     "name": "Vijay Shankar",
@@ -1782,7 +1866,8 @@
       "catches": 55,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vijay%20Shankar&backgroundColor=1a1a2e"
   },
   {
     "name": "Shahbaz Ahmed",
@@ -1803,7 +1888,8 @@
       "catches": 28,
       "fifties": 9,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shahbaz%20Ahmed&backgroundColor=1a1a2e"
   },
   {
     "name": "Deepak Hooda",
@@ -1824,7 +1910,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Deepak%20Hooda&backgroundColor=1a1a2e"
   },
   {
     "name": "Rahul Tewatia",
@@ -1845,7 +1932,8 @@
       "catches": 23,
       "fifties": 14,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rahul%20Tewatia&backgroundColor=1a1a2e"
   },
   {
     "name": "Shahrukh Khan",
@@ -1866,7 +1954,8 @@
       "catches": 4,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shahrukh%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "Ravi Bishnoi",
@@ -1887,7 +1976,8 @@
       "catches": 24,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ravi%20Bishnoi&backgroundColor=1a1a2e"
   },
   {
     "name": "Tushar Deshpande",
@@ -1908,7 +1998,8 @@
       "catches": 21,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tushar%20Deshpande&backgroundColor=1a1a2e"
   },
   {
     "name": "Mayank Yadav",
@@ -1929,7 +2020,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mayank%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Umran Malik",
@@ -1950,7 +2042,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Umran%20Malik&backgroundColor=1a1a2e"
   },
   {
     "name": "Jitesh Sharma",
@@ -1971,7 +2064,8 @@
       "catches": 8,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jitesh%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Dhruv Jurel",
@@ -1992,7 +2086,8 @@
       "catches": 34,
       "fifties": 11,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dhruv%20Jurel&backgroundColor=1a1a2e"
   },
   {
     "name": "Rajat Patidar",
@@ -2013,7 +2108,8 @@
       "catches": 15,
       "fifties": 13,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rajat%20Patidar&backgroundColor=1a1a2e"
   },
   {
     "name": "Ayush Badoni",
@@ -2034,7 +2130,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ayush%20Badoni&backgroundColor=1a1a2e"
   },
   {
     "name": "Shashank Singh",
@@ -2055,7 +2152,8 @@
       "catches": 55,
       "fifties": 8,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shashank%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Rovman Powell",
@@ -2076,7 +2174,8 @@
       "catches": 14,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rovman%20Powell&backgroundColor=1a1a2e"
   },
   {
     "name": "Glenn Phillips",
@@ -2097,7 +2196,8 @@
       "catches": 11,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Glenn%20Phillips&backgroundColor=1a1a2e"
   },
   {
     "name": "Aiden Markram",
@@ -2118,7 +2218,8 @@
       "catches": 25,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aiden%20Markram&backgroundColor=1a1a2e"
   },
   {
     "name": "Daryl Mitchell",
@@ -2139,7 +2240,8 @@
       "catches": 19,
       "fifties": 11,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Daryl%20Mitchell&backgroundColor=1a1a2e"
   },
   {
     "name": "Moeen Ali",
@@ -2160,7 +2262,8 @@
       "catches": 44,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Moeen%20Ali&backgroundColor=1a1a2e"
   },
   {
     "name": "Tim David",
@@ -2181,7 +2284,8 @@
       "catches": 55,
       "fifties": 16,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tim%20David&backgroundColor=1a1a2e"
   },
   {
     "name": "Will Jacks",
@@ -2202,7 +2306,8 @@
       "catches": 10,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Will%20Jacks&backgroundColor=1a1a2e"
   },
   {
     "name": "Rahmanullah Gurbaz",
@@ -2223,7 +2328,8 @@
       "catches": 32,
       "fifties": 14,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rahmanullah%20Gurbaz&backgroundColor=1a1a2e"
   },
   {
     "name": "Tristan Stubbs",
@@ -2244,7 +2350,8 @@
       "catches": 57,
       "fifties": 8,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tristan%20Stubbs&backgroundColor=1a1a2e"
   },
   {
     "name": "Alzarri Joseph",
@@ -2265,7 +2372,8 @@
       "catches": 7,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Alzarri%20Joseph&backgroundColor=1a1a2e"
   },
   {
     "name": "Fazalhaq Farooqi",
@@ -2286,7 +2394,8 @@
       "catches": 36,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Fazalhaq%20Farooqi&backgroundColor=1a1a2e"
   },
   {
     "name": "Mustafizur Rahman",
@@ -2307,7 +2416,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mustafizur%20Rahman&backgroundColor=1a1a2e"
   },
   {
     "name": "Naveen-ul-Haq",
@@ -2328,7 +2438,8 @@
       "catches": 33,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Naveen-ul-Haq&backgroundColor=1a1a2e"
   },
   {
     "name": "Adil Rashid",
@@ -2349,7 +2460,8 @@
       "catches": 34,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Adil%20Rashid&backgroundColor=1a1a2e"
   },
   {
     "name": "Matheesha Pathirana",
@@ -2370,7 +2482,8 @@
       "catches": 35,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Matheesha%20Pathirana&backgroundColor=1a1a2e"
   },
   {
     "name": "Rilee Rossouw",
@@ -2391,7 +2504,8 @@
       "catches": 2,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rilee%20Rossouw&backgroundColor=1a1a2e"
   },
   {
     "name": "Azmatullah Omarzai",
@@ -2412,7 +2526,8 @@
       "catches": 4,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Azmatullah%20Omarzai&backgroundColor=1a1a2e"
   },
   {
     "name": "Romario Shepherd",
@@ -2433,7 +2548,8 @@
       "catches": 8,
       "fifties": 11,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Romario%20Shepherd&backgroundColor=1a1a2e"
   },
   {
     "name": "Alex Carey",
@@ -2454,7 +2570,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Alex%20Carey&backgroundColor=1a1a2e"
   },
   {
     "name": "Shai Hope",
@@ -2475,7 +2592,8 @@
       "catches": 67,
       "fifties": 10,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shai%20Hope&backgroundColor=1a1a2e"
   },
   {
     "name": "Steven Smith",
@@ -2496,7 +2614,8 @@
       "catches": 57,
       "fifties": 13,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Steven%20Smith&backgroundColor=1a1a2e"
   },
   {
     "name": "Mitchell Santner",
@@ -2517,7 +2636,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mitchell%20Santner&backgroundColor=1a1a2e"
   },
   {
     "name": "Keshav Maharaj",
@@ -2538,7 +2658,8 @@
       "catches": 32,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Keshav%20Maharaj&backgroundColor=1a1a2e"
   },
   {
     "name": "Lungi Ngidi",
@@ -2559,7 +2680,8 @@
       "catches": 53,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Lungi%20Ngidi&backgroundColor=1a1a2e"
   },
   {
     "name": "Reece Topley",
@@ -2580,7 +2702,8 @@
       "catches": 28,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Reece%20Topley&backgroundColor=1a1a2e"
   },
   {
     "name": "Matt Henry",
@@ -2601,7 +2724,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Matt%20Henry&backgroundColor=1a1a2e"
   },
   {
     "name": "Kwena Maphaka",
@@ -2622,7 +2746,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kwena%20Maphaka&backgroundColor=1a1a2e"
   },
   {
     "name": "Donovan Ferreira",
@@ -2643,7 +2768,8 @@
       "catches": 11,
       "fifties": 10,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Donovan%20Ferreira&backgroundColor=1a1a2e"
   },
   {
     "name": "Ryan Rickelton",
@@ -2664,7 +2790,8 @@
       "catches": 13,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ryan%20Rickelton&backgroundColor=1a1a2e"
   },
   {
     "name": "Josh Inglis",
@@ -2685,7 +2812,8 @@
       "catches": 14,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Josh%20Inglis&backgroundColor=1a1a2e"
   },
   {
     "name": "Noor Ahmad",
@@ -2706,7 +2834,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Noor%20Ahmad&backgroundColor=1a1a2e"
   },
   {
     "name": "Yash Dhull",
@@ -2727,7 +2856,8 @@
       "catches": 26,
       "fifties": 10,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yash%20Dhull&backgroundColor=1a1a2e"
   },
   {
     "name": "Abhinav Manohar",
@@ -2748,7 +2878,8 @@
       "catches": 36,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Abhinav%20Manohar&backgroundColor=1a1a2e"
   },
   {
     "name": "Angkrish Raghuvanshi",
@@ -2769,7 +2900,8 @@
       "catches": 12,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Angkrish%20Raghuvanshi&backgroundColor=1a1a2e"
   },
   {
     "name": "Anmolpreet Singh",
@@ -2790,7 +2922,8 @@
       "catches": 37,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anmolpreet%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Atharva Taide",
@@ -2811,7 +2944,8 @@
       "catches": 16,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Atharva%20Taide&backgroundColor=1a1a2e"
   },
   {
     "name": "Harpreet Brar",
@@ -2832,7 +2966,8 @@
       "catches": 38,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harpreet%20Brar&backgroundColor=1a1a2e"
   },
   {
     "name": "Naman Dhir",
@@ -2853,7 +2988,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Naman%20Dhir&backgroundColor=1a1a2e"
   },
   {
     "name": "Mahipal Lomror",
@@ -2874,7 +3010,8 @@
       "catches": 29,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mahipal%20Lomror&backgroundColor=1a1a2e"
   },
   {
     "name": "Sameer Rizvi",
@@ -2895,7 +3032,8 @@
       "catches": 2,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sameer%20Rizvi&backgroundColor=1a1a2e"
   },
   {
     "name": "Abdul Samad",
@@ -2916,7 +3054,8 @@
       "catches": 7,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Abdul%20Samad&backgroundColor=1a1a2e"
   },
   {
     "name": "Ashutosh Sharma",
@@ -2937,7 +3076,8 @@
       "catches": 27,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ashutosh%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Nishant Sindhu",
@@ -2958,7 +3098,8 @@
       "catches": 37,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nishant%20Sindhu&backgroundColor=1a1a2e"
   },
   {
     "name": "Utkarsh Singh",
@@ -2979,7 +3120,8 @@
       "catches": 30,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Utkarsh%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Aryan Juyal",
@@ -3000,7 +3142,8 @@
       "catches": 4,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aryan%20Juyal&backgroundColor=1a1a2e"
   },
   {
     "name": "Kumar Kushagra",
@@ -3021,7 +3164,8 @@
       "catches": 16,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kumar%20Kushagra&backgroundColor=1a1a2e"
   },
   {
     "name": "Robin Minz",
@@ -3042,7 +3186,8 @@
       "catches": 10,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Robin%20Minz&backgroundColor=1a1a2e"
   },
   {
     "name": "Anuj Rawat",
@@ -3063,7 +3208,8 @@
       "catches": 12,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anuj%20Rawat&backgroundColor=1a1a2e"
   },
   {
     "name": "Luvnith Sisodia",
@@ -3084,7 +3230,8 @@
       "catches": 8,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Luvnith%20Sisodia&backgroundColor=1a1a2e"
   },
   {
     "name": "Vishnu Vinod",
@@ -3105,7 +3252,8 @@
       "catches": 18,
       "fifties": 8,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vishnu%20Vinod&backgroundColor=1a1a2e"
   },
   {
     "name": "Vaibhav Arora",
@@ -3126,7 +3274,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vaibhav%20Arora&backgroundColor=1a1a2e"
   },
   {
     "name": "Rasikh Dar",
@@ -3147,7 +3296,8 @@
       "catches": 29,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rasikh%20Dar&backgroundColor=1a1a2e"
   },
   {
     "name": "Akash Madhwal",
@@ -3168,7 +3318,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akash%20Madhwal&backgroundColor=1a1a2e"
   },
   {
     "name": "Mohit Sharma",
@@ -3189,7 +3340,8 @@
       "catches": 37,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mohit%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Simarjeet Singh",
@@ -3210,7 +3362,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Simarjeet%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Yash Thakur",
@@ -3231,7 +3384,8 @@
       "catches": 30,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yash%20Thakur&backgroundColor=1a1a2e"
   },
   {
     "name": "Kartik Tyagi",
@@ -3252,7 +3406,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kartik%20Tyagi&backgroundColor=1a1a2e"
   },
   {
     "name": "Vyshak Vijaykumar",
@@ -3273,7 +3428,8 @@
       "catches": 14,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vyshak%20Vijaykumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Piyush Chawla",
@@ -3294,7 +3450,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Piyush%20Chawla&backgroundColor=1a1a2e"
   },
   {
     "name": "Shreyas Gopal",
@@ -3315,7 +3472,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shreyas%20Gopal&backgroundColor=1a1a2e"
   },
   {
     "name": "Mayank Markande",
@@ -3336,7 +3494,8 @@
       "catches": 32,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mayank%20Markande&backgroundColor=1a1a2e"
   },
   {
     "name": "Suyash Sharma",
@@ -3357,7 +3516,8 @@
       "catches": 15,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Suyash%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Karn Sharma",
@@ -3378,7 +3538,8 @@
       "catches": 35,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Karn%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Kumar Kartikeya Singh",
@@ -3399,7 +3560,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kumar%20Kartikeya%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Manav Suthar",
@@ -3420,7 +3582,8 @@
       "catches": 23,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Manav%20Suthar&backgroundColor=1a1a2e"
   },
   {
     "name": "Ricky Bhui",
@@ -3441,7 +3604,8 @@
       "catches": 19,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ricky%20Bhui&backgroundColor=1a1a2e"
   },
   {
     "name": "Swastik Chhikara",
@@ -3462,7 +3626,8 @@
       "catches": 15,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Swastik%20Chhikara&backgroundColor=1a1a2e"
   },
   {
     "name": "Nehal Wadhera",
@@ -3483,7 +3648,8 @@
       "catches": 29,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nehal%20Wadhera&backgroundColor=1a1a2e"
   },
   {
     "name": "Shubham Dubey",
@@ -3504,7 +3670,8 @@
       "catches": 17,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shubham%20Dubey&backgroundColor=1a1a2e"
   },
   {
     "name": "Madhav Kaushik",
@@ -3525,7 +3692,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Madhav%20Kaushik&backgroundColor=1a1a2e"
   },
   {
     "name": "Pukhraj Mann",
@@ -3546,7 +3714,8 @@
       "catches": 12,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pukhraj%20Mann&backgroundColor=1a1a2e"
   },
   {
     "name": "Shaik Rasheed",
@@ -3567,7 +3736,8 @@
       "catches": 11,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shaik%20Rasheed&backgroundColor=1a1a2e"
   },
   {
     "name": "Himmat Singh",
@@ -3588,7 +3758,8 @@
       "catches": 4,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Himmat%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Mayank Dagar",
@@ -3609,7 +3780,8 @@
       "catches": 22,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mayank%20Dagar&backgroundColor=1a1a2e"
   },
   {
     "name": "Anshul Kamboj",
@@ -3630,7 +3802,8 @@
       "catches": 13,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anshul%20Kamboj&backgroundColor=1a1a2e"
   },
   {
     "name": "Darshan Nalkande",
@@ -3651,7 +3824,8 @@
       "catches": 16,
       "fifties": 8,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Darshan%20Nalkande&backgroundColor=1a1a2e"
   },
   {
     "name": "Suyash Prabhudessai",
@@ -3672,7 +3846,8 @@
       "catches": 4,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Suyash%20Prabhudessai&backgroundColor=1a1a2e"
   },
   {
     "name": "Anukul Roy",
@@ -3693,7 +3868,8 @@
       "catches": 23,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anukul%20Roy&backgroundColor=1a1a2e"
   },
   {
     "name": "Swapnil Singh",
@@ -3714,7 +3890,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Swapnil%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Sanvir Singh",
@@ -3735,7 +3912,8 @@
       "catches": 45,
       "fifties": 8,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sanvir%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Gurnoor Singh Brar",
@@ -3756,7 +3934,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gurnoor%20Singh%20Brar&backgroundColor=1a1a2e"
   },
   {
     "name": "Mukesh Choudhary",
@@ -3777,7 +3956,8 @@
       "catches": 20,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mukesh%20Choudhary&backgroundColor=1a1a2e"
   },
   {
     "name": "Sakib Hussain",
@@ -3798,7 +3978,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sakib%20Hussain&backgroundColor=1a1a2e"
   },
   {
     "name": "Vidwath Kaverappa",
@@ -3819,7 +4000,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vidwath%20Kaverappa&backgroundColor=1a1a2e"
   },
   {
     "name": "Rajan Kumar",
@@ -3840,7 +4022,8 @@
       "catches": 22,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rajan%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Sushant Mishra",
@@ -3861,7 +4044,8 @@
       "catches": 12,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sushant%20Mishra&backgroundColor=1a1a2e"
   },
   {
     "name": "Arjun Tendulkar",
@@ -3882,7 +4066,8 @@
       "catches": 6,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Arjun%20Tendulkar&backgroundColor=1a1a2e"
   },
   {
     "name": "Prashant Solanki",
@@ -3903,7 +4088,8 @@
       "catches": 28,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prashant%20Solanki&backgroundColor=1a1a2e"
   },
   {
     "name": "Ishant Sharma",
@@ -3924,7 +4110,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ishant%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Jaydev Unadkat",
@@ -3945,7 +4132,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jaydev%20Unadkat&backgroundColor=1a1a2e"
   },
   {
     "name": "Umesh Yadav",
@@ -3966,7 +4154,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Umesh%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Chetan Sakariya",
@@ -3987,7 +4176,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chetan%20Sakariya&backgroundColor=1a1a2e"
   },
   {
     "name": "Navdeep Saini",
@@ -4008,7 +4198,8 @@
       "catches": 24,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Navdeep%20Saini&backgroundColor=1a1a2e"
   },
   {
     "name": "Sachin Baby",
@@ -4029,7 +4220,8 @@
       "catches": 13,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sachin%20Baby&backgroundColor=1a1a2e"
   },
   {
     "name": "Priyam Garg",
@@ -4050,7 +4242,8 @@
       "catches": 14,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Priyam%20Garg&backgroundColor=1a1a2e"
   },
   {
     "name": "Krishnappa Gowtham",
@@ -4071,7 +4264,8 @@
       "catches": 4,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Krishnappa%20Gowtham&backgroundColor=1a1a2e"
   },
   {
     "name": "Jayant Yadav",
@@ -4092,7 +4286,8 @@
       "catches": 18,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jayant%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Sarfaraz Khan",
@@ -4113,7 +4308,8 @@
       "catches": 8,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sarfaraz%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "R Sai Kishore",
@@ -4134,7 +4330,8 @@
       "catches": 16,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=R%20Sai%20Kishore&backgroundColor=1a1a2e"
   },
   {
     "name": "Lalit Yadav",
@@ -4155,7 +4352,8 @@
       "catches": 26,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Lalit%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Harshit Rana",
@@ -4176,7 +4374,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harshit%20Rana&backgroundColor=1a1a2e"
   },
   {
     "name": "Shivam Mavi",
@@ -4197,7 +4396,8 @@
       "catches": 22,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shivam%20Mavi&backgroundColor=1a1a2e"
   },
   {
     "name": "Varun Chakaravarthy",
@@ -4218,7 +4418,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Varun%20Chakaravarthy&backgroundColor=1a1a2e"
   },
   {
     "name": "Sandeep Sharma",
@@ -4239,7 +4440,8 @@
       "catches": 18,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sandeep%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Ishan Porel",
@@ -4260,7 +4462,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ishan%20Porel&backgroundColor=1a1a2e"
   },
   {
     "name": "Kamlesh Nagarkoti",
@@ -4281,7 +4484,8 @@
       "catches": 14,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kamlesh%20Nagarkoti&backgroundColor=1a1a2e"
   },
   {
     "name": "Basil Thampi",
@@ -4302,7 +4506,8 @@
       "catches": 19,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Basil%20Thampi&backgroundColor=1a1a2e"
   },
   {
     "name": "Kuldeep Sen",
@@ -4323,7 +4528,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kuldeep%20Sen&backgroundColor=1a1a2e"
   },
   {
     "name": "Yash Dayal",
@@ -4344,7 +4550,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yash%20Dayal&backgroundColor=1a1a2e"
   },
   {
     "name": "Mohsin Khan",
@@ -4365,7 +4572,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mohsin%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "Ramandeep Singh",
@@ -4386,7 +4594,8 @@
       "catches": 27,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ramandeep%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Prabhsimran Singh",
@@ -4407,7 +4616,8 @@
       "catches": 8,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prabhsimran%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Avanish Aravelly",
@@ -4428,7 +4638,8 @@
       "catches": 12,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Avanish%20Aravelly&backgroundColor=1a1a2e"
   },
   {
     "name": "Vansh Bedi",
@@ -4449,7 +4660,8 @@
       "catches": 15,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vansh%20Bedi&backgroundColor=1a1a2e"
   },
   {
     "name": "Saurav Chauhan",
@@ -4470,7 +4682,8 @@
       "catches": 9,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Saurav%20Chauhan&backgroundColor=1a1a2e"
   },
   {
     "name": "Harvik Desai",
@@ -4491,7 +4704,8 @@
       "catches": 15,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harvik%20Desai&backgroundColor=1a1a2e"
   },
   {
     "name": "Kunal Rathore",
@@ -4512,7 +4726,8 @@
       "catches": 10,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kunal%20Rathore&backgroundColor=1a1a2e"
   },
   {
     "name": "B.R Sharath",
@@ -4533,7 +4748,8 @@
       "catches": 4,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=B.R%20Sharath&backgroundColor=1a1a2e"
   },
   {
     "name": "Upendra Singh Yadav",
@@ -4554,7 +4770,8 @@
       "catches": 39,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Upendra%20Singh%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Sachin Dhas",
@@ -4575,7 +4792,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sachin%20Dhas&backgroundColor=1a1a2e"
   },
   {
     "name": "Priyansh Arya",
@@ -4596,7 +4814,8 @@
       "catches": 20,
       "fifties": 9,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Priyansh%20Arya&backgroundColor=1a1a2e"
   },
   {
     "name": "Manoj Bhandage",
@@ -4617,7 +4836,8 @@
       "catches": 18,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Manoj%20Bhandage&backgroundColor=1a1a2e"
   },
   {
     "name": "Pravin Dubey",
@@ -4638,7 +4858,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pravin%20Dubey&backgroundColor=1a1a2e"
   },
   {
     "name": "Ajay Mandal",
@@ -4659,7 +4880,8 @@
       "catches": 17,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ajay%20Mandal&backgroundColor=1a1a2e"
   },
   {
     "name": "Prerak Mankad",
@@ -4680,7 +4902,8 @@
       "catches": 11,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prerak%20Mankad&backgroundColor=1a1a2e"
   },
   {
     "name": "Rajvardhan Hangargekar",
@@ -4701,7 +4924,8 @@
       "catches": 19,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rajvardhan%20Hangargekar&backgroundColor=1a1a2e"
   },
   {
     "name": "Tanush Kotian",
@@ -4722,7 +4946,8 @@
       "catches": 3,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tanush%20Kotian&backgroundColor=1a1a2e"
   },
   {
     "name": "Arshin Kulkarni",
@@ -4743,7 +4968,8 @@
       "catches": 11,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Arshin%20Kulkarni&backgroundColor=1a1a2e"
   },
   {
     "name": "Shams Mulani",
@@ -4764,7 +4990,8 @@
       "catches": 17,
       "fifties": 10,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shams%20Mulani&backgroundColor=1a1a2e"
   },
   {
     "name": "Shivam Singh",
@@ -4785,7 +5012,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shivam%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Abhimanyu Easwaran",
@@ -4806,7 +5034,8 @@
       "catches": 8,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Abhimanyu%20Easwaran&backgroundColor=1a1a2e"
   },
   {
     "name": "Musheer Khan",
@@ -4827,7 +5056,8 @@
       "catches": 23,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Musheer%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "Hrithik Shokeen",
@@ -4848,7 +5078,8 @@
       "catches": 2,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Hrithik%20Shokeen&backgroundColor=1a1a2e"
   },
   {
     "name": "Sandeep Warrier",
@@ -4869,7 +5100,8 @@
       "catches": 17,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sandeep%20Warrier&backgroundColor=1a1a2e"
   },
   {
     "name": "Rishi Dhawan",
@@ -4890,7 +5122,8 @@
       "catches": 27,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rishi%20Dhawan&backgroundColor=1a1a2e"
   },
   {
     "name": "Vijayakanth Viyaskanth",
@@ -4911,7 +5144,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vijayakanth%20Viyaskanth&backgroundColor=1a1a2e"
   },
   {
     "name": "Murugan Ashwin",
@@ -4932,7 +5166,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Murugan%20Ashwin&backgroundColor=1a1a2e"
   },
   {
     "name": "Jagadeesha Suchith",
@@ -4953,7 +5188,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jagadeesha%20Suchith&backgroundColor=1a1a2e"
   },
   {
     "name": "Narayan Jagadeesan",
@@ -4974,7 +5210,8 @@
       "catches": 17,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Narayan%20Jagadeesan&backgroundColor=1a1a2e"
   },
   {
     "name": "Tanmay Agarwal",
@@ -4995,7 +5232,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tanmay%20Agarwal&backgroundColor=1a1a2e"
   },
   {
     "name": "Ayush Mhatre",
@@ -5016,7 +5254,8 @@
       "catches": 15,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ayush%20Mhatre&backgroundColor=1a1a2e"
   },
   {
     "name": "Manan Vohra",
@@ -5037,7 +5276,8 @@
       "catches": 13,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Manan%20Vohra&backgroundColor=1a1a2e"
   },
   {
     "name": "Samarth Vyas",
@@ -5058,7 +5298,8 @@
       "catches": 3,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Samarth%20Vyas&backgroundColor=1a1a2e"
   },
   {
     "name": "Raj Angad Bawa",
@@ -5079,7 +5320,8 @@
       "catches": 9,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Raj%20Angad%20Bawa&backgroundColor=1a1a2e"
   },
   {
     "name": "Suryansh Shedge",
@@ -5100,7 +5342,8 @@
       "catches": 4,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Suryansh%20Shedge&backgroundColor=1a1a2e"
   },
   {
     "name": "Mayank Rawat",
@@ -5121,7 +5364,8 @@
       "catches": 4,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mayank%20Rawat&backgroundColor=1a1a2e"
   },
   {
     "name": "Anmol Malhotra",
@@ -5142,7 +5386,8 @@
       "catches": 20,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anmol%20Malhotra&backgroundColor=1a1a2e"
   },
   {
     "name": "Siddharth Yadav",
@@ -5163,7 +5408,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Siddharth%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Naman Tiwari",
@@ -5184,7 +5430,8 @@
       "catches": 6,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Naman%20Tiwari&backgroundColor=1a1a2e"
   },
   {
     "name": "Vipraj Nigam",
@@ -5205,7 +5452,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vipraj%20Nigam&backgroundColor=1a1a2e"
   },
   {
     "name": "Vicky Ostwal",
@@ -5226,7 +5474,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vicky%20Ostwal&backgroundColor=1a1a2e"
   },
   {
     "name": "Shivalik Sharma",
@@ -5247,7 +5496,8 @@
       "catches": 22,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shivalik%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Himanshu Chauhan",
@@ -5268,7 +5518,8 @@
       "catches": 29,
       "fifties": 8,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Himanshu%20Chauhan&backgroundColor=1a1a2e"
   },
   {
     "name": "Kuldip Yadav",
@@ -5289,7 +5540,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kuldip%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Aman Khan",
@@ -5310,7 +5562,8 @@
       "catches": 14,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aman%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "Sumit Kumar",
@@ -5331,7 +5584,8 @@
       "catches": 22,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sumit%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Harnoor Pannu",
@@ -5352,7 +5606,8 @@
       "catches": 6,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harnoor%20Pannu&backgroundColor=1a1a2e"
   },
   {
     "name": "Shashwat Rawat",
@@ -5373,7 +5628,8 @@
       "catches": 6,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shashwat%20Rawat&backgroundColor=1a1a2e"
   },
   {
     "name": "Apoorv Wankhade",
@@ -5394,7 +5650,8 @@
       "catches": 11,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Apoorv%20Wankhade&backgroundColor=1a1a2e"
   },
   {
     "name": "Yudhvir Singh Charak",
@@ -5415,7 +5672,8 @@
       "catches": 4,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yudhvir%20Singh%20Charak&backgroundColor=1a1a2e"
   },
   {
     "name": "Mohammed Azharuddeen",
@@ -5436,7 +5694,8 @@
       "catches": 27,
       "fifties": 11,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mohammed%20Azharuddeen&backgroundColor=1a1a2e"
   },
   {
     "name": "Urvil Patel",
@@ -5457,7 +5716,8 @@
       "catches": 3,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Urvil%20Patel&backgroundColor=1a1a2e"
   },
   {
     "name": "Money Grewal",
@@ -5478,7 +5738,8 @@
       "catches": 17,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Money%20Grewal&backgroundColor=1a1a2e"
   },
   {
     "name": "Ashwani Kumar",
@@ -5499,7 +5760,8 @@
       "catches": 32,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ashwani%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Abhilash Shetty",
@@ -5520,7 +5782,8 @@
       "catches": 17,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Abhilash%20Shetty&backgroundColor=1a1a2e"
   },
   {
     "name": "Akash Singh",
@@ -5541,7 +5804,8 @@
       "catches": 17,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akash%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Gurjapneet Singh",
@@ -5562,7 +5826,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gurjapneet%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Chintal Gandhi",
@@ -5583,7 +5848,8 @@
       "catches": 21,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chintal%20Gandhi&backgroundColor=1a1a2e"
   },
   {
     "name": "Salil Arora",
@@ -5604,7 +5870,8 @@
       "catches": 2,
       "fifties": 9,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Salil%20Arora&backgroundColor=1a1a2e"
   },
   {
     "name": "Dinesh Bana",
@@ -5625,7 +5892,8 @@
       "catches": 9,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dinesh%20Bana&backgroundColor=1a1a2e"
   },
   {
     "name": "Shrijith Krishnan",
@@ -5646,7 +5914,8 @@
       "catches": 13,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shrijith%20Krishnan&backgroundColor=1a1a2e"
   },
   {
     "name": "K.M Asif",
@@ -5667,7 +5936,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=K.M%20Asif&backgroundColor=1a1a2e"
   },
   {
     "name": "Akhil Chaudhary",
@@ -5688,7 +5958,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akhil%20Chaudhary&backgroundColor=1a1a2e"
   },
   {
     "name": "Arpit Guleria",
@@ -5709,7 +5980,8 @@
       "catches": 11,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Arpit%20Guleria&backgroundColor=1a1a2e"
   },
   {
     "name": "Nishanth Saranu",
@@ -5730,7 +6002,8 @@
       "catches": 2,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nishanth%20Saranu&backgroundColor=1a1a2e"
   },
   {
     "name": "Shubham Agrawal",
@@ -5751,7 +6024,8 @@
       "catches": 18,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shubham%20Agrawal&backgroundColor=1a1a2e"
   },
   {
     "name": "Jassinder Baidwan",
@@ -5772,7 +6046,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jassinder%20Baidwan&backgroundColor=1a1a2e"
   },
   {
     "name": "Pulkit Narang",
@@ -5793,7 +6068,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pulkit%20Narang&backgroundColor=1a1a2e"
   },
   {
     "name": "Mohit Rathee",
@@ -5814,7 +6090,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mohit%20Rathee&backgroundColor=1a1a2e"
   },
   {
     "name": "Himanshu Singh",
@@ -5835,7 +6112,8 @@
       "catches": 15,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Himanshu%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Saurabh Dubey",
@@ -5856,7 +6134,8 @@
       "catches": 4,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Saurabh%20Dubey&backgroundColor=1a1a2e"
   },
   {
     "name": "Aaqib Khan",
@@ -5877,7 +6156,8 @@
       "catches": 41,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aaqib%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "Kulwant Khejroliya",
@@ -5898,7 +6178,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kulwant%20Khejroliya&backgroundColor=1a1a2e"
   },
   {
     "name": "Ankit Singh Rajpoot",
@@ -5919,7 +6200,8 @@
       "catches": 7,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ankit%20Singh%20Rajpoot&backgroundColor=1a1a2e"
   },
   {
     "name": "Divesh Sharma",
@@ -5940,7 +6222,8 @@
       "catches": 21,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Divesh%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Prince Yadav",
@@ -5961,7 +6244,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prince%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Kunal Singh Chib",
@@ -5982,7 +6266,8 @@
       "catches": 34,
       "fifties": 10,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kunal%20Singh%20Chib&backgroundColor=1a1a2e"
   },
   {
     "name": "Yuvraj Chudasama",
@@ -6003,7 +6288,8 @@
       "catches": 8,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yuvraj%20Chudasama&backgroundColor=1a1a2e"
   },
   {
     "name": "Deepak Devadiga",
@@ -6024,7 +6310,8 @@
       "catches": 10,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Deepak%20Devadiga&backgroundColor=1a1a2e"
   },
   {
     "name": "Avinash Singh",
@@ -6045,7 +6332,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Avinash%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Shivam Shukla",
@@ -6066,7 +6354,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shivam%20Shukla&backgroundColor=1a1a2e"
   },
   {
     "name": "Agni Chopra",
@@ -6087,7 +6376,8 @@
       "catches": 12,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Agni%20Chopra&backgroundColor=1a1a2e"
   },
   {
     "name": "Sudip Gharami",
@@ -6108,7 +6398,8 @@
       "catches": 40,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sudip%20Gharami&backgroundColor=1a1a2e"
   },
   {
     "name": "Shubham Khajuria",
@@ -6129,7 +6420,8 @@
       "catches": 22,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shubham%20Khajuria&backgroundColor=1a1a2e"
   },
   {
     "name": "Akhil Rawat",
@@ -6150,7 +6442,8 @@
       "catches": 26,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akhil%20Rawat&backgroundColor=1a1a2e"
   },
   {
     "name": "Prateek Yadav",
@@ -6171,7 +6464,8 @@
       "catches": 4,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prateek%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Abdul Bazith",
@@ -6192,7 +6486,8 @@
       "catches": 13,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Abdul%20Bazith&backgroundColor=1a1a2e"
   },
   {
     "name": "Yuvraj Chaudhary",
@@ -6213,7 +6508,8 @@
       "catches": 11,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yuvraj%20Chaudhary&backgroundColor=1a1a2e"
   },
   {
     "name": "Hardik Raj",
@@ -6234,7 +6530,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Hardik%20Raj&backgroundColor=1a1a2e"
   },
   {
     "name": "Harsh Tyagi",
@@ -6255,7 +6552,8 @@
       "catches": 11,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harsh%20Tyagi&backgroundColor=1a1a2e"
   },
   {
     "name": "Unmukt Chand",
@@ -6276,7 +6574,8 @@
       "catches": 5,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Unmukt%20Chand&backgroundColor=1a1a2e"
   },
   {
     "name": "Baba Indrajith",
@@ -6297,7 +6596,8 @@
       "catches": 19,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Baba%20Indrajith&backgroundColor=1a1a2e"
   },
   {
     "name": "Baltej Dhanda",
@@ -6318,7 +6618,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Baltej%20Dhanda&backgroundColor=1a1a2e"
   },
   {
     "name": "Prince Choudhary",
@@ -6339,7 +6640,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prince%20Choudhary&backgroundColor=1a1a2e"
   },
   {
     "name": "Hemanshu Sharma",
@@ -6360,7 +6662,8 @@
       "catches": 13,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Hemanshu%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "M. Siddharth",
@@ -6381,7 +6684,8 @@
       "catches": 21,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=M.%20Siddharth&backgroundColor=1a1a2e"
   },
   {
     "name": "Digvesh Singh",
@@ -6402,7 +6706,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Digvesh%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Zeeshan Ansari",
@@ -6423,7 +6728,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Zeeshan%20Ansari&backgroundColor=1a1a2e"
   },
   {
     "name": "Finn Allen",
@@ -6444,7 +6750,8 @@
       "catches": 8,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Finn%20Allen&backgroundColor=1a1a2e"
   },
   {
     "name": "Dewald Brevis",
@@ -6465,7 +6772,8 @@
       "catches": 8,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dewald%20Brevis&backgroundColor=1a1a2e"
   },
   {
     "name": "Ben Duckett",
@@ -6486,7 +6794,8 @@
       "catches": 6,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ben%20Duckett&backgroundColor=1a1a2e"
   },
   {
     "name": "Sherfane Rutherford",
@@ -6507,7 +6816,8 @@
       "catches": 11,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sherfane%20Rutherford&backgroundColor=1a1a2e"
   },
   {
     "name": "Ashton Turner",
@@ -6528,7 +6838,8 @@
       "catches": 7,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ashton%20Turner&backgroundColor=1a1a2e"
   },
   {
     "name": "James Vince",
@@ -6549,7 +6860,8 @@
       "catches": 2,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=James%20Vince&backgroundColor=1a1a2e"
   },
   {
     "name": "Michael Bracewell",
@@ -6570,7 +6882,8 @@
       "catches": 33,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Michael%20Bracewell&backgroundColor=1a1a2e"
   },
   {
     "name": "Tom Banton",
@@ -6591,7 +6904,8 @@
       "catches": 28,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tom%20Banton&backgroundColor=1a1a2e"
   },
   {
     "name": "Sam Billings",
@@ -6612,7 +6926,8 @@
       "catches": 7,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sam%20Billings&backgroundColor=1a1a2e"
   },
   {
     "name": "Ben McDermott",
@@ -6633,7 +6948,8 @@
       "catches": 15,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ben%20McDermott&backgroundColor=1a1a2e"
   },
   {
     "name": "Kusal Mendis",
@@ -6654,7 +6970,8 @@
       "catches": 29,
       "fifties": 8,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kusal%20Mendis&backgroundColor=1a1a2e"
   },
   {
     "name": "Kusal Perera",
@@ -6675,7 +6992,8 @@
       "catches": 7,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kusal%20Perera&backgroundColor=1a1a2e"
   },
   {
     "name": "Josh Philippe",
@@ -6696,7 +7014,8 @@
       "catches": 16,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Josh%20Philippe&backgroundColor=1a1a2e"
   },
   {
     "name": "Tim Seifert",
@@ -6717,7 +7036,8 @@
       "catches": 23,
       "fifties": 9,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tim%20Seifert&backgroundColor=1a1a2e"
   },
   {
     "name": "Rishad Hossain",
@@ -6738,7 +7058,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rishad%20Hossain&backgroundColor=1a1a2e"
   },
   {
     "name": "Tabraiz Shamsi",
@@ -6759,7 +7080,8 @@
       "catches": 30,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tabraiz%20Shamsi&backgroundColor=1a1a2e"
   },
   {
     "name": "Jeffery Vandersay",
@@ -6780,7 +7102,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jeffery%20Vandersay&backgroundColor=1a1a2e"
   },
   {
     "name": "Tanveer Sangha",
@@ -6801,7 +7124,8 @@
       "catches": 15,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tanveer%20Sangha&backgroundColor=1a1a2e"
   },
   {
     "name": "Sediqullah Atal",
@@ -6822,7 +7146,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sediqullah%20Atal&backgroundColor=1a1a2e"
   },
   {
     "name": "Matthew Breetzke",
@@ -6843,7 +7168,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Matthew%20Breetzke&backgroundColor=1a1a2e"
   },
   {
     "name": "Mark Chapman",
@@ -6864,7 +7190,8 @@
       "catches": 3,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mark%20Chapman&backgroundColor=1a1a2e"
   },
   {
     "name": "Brandon King",
@@ -6885,7 +7212,8 @@
       "catches": 19,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Brandon%20King&backgroundColor=1a1a2e"
   },
   {
     "name": "Evin Lewis",
@@ -6906,7 +7234,8 @@
       "catches": 20,
       "fifties": 10,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Evin%20Lewis&backgroundColor=1a1a2e"
   },
   {
     "name": "Pathum Nissanka",
@@ -6927,7 +7256,8 @@
       "catches": 17,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pathum%20Nissanka&backgroundColor=1a1a2e"
   },
   {
     "name": "Bhanuka Rajapaksa",
@@ -6948,7 +7278,8 @@
       "catches": 4,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Bhanuka%20Rajapaksa&backgroundColor=1a1a2e"
   },
   {
     "name": "Gus Atkinson",
@@ -6969,7 +7300,8 @@
       "catches": 6,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gus%20Atkinson&backgroundColor=1a1a2e"
   },
   {
     "name": "Tom Curran",
@@ -6990,7 +7322,8 @@
       "catches": 16,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tom%20Curran&backgroundColor=1a1a2e"
   },
   {
     "name": "Mohammad Nabi",
@@ -7011,7 +7344,8 @@
       "catches": 28,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mohammad%20Nabi&backgroundColor=1a1a2e"
   },
   {
     "name": "Gulbadin Naib",
@@ -7032,7 +7366,8 @@
       "catches": 14,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gulbadin%20Naib&backgroundColor=1a1a2e"
   },
   {
     "name": "Sikandar Raza",
@@ -7053,7 +7388,8 @@
       "catches": 15,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sikandar%20Raza&backgroundColor=1a1a2e"
   },
   {
     "name": "Johnson Charles",
@@ -7074,7 +7410,8 @@
       "catches": 21,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Johnson%20Charles&backgroundColor=1a1a2e"
   },
   {
     "name": "Litton Das",
@@ -7095,7 +7432,8 @@
       "catches": 15,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Litton%20Das&backgroundColor=1a1a2e"
   },
   {
     "name": "Tom Latham",
@@ -7116,7 +7454,8 @@
       "catches": 28,
       "fifties": 8,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tom%20Latham&backgroundColor=1a1a2e"
   },
   {
     "name": "Kyle Verreynne",
@@ -7137,7 +7476,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kyle%20Verreynne&backgroundColor=1a1a2e"
   },
   {
     "name": "Richard Gleeson",
@@ -7158,7 +7498,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Richard%20Gleeson&backgroundColor=1a1a2e"
   },
   {
     "name": "Josh Little",
@@ -7179,7 +7520,8 @@
       "catches": 5,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Josh%20Little&backgroundColor=1a1a2e"
   },
   {
     "name": "Lizaad Williams",
@@ -7200,7 +7542,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Lizaad%20Williams&backgroundColor=1a1a2e"
   },
   {
     "name": "Luke Wood",
@@ -7221,7 +7564,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Luke%20Wood&backgroundColor=1a1a2e"
   },
   {
     "name": "Towhid Hridoy",
@@ -7242,7 +7586,8 @@
       "catches": 16,
       "fifties": 8,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Towhid%20Hridoy&backgroundColor=1a1a2e"
   },
   {
     "name": "Mikyle Louis",
@@ -7263,7 +7608,8 @@
       "catches": 2,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mikyle%20Louis&backgroundColor=1a1a2e"
   },
   {
     "name": "Harry Tector",
@@ -7284,7 +7630,8 @@
       "catches": 18,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harry%20Tector&backgroundColor=1a1a2e"
   },
   {
     "name": "Rassie van der Dussen",
@@ -7305,7 +7652,8 @@
       "catches": 6,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rassie%20van%20der%20Dussen&backgroundColor=1a1a2e"
   },
   {
     "name": "Will Young",
@@ -7326,7 +7674,8 @@
       "catches": 29,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Will%20Young&backgroundColor=1a1a2e"
   },
   {
     "name": "Najibullah Zadran",
@@ -7347,7 +7696,8 @@
       "catches": 39,
       "fifties": 10,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Najibullah%20Zadran&backgroundColor=1a1a2e"
   },
   {
     "name": "Ibrahim Zadran",
@@ -7368,7 +7718,8 @@
       "catches": 13,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ibrahim%20Zadran&backgroundColor=1a1a2e"
   },
   {
     "name": "Jason Behrendorff",
@@ -7389,7 +7740,8 @@
       "catches": 28,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jason%20Behrendorff&backgroundColor=1a1a2e"
   },
   {
     "name": "Jacob Bethell",
@@ -7410,7 +7762,8 @@
       "catches": 2,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jacob%20Bethell&backgroundColor=1a1a2e"
   },
   {
     "name": "Brydon Carse",
@@ -7431,7 +7784,8 @@
       "catches": 7,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Brydon%20Carse&backgroundColor=1a1a2e"
   },
   {
     "name": "Aaron Hardie",
@@ -7452,7 +7806,8 @@
       "catches": 23,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aaron%20Hardie&backgroundColor=1a1a2e"
   },
   {
     "name": "Kyle Mayers",
@@ -7473,7 +7828,8 @@
       "catches": 9,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kyle%20Mayers&backgroundColor=1a1a2e"
   },
   {
     "name": "Kamindu Mendis",
@@ -7494,7 +7850,8 @@
       "catches": 7,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kamindu%20Mendis&backgroundColor=1a1a2e"
   },
   {
     "name": "Matthew Short",
@@ -7515,7 +7872,8 @@
       "catches": 39,
       "fifties": 9,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Matthew%20Short&backgroundColor=1a1a2e"
   },
   {
     "name": "Dushmantha Chameera",
@@ -7536,7 +7894,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dushmantha%20Chameera&backgroundColor=1a1a2e"
   },
   {
     "name": "Nathan Ellis",
@@ -7557,7 +7916,8 @@
       "catches": 11,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nathan%20Ellis&backgroundColor=1a1a2e"
   },
   {
     "name": "Shamar Joseph",
@@ -7578,7 +7938,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shamar%20Joseph&backgroundColor=1a1a2e"
   },
   {
     "name": "Jhye Richardson",
@@ -7599,7 +7960,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jhye%20Richardson&backgroundColor=1a1a2e"
   },
   {
     "name": "Tim Southee",
@@ -7620,7 +7982,8 @@
       "catches": 21,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tim%20Southee&backgroundColor=1a1a2e"
   },
   {
     "name": "Shakib Al Hasan",
@@ -7641,7 +8004,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shakib%20Al%20Hasan&backgroundColor=1a1a2e"
   },
   {
     "name": "Mehidy Hasan Miraz",
@@ -7662,7 +8026,8 @@
       "catches": 14,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mehidy%20Hasan%20Miraz&backgroundColor=1a1a2e"
   },
   {
     "name": "Dasun Shanaka",
@@ -7683,7 +8048,8 @@
       "catches": 17,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dasun%20Shanaka&backgroundColor=1a1a2e"
   },
   {
     "name": "Shoriful Islam",
@@ -7704,7 +8070,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shoriful%20Islam&backgroundColor=1a1a2e"
   },
   {
     "name": "Qais Ahmad",
@@ -7725,7 +8092,8 @@
       "catches": 27,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Qais%20Ahmad&backgroundColor=1a1a2e"
   },
   {
     "name": "Charith Asalanka",
@@ -7746,7 +8114,8 @@
       "catches": 4,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Charith%20Asalanka&backgroundColor=1a1a2e"
   },
   {
     "name": "George Garton",
@@ -7767,7 +8136,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=George%20Garton&backgroundColor=1a1a2e"
   },
   {
     "name": "Daniel Mousley",
@@ -7788,7 +8158,8 @@
       "catches": 14,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Daniel%20Mousley&backgroundColor=1a1a2e"
   },
   {
     "name": "Jamie Overton",
@@ -7809,7 +8180,8 @@
       "catches": 19,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jamie%20Overton&backgroundColor=1a1a2e"
   },
   {
     "name": "Dunith Wellalage",
@@ -7830,7 +8202,8 @@
       "catches": 3,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dunith%20Wellalage&backgroundColor=1a1a2e"
   },
   {
     "name": "Ottneil Baartman",
@@ -7851,7 +8224,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ottneil%20Baartman&backgroundColor=1a1a2e"
   },
   {
     "name": "Xavier Bartlett",
@@ -7872,7 +8246,8 @@
       "catches": 17,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Xavier%20Bartlett&backgroundColor=1a1a2e"
   },
   {
     "name": "Dilshan Madushanka",
@@ -7893,7 +8268,8 @@
       "catches": 23,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dilshan%20Madushanka&backgroundColor=1a1a2e"
   },
   {
     "name": "Adam Milne",
@@ -7914,7 +8290,8 @@
       "catches": 18,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Adam%20Milne&backgroundColor=1a1a2e"
   },
   {
     "name": "William O'Rourke",
@@ -7935,7 +8312,8 @@
       "catches": 20,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=William%20O'Rourke&backgroundColor=1a1a2e"
   },
   {
     "name": "Ollie Pope",
@@ -7956,7 +8334,8 @@
       "catches": 32,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ollie%20Pope&backgroundColor=1a1a2e"
   },
   {
     "name": "Andre Fletcher",
@@ -7977,7 +8356,8 @@
       "catches": 35,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Andre%20Fletcher&backgroundColor=1a1a2e"
   },
   {
     "name": "Leus Du Plooy",
@@ -7998,7 +8378,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Leus%20Du%20Plooy&backgroundColor=1a1a2e"
   },
   {
     "name": "Michael Pepper",
@@ -8019,7 +8400,8 @@
       "catches": 2,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Michael%20Pepper&backgroundColor=1a1a2e"
   },
   {
     "name": "Allah Ghazanfar",
@@ -8040,7 +8422,8 @@
       "catches": 21,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Allah%20Ghazanfar&backgroundColor=1a1a2e"
   },
   {
     "name": "Akeal Hosein",
@@ -8061,7 +8444,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akeal%20Hosein&backgroundColor=1a1a2e"
   },
   {
     "name": "Mujeeb Ur Rahman",
@@ -8082,7 +8466,8 @@
       "catches": 21,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mujeeb%20Ur%20Rahman&backgroundColor=1a1a2e"
   },
   {
     "name": "Waqar Salamkheil",
@@ -8103,7 +8488,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Waqar%20Salamkheil&backgroundColor=1a1a2e"
   },
   {
     "name": "Tom Kohler-Cadmore",
@@ -8124,7 +8510,8 @@
       "catches": 2,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tom%20Kohler-Cadmore&backgroundColor=1a1a2e"
   },
   {
     "name": "Jordan Cox",
@@ -8145,7 +8532,8 @@
       "catches": 7,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jordan%20Cox&backgroundColor=1a1a2e"
   },
   {
     "name": "Ali Khan",
@@ -8166,7 +8554,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ali%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "Nqabayomzi Peter",
@@ -8187,7 +8576,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nqabayomzi%20Peter&backgroundColor=1a1a2e"
   },
   {
     "name": "Smaran Ravichandran",
@@ -8208,7 +8598,8 @@
       "catches": 17,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Smaran%20Ravichandran&backgroundColor=1a1a2e"
   },
   {
     "name": "Andre Siddharth",
@@ -8229,7 +8620,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Andre%20Siddharth&backgroundColor=1a1a2e"
   },
   {
     "name": "Avineesh Sudha",
@@ -8250,7 +8642,8 @@
       "catches": 10,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Avineesh%20Sudha&backgroundColor=1a1a2e"
   },
   {
     "name": "L.R Chethan",
@@ -8271,7 +8664,8 @@
       "catches": 22,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=L.R%20Chethan&backgroundColor=1a1a2e"
   },
   {
     "name": "Aryaman Singh Dhaliwal",
@@ -8292,7 +8686,8 @@
       "catches": 4,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aryaman%20Singh%20Dhaliwal&backgroundColor=1a1a2e"
   },
   {
     "name": "Sanskar Rawat",
@@ -8313,7 +8708,8 @@
       "catches": 13,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sanskar%20Rawat&backgroundColor=1a1a2e"
   },
   {
     "name": "Bipin Saurabh",
@@ -8334,7 +8730,8 @@
       "catches": 13,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Bipin%20Saurabh&backgroundColor=1a1a2e"
   },
   {
     "name": "Tanay Thyagarajan",
@@ -8355,7 +8752,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tanay%20Thyagarajan&backgroundColor=1a1a2e"
   },
   {
     "name": "Raghav Goyal",
@@ -8376,7 +8774,8 @@
       "catches": 14,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Raghav%20Goyal&backgroundColor=1a1a2e"
   },
   {
     "name": "Roshan Waghsare",
@@ -8397,7 +8796,8 @@
       "catches": 18,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Roshan%20Waghsare&backgroundColor=1a1a2e"
   },
   {
     "name": "Bailapudi Yeswanth",
@@ -8418,7 +8818,8 @@
       "catches": 2,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Bailapudi%20Yeswanth&backgroundColor=1a1a2e"
   },
   {
     "name": "Ashwin Hebbar",
@@ -8439,7 +8840,8 @@
       "catches": 21,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ashwin%20Hebbar&backgroundColor=1a1a2e"
   },
   {
     "name": "Rohan Kunnummal",
@@ -8460,7 +8862,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rohan%20Kunnummal&backgroundColor=1a1a2e"
   },
   {
     "name": "Ayush Pandey",
@@ -8481,7 +8884,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ayush%20Pandey&backgroundColor=1a1a2e"
   },
   {
     "name": "Akshat Raghuwanshi",
@@ -8502,7 +8906,8 @@
       "catches": 13,
       "fifties": 9,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akshat%20Raghuwanshi&backgroundColor=1a1a2e"
   },
   {
     "name": "Shaoun Roger",
@@ -8523,7 +8928,8 @@
       "catches": 21,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shaoun%20Roger&backgroundColor=1a1a2e"
   },
   {
     "name": "Virat Singh",
@@ -8544,7 +8950,8 @@
       "catches": 7,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Virat%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Ajitesh Guruswamy",
@@ -8565,7 +8972,8 @@
       "catches": 8,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ajitesh%20Guruswamy&backgroundColor=1a1a2e"
   },
   {
     "name": "Vishnu Solanki",
@@ -8586,7 +8994,8 @@
       "catches": 8,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vishnu%20Solanki&backgroundColor=1a1a2e"
   },
   {
     "name": "Prithvi Raj Yarra",
@@ -8607,7 +9016,8 @@
       "catches": 10,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prithvi%20Raj%20Yarra&backgroundColor=1a1a2e"
   },
   {
     "name": "Jasmer Dhankhar",
@@ -8628,7 +9038,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jasmer%20Dhankhar&backgroundColor=1a1a2e"
   },
   {
     "name": "Saumy Pandey",
@@ -8649,7 +9060,8 @@
       "catches": 16,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Saumy%20Pandey&backgroundColor=1a1a2e"
   },
   {
     "name": "Tejasvi Dahiya",
@@ -8670,7 +9082,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tejasvi%20Dahiya&backgroundColor=1a1a2e"
   },
   {
     "name": "Sumit Ghadigaonkar",
@@ -8691,7 +9104,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sumit%20Ghadigaonkar&backgroundColor=1a1a2e"
   },
   {
     "name": "Bhagmender Lather",
@@ -8712,7 +9126,8 @@
       "catches": 15,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Bhagmender%20Lather&backgroundColor=1a1a2e"
   },
   {
     "name": "Emanjot Singh Chahal",
@@ -8733,7 +9148,8 @@
       "catches": 40,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Emanjot%20Singh%20Chahal&backgroundColor=1a1a2e"
   },
   {
     "name": "Manvanth Kumar L",
@@ -8754,7 +9170,8 @@
       "catches": 10,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Manvanth%20Kumar%20L&backgroundColor=1a1a2e"
   },
   {
     "name": "Sonu Yadav",
@@ -8775,7 +9192,8 @@
       "catches": 27,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sonu%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "S. Rithik Easwaran",
@@ -8796,7 +9214,8 @@
       "catches": 26,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=S.%20Rithik%20Easwaran&backgroundColor=1a1a2e"
   },
   {
     "name": "Prahlad Singh",
@@ -8817,7 +9236,8 @@
       "catches": 2,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prahlad%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Karteek Sharma",
@@ -8838,7 +9258,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Karteek%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Tejasvi Singh",
@@ -8859,7 +9280,8 @@
       "catches": 20,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tejasvi%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Salman Nizar",
@@ -8880,7 +9302,8 @@
       "catches": 30,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Salman%20Nizar&backgroundColor=1a1a2e"
   },
   {
     "name": "Aniket Verma",
@@ -8901,7 +9324,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aniket%20Verma&backgroundColor=1a1a2e"
   },
   {
     "name": "Sumeet Verma",
@@ -8922,7 +9346,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sumeet%20Verma&backgroundColor=1a1a2e"
   },
   {
     "name": "Amandeep Khare",
@@ -8943,7 +9368,8 @@
       "catches": 25,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Amandeep%20Khare&backgroundColor=1a1a2e"
   },
   {
     "name": "Mujtaba Yousuf",
@@ -8964,7 +9390,8 @@
       "catches": 15,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mujtaba%20Yousuf&backgroundColor=1a1a2e"
   },
   {
     "name": "Ripal Patel",
@@ -8985,7 +9412,8 @@
       "catches": 8,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ripal%20Patel&backgroundColor=1a1a2e"
   },
   {
     "name": "Sheldon Jackson",
@@ -9006,7 +9434,8 @@
       "catches": 34,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sheldon%20Jackson&backgroundColor=1a1a2e"
   },
   {
     "name": "Wakhare Aditya",
@@ -9027,7 +9456,8 @@
       "catches": 29,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Wakhare%20Aditya&backgroundColor=1a1a2e"
   },
   {
     "name": "Tushar Raheja",
@@ -9048,7 +9478,8 @@
       "catches": 23,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tushar%20Raheja&backgroundColor=1a1a2e"
   },
   {
     "name": "Saurabh Kumar",
@@ -9069,7 +9500,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Saurabh%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Yarra Prithviraj",
@@ -9090,7 +9522,8 @@
       "catches": 23,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yarra%20Prithviraj&backgroundColor=1a1a2e"
   },
   {
     "name": "Pratham Harshal",
@@ -9111,7 +9544,8 @@
       "catches": 12,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pratham%20Harshal&backgroundColor=1a1a2e"
   },
   {
     "name": "Aryan Varma",
@@ -9132,7 +9566,8 @@
       "catches": 13,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aryan%20Varma&backgroundColor=1a1a2e"
   },
   {
     "name": "Rohan Rana",
@@ -9153,7 +9588,8 @@
       "catches": 17,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rohan%20Rana&backgroundColor=1a1a2e"
   },
   {
     "name": "Parvez Alam",
@@ -9174,7 +9610,8 @@
       "catches": 19,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Parvez%20Alam&backgroundColor=1a1a2e"
   },
   {
     "name": "Gaurav Kumar",
@@ -9195,7 +9632,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gaurav%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Sachin Rana",
@@ -9216,7 +9654,8 @@
       "catches": 4,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sachin%20Rana&backgroundColor=1a1a2e"
   },
   {
     "name": "Dhiraj Kumar",
@@ -9237,7 +9676,8 @@
       "catches": 29,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dhiraj%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Randhir Singh",
@@ -9258,7 +9698,8 @@
       "catches": 23,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Randhir%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Akshay Jain",
@@ -9279,7 +9720,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akshay%20Jain&backgroundColor=1a1a2e"
   },
   {
     "name": "Pawan Negi",
@@ -9300,7 +9742,8 @@
       "catches": 28,
       "fifties": 8,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pawan%20Negi&backgroundColor=1a1a2e"
   },
   {
     "name": "Monu Kumar",
@@ -9321,7 +9764,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Monu%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "Mihir Hirwani",
@@ -9342,7 +9786,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mihir%20Hirwani&backgroundColor=1a1a2e"
   },
   {
     "name": "Puneet Bisht",
@@ -9363,7 +9808,8 @@
       "catches": 17,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Puneet%20Bisht&backgroundColor=1a1a2e"
   },
   {
     "name": "Aditya Sarwate",
@@ -9384,7 +9830,8 @@
       "catches": 4,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aditya%20Sarwate&backgroundColor=1a1a2e"
   },
   {
     "name": "Shubhang Hegde",
@@ -9405,7 +9852,8 @@
       "catches": 10,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shubhang%20Hegde&backgroundColor=1a1a2e"
   },
   {
     "name": "Akshath Reddy",
@@ -9426,7 +9874,8 @@
       "catches": 2,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akshath%20Reddy&backgroundColor=1a1a2e"
   },
   {
     "name": "Tanmay Srivastava",
@@ -9447,7 +9896,8 @@
       "catches": 16,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tanmay%20Srivastava&backgroundColor=1a1a2e"
   },
   {
     "name": "Smit Patel",
@@ -9468,7 +9918,8 @@
       "catches": 18,
       "fifties": 8,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Smit%20Patel&backgroundColor=1a1a2e"
   },
   {
     "name": "Siddhesh Lad",
@@ -9489,7 +9940,8 @@
       "catches": 9,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Siddhesh%20Lad&backgroundColor=1a1a2e"
   },
   {
     "name": "Jalaj Saxena",
@@ -9510,7 +9962,8 @@
       "catches": 30,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jalaj%20Saxena&backgroundColor=1a1a2e"
   },
   {
     "name": "Satyajeet Bachhav",
@@ -9531,7 +9984,8 @@
       "catches": 16,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Satyajeet%20Bachhav&backgroundColor=1a1a2e"
   },
   {
     "name": "Anirudh Singh",
@@ -9552,7 +10006,8 @@
       "catches": 24,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anirudh%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Ravi Yadav",
@@ -9573,7 +10028,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ravi%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Shreevats Goswami",
@@ -9594,7 +10050,8 @@
       "catches": 4,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shreevats%20Goswami&backgroundColor=1a1a2e"
   },
   {
     "name": "Yash Lalwani",
@@ -9615,7 +10072,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yash%20Lalwani&backgroundColor=1a1a2e"
   },
   {
     "name": "Shahid Judge",
@@ -9636,7 +10094,8 @@
       "catches": 9,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shahid%20Judge&backgroundColor=1a1a2e"
   },
   {
     "name": "Deep Dasgupta Jr",
@@ -9657,7 +10116,8 @@
       "catches": 2,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Deep%20Dasgupta%20Jr&backgroundColor=1a1a2e"
   },
   {
     "name": "Rohan Prem",
@@ -9678,7 +10138,8 @@
       "catches": 18,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rohan%20Prem&backgroundColor=1a1a2e"
   },
   {
     "name": "Pradeep Sahu",
@@ -9699,7 +10160,8 @@
       "catches": 16,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pradeep%20Sahu&backgroundColor=1a1a2e"
   },
   {
     "name": "Gaurav Yadav",
@@ -9720,7 +10182,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gaurav%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Yuvraj Tomar",
@@ -9741,7 +10204,8 @@
       "catches": 25,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yuvraj%20Tomar&backgroundColor=1a1a2e"
   },
   {
     "name": "Siddhant Lohani",
@@ -9762,7 +10226,8 @@
       "catches": 25,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Siddhant%20Lohani&backgroundColor=1a1a2e"
   },
   {
     "name": "Dev Uthappa",
@@ -9783,7 +10248,8 @@
       "catches": 13,
       "fifties": 8,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dev%20Uthappa&backgroundColor=1a1a2e"
   },
   {
     "name": "Anand Rajan",
@@ -9804,7 +10270,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anand%20Rajan&backgroundColor=1a1a2e"
   },
   {
     "name": "Gaurav Sundararaman",
@@ -9825,7 +10292,8 @@
       "catches": 6,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gaurav%20Sundararaman&backgroundColor=1a1a2e"
   },
   {
     "name": "Krish Yadav",
@@ -9846,7 +10314,8 @@
       "catches": 5,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Krish%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Taruwar Kohli",
@@ -9867,7 +10336,8 @@
       "catches": 4,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Taruwar%20Kohli&backgroundColor=1a1a2e"
   },
   {
     "name": "Shreyansh Sharma",
@@ -9888,7 +10358,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shreyansh%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Manveer Singh",
@@ -9909,7 +10380,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Manveer%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Prashant Gupta",
@@ -9930,7 +10402,8 @@
       "catches": 14,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Prashant%20Gupta&backgroundColor=1a1a2e"
   },
   {
     "name": "Govind Sharma",
@@ -9951,7 +10424,8 @@
       "catches": 14,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Govind%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Deepanshu Singh",
@@ -9972,7 +10446,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Deepanshu%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Pratham Singh",
@@ -9993,7 +10468,8 @@
       "catches": 28,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pratham%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Anuj Tomar",
@@ -10014,7 +10490,8 @@
       "catches": 32,
       "fifties": 9,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anuj%20Tomar&backgroundColor=1a1a2e"
   },
   {
     "name": "Tushar Bharadwaj",
@@ -10035,7 +10512,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tushar%20Bharadwaj&backgroundColor=1a1a2e"
   },
   {
     "name": "Lakshay Thareja",
@@ -10056,7 +10534,8 @@
       "catches": 7,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Lakshay%20Thareja&backgroundColor=1a1a2e"
   },
   {
     "name": "Vedant Mehta",
@@ -10077,7 +10556,8 @@
       "catches": 16,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vedant%20Mehta&backgroundColor=1a1a2e"
   },
   {
     "name": "Ayushman Gupta",
@@ -10098,7 +10578,8 @@
       "catches": 3,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ayushman%20Gupta&backgroundColor=1a1a2e"
   },
   {
     "name": "Sahaj Patel",
@@ -10119,7 +10600,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sahaj%20Patel&backgroundColor=1a1a2e"
   },
   {
     "name": "Rajneesh Gurbani",
@@ -10140,7 +10622,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rajneesh%20Gurbani&backgroundColor=1a1a2e"
   },
   {
     "name": "Raunak Chauhan",
@@ -10161,7 +10644,8 @@
       "catches": 35,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Raunak%20Chauhan&backgroundColor=1a1a2e"
   },
   {
     "name": "Vaibhav Rawal",
@@ -10182,7 +10666,8 @@
       "catches": 7,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vaibhav%20Rawal&backgroundColor=1a1a2e"
   },
   {
     "name": "Nikin Jose",
@@ -10203,7 +10688,8 @@
       "catches": 2,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nikin%20Jose&backgroundColor=1a1a2e"
   },
   {
     "name": "Harsh Dubey",
@@ -10224,7 +10710,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harsh%20Dubey&backgroundColor=1a1a2e"
   },
   {
     "name": "Saurabh Rawat",
@@ -10245,7 +10732,8 @@
       "catches": 11,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Saurabh%20Rawat&backgroundColor=1a1a2e"
   },
   {
     "name": "Aditya Thakare",
@@ -10266,7 +10754,8 @@
       "catches": 22,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aditya%20Thakare&backgroundColor=1a1a2e"
   },
   {
     "name": "Roosh Kalaria",
@@ -10287,7 +10776,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Roosh%20Kalaria&backgroundColor=1a1a2e"
   },
   {
     "name": "Chirag Jani",
@@ -10308,7 +10798,8 @@
       "catches": 28,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chirag%20Jani&backgroundColor=1a1a2e"
   },
   {
     "name": "Parth Bhut",
@@ -10329,7 +10820,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Parth%20Bhut&backgroundColor=1a1a2e"
   },
   {
     "name": "Het Patel",
@@ -10350,7 +10842,8 @@
       "catches": 31,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Het%20Patel&backgroundColor=1a1a2e"
   },
   {
     "name": "C Hari Nishaanth",
@@ -10371,7 +10864,8 @@
       "catches": 2,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=C%20Hari%20Nishaanth&backgroundColor=1a1a2e"
   },
   {
     "name": "Jhon Osafa",
@@ -10392,7 +10886,8 @@
       "catches": 42,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jhon%20Osafa&backgroundColor=1a1a2e"
   },
   {
     "name": "Kiran Akash",
@@ -10413,7 +10908,8 @@
       "catches": 11,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kiran%20Akash&backgroundColor=1a1a2e"
   },
   {
     "name": "Sanjay Yadav",
@@ -10434,7 +10930,8 @@
       "catches": 11,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sanjay%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "Atit Sheth",
@@ -10455,7 +10952,8 @@
       "catches": 9,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Atit%20Sheth&backgroundColor=1a1a2e"
   },
   {
     "name": "Robin Bist",
@@ -10476,7 +10974,8 @@
       "catches": 7,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Robin%20Bist&backgroundColor=1a1a2e"
   },
   {
     "name": "Anureet Singh",
@@ -10497,7 +10996,8 @@
       "catches": 35,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anureet%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Arjit Gupta",
@@ -10518,7 +11018,8 @@
       "catches": 2,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Arjit%20Gupta&backgroundColor=1a1a2e"
   },
   {
     "name": "Rahul Sharma",
@@ -10539,7 +11040,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rahul%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Vivrant Sharma",
@@ -10560,7 +11062,8 @@
       "catches": 5,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vivrant%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Dewald Brevis Jr",
@@ -10581,7 +11084,8 @@
       "catches": 25,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dewald%20Brevis%20Jr&backgroundColor=1a1a2e"
   },
   {
     "name": "Kevin Koththigoda",
@@ -10602,7 +11106,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kevin%20Koththigoda&backgroundColor=1a1a2e"
   },
   {
     "name": "Nuwan Pradeep",
@@ -10623,7 +11128,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nuwan%20Pradeep&backgroundColor=1a1a2e"
   },
   {
     "name": "Devon Thomas",
@@ -10644,7 +11150,8 @@
       "catches": 20,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Devon%20Thomas&backgroundColor=1a1a2e"
   },
   {
     "name": "Angelo Mathews",
@@ -10665,7 +11172,8 @@
       "catches": 6,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Angelo%20Mathews&backgroundColor=1a1a2e"
   },
   {
     "name": "Oshane Thomas",
@@ -10686,7 +11194,8 @@
       "catches": 33,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Oshane%20Thomas&backgroundColor=1a1a2e"
   },
   {
     "name": "Carlos Brathwaite",
@@ -10707,7 +11216,8 @@
       "catches": 7,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Carlos%20Brathwaite&backgroundColor=1a1a2e"
   },
   {
     "name": "Obed McCoy",
@@ -10728,7 +11238,8 @@
       "catches": 6,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Obed%20McCoy&backgroundColor=1a1a2e"
   },
   {
     "name": "Fabian Allen",
@@ -10749,7 +11260,8 @@
       "catches": 11,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Fabian%20Allen&backgroundColor=1a1a2e"
   },
   {
     "name": "Sheldon Cottrell",
@@ -10770,7 +11282,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sheldon%20Cottrell&backgroundColor=1a1a2e"
   },
   {
     "name": "Sandeep Lamichhane",
@@ -10791,7 +11304,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sandeep%20Lamichhane&backgroundColor=1a1a2e"
   },
   {
     "name": "Blessing Muzarabani",
@@ -10812,7 +11326,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Blessing%20Muzarabani&backgroundColor=1a1a2e"
   },
   {
     "name": "Sean Williams",
@@ -10833,7 +11348,8 @@
       "catches": 5,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sean%20Williams&backgroundColor=1a1a2e"
   },
   {
     "name": "Ryan Burl",
@@ -10854,7 +11370,8 @@
       "catches": 7,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ryan%20Burl&backgroundColor=1a1a2e"
   },
   {
     "name": "Craig Ervine",
@@ -10875,7 +11392,8 @@
       "catches": 32,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Craig%20Ervine&backgroundColor=1a1a2e"
   },
   {
     "name": "Taskin Ahmed",
@@ -10896,7 +11414,8 @@
       "catches": 32,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Taskin%20Ahmed&backgroundColor=1a1a2e"
   },
   {
     "name": "Tanzid Hasan",
@@ -10917,7 +11436,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tanzid%20Hasan&backgroundColor=1a1a2e"
   },
   {
     "name": "Mahmudullah",
@@ -10938,7 +11458,8 @@
       "catches": 3,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mahmudullah&backgroundColor=1a1a2e"
   },
   {
     "name": "Afif Hossain",
@@ -10959,7 +11480,8 @@
       "catches": 10,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Afif%20Hossain&backgroundColor=1a1a2e"
   },
   {
     "name": "Soumya Sarkar",
@@ -10980,7 +11502,8 @@
       "catches": 7,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Soumya%20Sarkar&backgroundColor=1a1a2e"
   },
   {
     "name": "Hazratullah Zazai",
@@ -11001,7 +11524,8 @@
       "catches": 9,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Hazratullah%20Zazai&backgroundColor=1a1a2e"
   },
   {
     "name": "Karim Janat",
@@ -11022,7 +11546,8 @@
       "catches": 32,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Karim%20Janat&backgroundColor=1a1a2e"
   },
   {
     "name": "Naveen-ul-Hasan",
@@ -11043,7 +11568,8 @@
       "catches": 25,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Naveen-ul-Hasan&backgroundColor=1a1a2e"
   },
   {
     "name": "Zahir Khan",
@@ -11064,7 +11590,8 @@
       "catches": 28,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Zahir%20Khan&backgroundColor=1a1a2e"
   },
   {
     "name": "Ryan ten Doeschate",
@@ -11085,7 +11612,8 @@
       "catches": 46,
       "fifties": 11,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ryan%20ten%20Doeschate&backgroundColor=1a1a2e"
   },
   {
     "name": "Ben Cutting",
@@ -11106,7 +11634,8 @@
       "catches": 13,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ben%20Cutting&backgroundColor=1a1a2e"
   },
   {
     "name": "Chris Jordan",
@@ -11127,7 +11656,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chris%20Jordan&backgroundColor=1a1a2e"
   },
   {
     "name": "Jofra Archer",
@@ -11148,7 +11678,8 @@
       "catches": 38,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jofra%20Archer&backgroundColor=1a1a2e"
   },
   {
     "name": "Mark Wood",
@@ -11169,7 +11700,8 @@
       "catches": 25,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mark%20Wood&backgroundColor=1a1a2e"
   },
   {
     "name": "Dawid Malan",
@@ -11190,7 +11722,8 @@
       "catches": 36,
       "fifties": 8,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dawid%20Malan&backgroundColor=1a1a2e"
   },
   {
     "name": "Alex Hales",
@@ -11211,7 +11744,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Alex%20Hales&backgroundColor=1a1a2e"
   },
   {
     "name": "Jason Roy",
@@ -11232,7 +11766,8 @@
       "catches": 17,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jason%20Roy&backgroundColor=1a1a2e"
   },
   {
     "name": "Chris Woakes",
@@ -11253,7 +11788,8 @@
       "catches": 7,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chris%20Woakes&backgroundColor=1a1a2e"
   },
   {
     "name": "Olly Stone",
@@ -11274,7 +11810,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Olly%20Stone&backgroundColor=1a1a2e"
   },
   {
     "name": "Sean Abbott",
@@ -11295,7 +11832,8 @@
       "catches": 5,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sean%20Abbott&backgroundColor=1a1a2e"
   },
   {
     "name": "Cameron Green",
@@ -11316,7 +11854,8 @@
       "catches": 21,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Cameron%20Green&backgroundColor=1a1a2e"
   },
   {
     "name": "Riley Meredith",
@@ -11337,7 +11876,8 @@
       "catches": 7,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Riley%20Meredith&backgroundColor=1a1a2e"
   },
   {
     "name": "Daniel Sams",
@@ -11358,7 +11898,8 @@
       "catches": 27,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Daniel%20Sams&backgroundColor=1a1a2e"
   },
   {
     "name": "Chris Lynn",
@@ -11379,7 +11920,8 @@
       "catches": 10,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chris%20Lynn&backgroundColor=1a1a2e"
   },
   {
     "name": "Ben Dwarshuis",
@@ -11400,7 +11942,8 @@
       "catches": 7,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ben%20Dwarshuis&backgroundColor=1a1a2e"
   },
   {
     "name": "Tye Abell",
@@ -11421,7 +11964,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Tye%20Abell&backgroundColor=1a1a2e"
   },
   {
     "name": "Dwayne Bravo",
@@ -11442,7 +11986,8 @@
       "catches": 20,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dwayne%20Bravo&backgroundColor=1a1a2e"
   },
   {
     "name": "Sunil Narine",
@@ -11463,7 +12008,8 @@
       "catches": 17,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sunil%20Narine&backgroundColor=1a1a2e"
   },
   {
     "name": "Andre Russell",
@@ -11484,7 +12030,8 @@
       "catches": 7,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Andre%20Russell&backgroundColor=1a1a2e"
   },
   {
     "name": "Nicholas Pooran",
@@ -11505,7 +12052,8 @@
       "catches": 24,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Nicholas%20Pooran&backgroundColor=1a1a2e"
   },
   {
     "name": "Shimron Hetmyer",
@@ -11526,7 +12074,8 @@
       "catches": 14,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shimron%20Hetmyer&backgroundColor=1a1a2e"
   },
   {
     "name": "Odean Smith",
@@ -11547,7 +12096,8 @@
       "catches": 7,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Odean%20Smith&backgroundColor=1a1a2e"
   },
   {
     "name": "Heinrich Klaasen Jr",
@@ -11568,7 +12118,8 @@
       "catches": 4,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Heinrich%20Klaasen%20Jr&backgroundColor=1a1a2e"
   },
   {
     "name": "Wayne Parnell",
@@ -11589,7 +12140,8 @@
       "catches": 3,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Wayne%20Parnell&backgroundColor=1a1a2e"
   },
   {
     "name": "Sisanda Magala",
@@ -11610,7 +12162,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sisanda%20Magala&backgroundColor=1a1a2e"
   },
   {
     "name": "Marco Marais",
@@ -11631,7 +12184,8 @@
       "catches": 10,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Marco%20Marais&backgroundColor=1a1a2e"
   },
   {
     "name": "George Linde",
@@ -11652,7 +12206,8 @@
       "catches": 21,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=George%20Linde&backgroundColor=1a1a2e"
   },
   {
     "name": "Dane Paterson",
@@ -11673,7 +12228,8 @@
       "catches": 11,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dane%20Paterson&backgroundColor=1a1a2e"
   },
   {
     "name": "Darren Bravo",
@@ -11694,7 +12250,8 @@
       "catches": 16,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Darren%20Bravo&backgroundColor=1a1a2e"
   },
   {
     "name": "Hayden Walsh Jr",
@@ -11715,7 +12272,8 @@
       "catches": 14,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Hayden%20Walsh%20Jr&backgroundColor=1a1a2e"
   },
   {
     "name": "Michael Neser",
@@ -11736,7 +12294,8 @@
       "catches": 8,
       "fifties": 4,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Michael%20Neser&backgroundColor=1a1a2e"
   },
   {
     "name": "Kyle Jamieson",
@@ -11757,7 +12316,8 @@
       "catches": 16,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kyle%20Jamieson&backgroundColor=1a1a2e"
   },
   {
     "name": "Ish Sodhi",
@@ -11778,7 +12338,8 @@
       "catches": 22,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ish%20Sodhi&backgroundColor=1a1a2e"
   },
   {
     "name": "Jimmy Neesham",
@@ -11799,7 +12360,8 @@
       "catches": 19,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jimmy%20Neesham&backgroundColor=1a1a2e"
   },
   {
     "name": "Colin Munro",
@@ -11820,7 +12382,8 @@
       "catches": 23,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Colin%20Munro&backgroundColor=1a1a2e"
   },
   {
     "name": "Martin Guptill",
@@ -11841,7 +12404,8 @@
       "catches": 41,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Martin%20Guptill&backgroundColor=1a1a2e"
   },
   {
     "name": "Dhananjaya de Silva",
@@ -11862,7 +12426,8 @@
       "catches": 32,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dhananjaya%20de%20Silva&backgroundColor=1a1a2e"
   },
   {
     "name": "Lahiru Kumara",
@@ -11883,7 +12448,8 @@
       "catches": 17,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Lahiru%20Kumara&backgroundColor=1a1a2e"
   },
   {
     "name": "Avishka Fernando",
@@ -11904,7 +12470,8 @@
       "catches": 25,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Avishka%20Fernando&backgroundColor=1a1a2e"
   },
   {
     "name": "Isuru Udana",
@@ -11925,7 +12492,8 @@
       "catches": 19,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Isuru%20Udana&backgroundColor=1a1a2e"
   },
   {
     "name": "Abhimanyu Singh",
@@ -11946,7 +12514,8 @@
       "catches": 1,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Abhimanyu%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Aditya Sarvate",
@@ -11967,7 +12536,8 @@
       "catches": 7,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aditya%20Sarvate&backgroundColor=1a1a2e"
   },
   {
     "name": "Ajay Rohera",
@@ -11988,7 +12558,8 @@
       "catches": 10,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ajay%20Rohera&backgroundColor=1a1a2e"
   },
   {
     "name": "Akshay Wadkar",
@@ -12009,7 +12580,8 @@
       "catches": 19,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akshay%20Wadkar&backgroundColor=1a1a2e"
   },
   {
     "name": "Anubhav Agarwal",
@@ -12030,7 +12602,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anubhav%20Agarwal&backgroundColor=1a1a2e"
   },
   {
     "name": "Arpit Vasavada",
@@ -12051,7 +12624,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Arpit%20Vasavada&backgroundColor=1a1a2e"
   },
   {
     "name": "Ashok Menaria",
@@ -12072,7 +12646,8 @@
       "catches": 7,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ashok%20Menaria&backgroundColor=1a1a2e"
   },
   {
     "name": "B Aparajith",
@@ -12093,7 +12668,8 @@
       "catches": 1,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=B%20Aparajith&backgroundColor=1a1a2e"
   },
   {
     "name": "Babashafi Pathan",
@@ -12114,7 +12690,8 @@
       "catches": 9,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Babashafi%20Pathan&backgroundColor=1a1a2e"
   },
   {
     "name": "Brijesh Yadav",
@@ -12135,7 +12712,8 @@
       "catches": 17,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Brijesh%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "C Ganapathy",
@@ -12156,7 +12734,8 @@
       "catches": 9,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=C%20Ganapathy&backgroundColor=1a1a2e"
   },
   {
     "name": "Chama Milind",
@@ -12177,7 +12756,8 @@
       "catches": 15,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chama%20Milind&backgroundColor=1a1a2e"
   },
   {
     "name": "D Hemanth",
@@ -12198,7 +12778,8 @@
       "catches": 1,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=D%20Hemanth&backgroundColor=1a1a2e"
   },
   {
     "name": "Dharmendrasinh Jadeja",
@@ -12219,7 +12800,8 @@
       "catches": 4,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dharmendrasinh%20Jadeja&backgroundColor=1a1a2e"
   },
   {
     "name": "Dikshanshu Negi",
@@ -12240,7 +12822,8 @@
       "catches": 1,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dikshanshu%20Negi&backgroundColor=1a1a2e"
   },
   {
     "name": "Faiz Fazal",
@@ -12261,7 +12844,8 @@
       "catches": 14,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Faiz%20Fazal&backgroundColor=1a1a2e"
   },
   {
     "name": "Ganesh Satish",
@@ -12282,7 +12866,8 @@
       "catches": 8,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ganesh%20Satish&backgroundColor=1a1a2e"
   },
   {
     "name": "Ghanshyam Satpathy",
@@ -12303,7 +12888,8 @@
       "catches": 3,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ghanshyam%20Satpathy&backgroundColor=1a1a2e"
   },
   {
     "name": "Gurinder Singh",
@@ -12324,7 +12910,8 @@
       "catches": 11,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gurinder%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Himanshu Mantri",
@@ -12345,7 +12932,8 @@
       "catches": 14,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Himanshu%20Mantri&backgroundColor=1a1a2e"
   },
   {
     "name": "Ishwar Pandey",
@@ -12366,7 +12954,8 @@
       "catches": 7,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ishwar%20Pandey&backgroundColor=1a1a2e"
   },
   {
     "name": "J Suchith",
@@ -12387,7 +12976,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=J%20Suchith&backgroundColor=1a1a2e"
   },
   {
     "name": "Jiwanjot Singh",
@@ -12408,7 +12998,8 @@
       "catches": 1,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jiwanjot%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "K Gowtham",
@@ -12429,7 +13020,8 @@
       "catches": 12,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=K%20Gowtham&backgroundColor=1a1a2e"
   },
   {
     "name": "KB Arun Karthik",
@@ -12450,7 +13042,8 @@
       "catches": 11,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=KB%20Arun%20Karthik&backgroundColor=1a1a2e"
   },
   {
     "name": "Kedar Devdhar",
@@ -12471,7 +13064,8 @@
       "catches": 11,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kedar%20Devdhar&backgroundColor=1a1a2e"
   },
   {
     "name": "Lukman Meriwala",
@@ -12492,7 +13086,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Lukman%20Meriwala&backgroundColor=1a1a2e"
   },
   {
     "name": "Malolan Rangarajan",
@@ -12513,7 +13108,8 @@
       "catches": 4,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Malolan%20Rangarajan&backgroundColor=1a1a2e"
   },
   {
     "name": "Mandeep Singh",
@@ -12534,7 +13130,8 @@
       "catches": 11,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mandeep%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Milind Kumar",
@@ -12555,7 +13152,8 @@
       "catches": 16,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Milind%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "N Jagadeesan",
@@ -12576,7 +13174,8 @@
       "catches": 11,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=N%20Jagadeesan&backgroundColor=1a1a2e"
   },
   {
     "name": "Naman Ojha",
@@ -12597,7 +13196,8 @@
       "catches": 5,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Naman%20Ojha&backgroundColor=1a1a2e"
   },
   {
     "name": "P Suyal",
@@ -12618,7 +13218,8 @@
       "catches": 1,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=P%20Suyal&backgroundColor=1a1a2e"
   },
   {
     "name": "Paras Dogra",
@@ -12639,7 +13240,8 @@
       "catches": 16,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Paras%20Dogra&backgroundColor=1a1a2e"
   },
   {
     "name": "Pramod Chandila",
@@ -12660,7 +13262,8 @@
       "catches": 14,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Pramod%20Chandila&backgroundColor=1a1a2e"
   },
   {
     "name": "R Dhruv",
@@ -12681,7 +13284,8 @@
       "catches": 12,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=R%20Dhruv&backgroundColor=1a1a2e"
   },
   {
     "name": "Rahil Shah",
@@ -12702,7 +13306,8 @@
       "catches": 12,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rahil%20Shah&backgroundColor=1a1a2e"
   },
   {
     "name": "Rajat Bhatia",
@@ -12723,7 +13328,8 @@
       "catches": 7,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rajat%20Bhatia&backgroundColor=1a1a2e"
   },
   {
     "name": "Ranjit Nikam",
@@ -12744,7 +13350,8 @@
       "catches": 7,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ranjit%20Nikam&backgroundColor=1a1a2e"
   },
   {
     "name": "Rishi Arothe",
@@ -12765,7 +13372,8 @@
       "catches": 2,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rishi%20Arothe&backgroundColor=1a1a2e"
   },
   {
     "name": "Ronit More",
@@ -12786,7 +13394,8 @@
       "catches": 17,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ronit%20More&backgroundColor=1a1a2e"
   },
   {
     "name": "S Aravind",
@@ -12807,7 +13416,8 @@
       "catches": 6,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=S%20Aravind&backgroundColor=1a1a2e"
   },
   {
     "name": "S Badrinath",
@@ -12828,7 +13438,8 @@
       "catches": 9,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=S%20Badrinath&backgroundColor=1a1a2e"
   },
   {
     "name": "Samarth R",
@@ -12849,7 +13460,8 @@
       "catches": 3,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Samarth%20R&backgroundColor=1a1a2e"
   },
   {
     "name": "Shahbaz Nadeem",
@@ -12870,7 +13482,8 @@
       "catches": 12,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shahbaz%20Nadeem&backgroundColor=1a1a2e"
   },
   {
     "name": "Shivnarayan Chandran",
@@ -12891,7 +13504,8 @@
       "catches": 3,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shivnarayan%20Chandran&backgroundColor=1a1a2e"
   },
   {
     "name": "Shreyas Mundhe",
@@ -12912,7 +13526,8 @@
       "catches": 17,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shreyas%20Mundhe&backgroundColor=1a1a2e"
   },
   {
     "name": "Subodh Bhati",
@@ -12933,7 +13548,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Subodh%20Bhati&backgroundColor=1a1a2e"
   },
   {
     "name": "Swapnil Gugale",
@@ -12954,7 +13570,8 @@
       "catches": 6,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Swapnil%20Gugale&backgroundColor=1a1a2e"
   },
   {
     "name": "T Pradeep",
@@ -12975,7 +13592,8 @@
       "catches": 7,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=T%20Pradeep&backgroundColor=1a1a2e"
   },
   {
     "name": "U Chand",
@@ -12996,7 +13614,8 @@
       "catches": 5,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=U%20Chand&backgroundColor=1a1a2e"
   },
   {
     "name": "Upendra Yadav",
@@ -13017,7 +13636,8 @@
       "catches": 19,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Upendra%20Yadav&backgroundColor=1a1a2e"
   },
   {
     "name": "V Koushik",
@@ -13038,7 +13658,8 @@
       "catches": 16,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=V%20Koushik&backgroundColor=1a1a2e"
   },
   {
     "name": "Vaibhav Suryavanshi",
@@ -13059,7 +13680,8 @@
       "catches": 15,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vaibhav%20Suryavanshi&backgroundColor=1a1a2e"
   },
   {
     "name": "Vikas Mishra",
@@ -13080,7 +13702,8 @@
       "catches": 11,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vikas%20Mishra&backgroundColor=1a1a2e"
   },
   {
     "name": "Vishesh Bhriguvanshi",
@@ -13101,7 +13724,8 @@
       "catches": 4,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Vishesh%20Bhriguvanshi&backgroundColor=1a1a2e"
   },
   {
     "name": "Wasim Jaffer Jr",
@@ -13122,7 +13746,8 @@
       "catches": 15,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Wasim%20Jaffer%20Jr&backgroundColor=1a1a2e"
   },
   {
     "name": "Y Gnaneswara Rao",
@@ -13143,7 +13768,8 @@
       "catches": 13,
       "fifties": 2,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Y%20Gnaneswara%20Rao&backgroundColor=1a1a2e"
   },
   {
     "name": "Zubayr Hamza",
@@ -13164,7 +13790,8 @@
       "catches": 6,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Zubayr%20Hamza&backgroundColor=1a1a2e"
   },
   {
     "name": "Aakarshit Gomel",
@@ -13185,7 +13812,8 @@
       "catches": 16,
       "fifties": 6,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Aakarshit%20Gomel&backgroundColor=1a1a2e"
   },
   {
     "name": "Abhimanyu Mithun",
@@ -13206,7 +13834,8 @@
       "catches": 15,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Abhimanyu%20Mithun&backgroundColor=1a1a2e"
   },
   {
     "name": "Akshay Karnewar",
@@ -13227,7 +13856,8 @@
       "catches": 15,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Akshay%20Karnewar&backgroundColor=1a1a2e"
   },
   {
     "name": "Ankit Bawne",
@@ -13248,7 +13878,8 @@
       "catches": 7,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ankit%20Bawne&backgroundColor=1a1a2e"
   },
   {
     "name": "Ashok Dinda",
@@ -13269,7 +13900,8 @@
       "catches": 2,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ashok%20Dinda&backgroundColor=1a1a2e"
   },
   {
     "name": "Babji Pantha",
@@ -13290,7 +13922,8 @@
       "catches": 0,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Babji%20Pantha&backgroundColor=1a1a2e"
   },
   {
     "name": "Bipul Sharma",
@@ -13311,7 +13944,8 @@
       "catches": 5,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Bipul%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "C Khurana",
@@ -13332,7 +13966,8 @@
       "catches": 9,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=C%20Khurana&backgroundColor=1a1a2e"
   },
   {
     "name": "Chirag Gandhi",
@@ -13353,7 +13988,8 @@
       "catches": 15,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chirag%20Gandhi&backgroundColor=1a1a2e"
   },
   {
     "name": "D Shorey",
@@ -13374,7 +14010,8 @@
       "catches": 15,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=D%20Shorey&backgroundColor=1a1a2e"
   },
   {
     "name": "Dhruv Shorey",
@@ -13395,7 +14032,8 @@
       "catches": 0,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dhruv%20Shorey&backgroundColor=1a1a2e"
   },
   {
     "name": "Eklavya Dwivedi",
@@ -13416,7 +14054,8 @@
       "catches": 17,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Eklavya%20Dwivedi&backgroundColor=1a1a2e"
   },
   {
     "name": "G Vihari",
@@ -13437,7 +14076,8 @@
       "catches": 2,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=G%20Vihari&backgroundColor=1a1a2e"
   },
   {
     "name": "Gaurav Jathar",
@@ -13458,7 +14098,8 @@
       "catches": 12,
       "fifties": 7,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gaurav%20Jathar&backgroundColor=1a1a2e"
   },
   {
     "name": "Hardik Tamore",
@@ -13479,7 +14120,8 @@
       "catches": 17,
       "fifties": 4,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Hardik%20Tamore&backgroundColor=1a1a2e"
   },
   {
     "name": "Jaskaran Malhotra",
@@ -13500,7 +14142,8 @@
       "catches": 18,
       "fifties": 5,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jaskaran%20Malhotra&backgroundColor=1a1a2e"
   },
   {
     "name": "KV Sharma",
@@ -13521,7 +14164,8 @@
       "catches": 2,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=KV%20Sharma&backgroundColor=1a1a2e"
   },
   {
     "name": "Khaleel Saab",
@@ -13542,7 +14186,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Khaleel%20Saab&backgroundColor=1a1a2e"
   },
   {
     "name": "Manprit Juneja",
@@ -13563,7 +14208,8 @@
       "catches": 13,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Manprit%20Juneja&backgroundColor=1a1a2e"
   },
   {
     "name": "N Tilak Naik",
@@ -13584,7 +14230,8 @@
       "catches": 18,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=N%20Tilak%20Naik&backgroundColor=1a1a2e"
   },
   {
     "name": "P Krishna Rao",
@@ -13605,7 +14252,8 @@
       "catches": 8,
       "fifties": 3,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=P%20Krishna%20Rao&backgroundColor=1a1a2e"
   },
   {
     "name": "Paidkal Rahul",
@@ -13626,7 +14274,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Paidkal%20Rahul&backgroundColor=1a1a2e"
   },
   {
     "name": "R Vinay Kumar",
@@ -13647,7 +14296,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=R%20Vinay%20Kumar&backgroundColor=1a1a2e"
   },
   {
     "name": "AB de Villiers",
@@ -13668,7 +14318,8 @@
       "catches": 103,
       "fifties": 40,
       "hundreds": 3
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=AB%20de%20Villiers&backgroundColor=1a1a2e"
   },
   {
     "name": "Chris Gayle",
@@ -13689,7 +14340,8 @@
       "catches": 44,
       "fifties": 31,
       "hundreds": 6
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chris%20Gayle&backgroundColor=1a1a2e"
   },
   {
     "name": "Ben Stokes",
@@ -13710,7 +14362,8 @@
       "catches": 18,
       "fifties": 3,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ben%20Stokes&backgroundColor=1a1a2e"
   },
   {
     "name": "Dinesh Karthik",
@@ -13731,7 +14384,8 @@
       "catches": 131,
       "fifties": 22,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dinesh%20Karthik&backgroundColor=1a1a2e"
   },
   {
     "name": "Kieron Pollard",
@@ -13752,7 +14406,8 @@
       "catches": 82,
       "fifties": 16,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Kieron%20Pollard&backgroundColor=1a1a2e"
   },
   {
     "name": "Lasith Malinga",
@@ -13773,7 +14428,8 @@
       "catches": 16,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Lasith%20Malinga&backgroundColor=1a1a2e"
   },
   {
     "name": "Dale Steyn",
@@ -13794,7 +14450,8 @@
       "catches": 20,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Dale%20Steyn&backgroundColor=1a1a2e"
   },
   {
     "name": "Shane Watson",
@@ -13815,7 +14472,8 @@
       "catches": 54,
       "fifties": 21,
       "hundreds": 4
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shane%20Watson&backgroundColor=1a1a2e"
   },
   {
     "name": "Sachin Tendulkar",
@@ -13836,7 +14494,8 @@
       "catches": 20,
       "fifties": 13,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Sachin%20Tendulkar&backgroundColor=1a1a2e"
   },
   {
     "name": "Yuvraj Singh",
@@ -13857,7 +14516,8 @@
       "catches": 44,
       "fifties": 14,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yuvraj%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Gautam Gambhir",
@@ -13878,7 +14538,8 @@
       "catches": 60,
       "fifties": 36,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Gautam%20Gambhir&backgroundColor=1a1a2e"
   },
   {
     "name": "Robin Uthappa",
@@ -13899,7 +14560,8 @@
       "catches": 88,
       "fifties": 27,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Robin%20Uthappa&backgroundColor=1a1a2e"
   },
   {
     "name": "Chris Morris",
@@ -13920,7 +14582,8 @@
       "catches": 27,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Chris%20Morris&backgroundColor=1a1a2e"
   },
   {
     "name": "Brendon McCullum",
@@ -13941,7 +14604,8 @@
       "catches": 46,
       "fifties": 16,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Brendon%20McCullum&backgroundColor=1a1a2e"
   },
   {
     "name": "Suresh Raina",
@@ -13962,7 +14626,8 @@
       "catches": 109,
       "fifties": 39,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Suresh%20Raina&backgroundColor=1a1a2e"
   },
   {
     "name": "Shikhar Dhawan",
@@ -13983,7 +14648,8 @@
       "catches": 98,
       "fifties": 51,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shikhar%20Dhawan&backgroundColor=1a1a2e"
   },
   {
     "name": "Yusuf Pathan",
@@ -14004,7 +14670,8 @@
       "catches": 44,
       "fifties": 13,
       "hundreds": 1
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Yusuf%20Pathan&backgroundColor=1a1a2e"
   },
   {
     "name": "Adam Gilchrist",
@@ -14025,7 +14692,8 @@
       "catches": 51,
       "fifties": 11,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Adam%20Gilchrist&backgroundColor=1a1a2e"
   },
   {
     "name": "Shane Warne",
@@ -14046,7 +14714,8 @@
       "catches": 11,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Shane%20Warne&backgroundColor=1a1a2e"
   },
   {
     "name": "Anil Kumble",
@@ -14067,7 +14736,8 @@
       "catches": 10,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Anil%20Kumble&backgroundColor=1a1a2e"
   },
   {
     "name": "Ashish Nehra",
@@ -14088,7 +14758,8 @@
       "catches": 13,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Ashish%20Nehra&backgroundColor=1a1a2e"
   },
   {
     "name": "Harbhajan Singh",
@@ -14109,7 +14780,8 @@
       "catches": 45,
       "fifties": 1,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Harbhajan%20Singh&backgroundColor=1a1a2e"
   },
   {
     "name": "Imran Tahir",
@@ -14130,7 +14802,8 @@
       "catches": 15,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Imran%20Tahir&backgroundColor=1a1a2e"
   },
   {
     "name": "Mitchell Johnson",
@@ -14151,7 +14824,8 @@
       "catches": 14,
       "fifties": 0,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Mitchell%20Johnson&backgroundColor=1a1a2e"
   },
   {
     "name": "Matthew Hayden",
@@ -14172,7 +14846,8 @@
       "catches": 14,
       "fifties": 8,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Matthew%20Hayden&backgroundColor=1a1a2e"
   },
   {
     "name": "Virender Sehwag",
@@ -14193,7 +14868,8 @@
       "catches": 30,
       "fifties": 16,
       "hundreds": 2
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Virender%20Sehwag&backgroundColor=1a1a2e"
   },
   {
     "name": "Rahul Dravid",
@@ -14214,7 +14890,8 @@
       "catches": 41,
       "fifties": 11,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Rahul%20Dravid&backgroundColor=1a1a2e"
   },
   {
     "name": "Jacques Kallis",
@@ -14235,6 +14912,7 @@
       "catches": 31,
       "fifties": 17,
       "hundreds": 0
-    }
+    },
+    "image": "https://api.dicebear.com/7.x/lorelei/svg?seed=Jacques%20Kallis&backgroundColor=1a1a2e"
   }
 ]

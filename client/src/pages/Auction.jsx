@@ -691,10 +691,23 @@ export default function Auction() {
                   transform: isPaused ? 'scale(0.98)' : 'scale(1)'
                 }}
               >
+                {currentPlayer.image ? (
+                  <img
+                    src={currentPlayer.image}
+                    alt={currentPlayer.name}
+                    className="player-avatar-showcase"
+                    style={{
+                      background: `linear-gradient(135deg, ${TEAM_COLORS[playerIndex % TEAM_COLORS.length]}, var(--primary-600))`,
+                      objectFit: 'cover',
+                    }}
+                    onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+                  />
+                ) : null}
                 <div
                   className="player-avatar-showcase"
                   style={{ 
                     background: `linear-gradient(135deg, ${TEAM_COLORS[playerIndex % TEAM_COLORS.length]}, var(--primary-600))`,
+                    display: currentPlayer.image ? 'none' : 'flex',
                   }}
                 >
                   {getInitial(currentPlayer.name)}
@@ -859,6 +872,12 @@ export default function Auction() {
             <h2 className={showSold.type}>
               {showSold.type === 'sold' ? 'SOLD!' : 'UNSOLD'}
             </h2>
+            {showSold.player?.image && (
+              <img src={showSold.player.image} alt={showSold.player.name}
+                style={{ width: 80, height: 80, borderRadius: '50%', objectFit: 'cover', marginTop: 12, border: '3px solid rgba(255,255,255,0.2)' }}
+                onError={(e) => { e.target.style.display = 'none'; }}
+              />
+            )}
             <div style={{ fontSize: 24, fontWeight: 700, marginTop: 12 }}>
               {showSold.player?.name}
             </div>
@@ -896,7 +915,14 @@ export default function Auction() {
             
             <div style={{ position: 'relative', marginBottom: 24, animation: 'fadeInUp 0.6s 0.3s both' }}>
               <div style={{ position: 'absolute', inset: -20, background: 'var(--primary-500)', opacity: 0.15, filter: 'blur(30px)', borderRadius: '50%' }}></div>
-              <div style={{ fontSize: 72 }}>{getRoleEmoji(currentPlayer.role)}</div>
+              {currentPlayer.image ? (
+                <img src={currentPlayer.image} alt={currentPlayer.name}
+                  style={{ width: 120, height: 120, borderRadius: '50%', objectFit: 'cover', border: '3px solid var(--primary-400)', position: 'relative' }}
+                  onError={(e) => { e.target.style.display = 'none'; }}
+                />
+              ) : (
+                <div style={{ fontSize: 72 }}>{getRoleEmoji(currentPlayer.role)}</div>
+              )}
             </div>
 
             <h1 style={{ fontSize: 48, fontWeight: 900, letterSpacing: '-1px', textShadow: '0 4px 12px rgba(0,0,0,0.5)', marginBottom: 8, animation: 'fadeInUp 0.6s 0.4s both' }}>

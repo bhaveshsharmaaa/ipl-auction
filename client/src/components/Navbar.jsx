@@ -17,6 +17,7 @@ export default function Navbar() {
           {user ? (
             <>
               <NavLink to="/dashboard" className="nav-link">Dashboard</NavLink>
+              <NavLink to="/players" className="nav-link">Players</NavLink>
               <NavLink to="/rules" className="nav-link">Rules</NavLink>
               <NavLink to="/completed" className="nav-link">Completed Auctions</NavLink>
               <div className="navbar-user">
@@ -35,6 +36,7 @@ export default function Navbar() {
           ) : (
             <>
               <NavLink to="/about" className="nav-link">About</NavLink>
+              <NavLink to="/players" className="nav-link">Players</NavLink>
               <NavLink to="/guide" className="nav-link">Strategy Guide</NavLink>
               <NavLink to="/rules" className="nav-link">Rules</NavLink>
               <NavLink to="/login" className="nav-link">Login</NavLink>

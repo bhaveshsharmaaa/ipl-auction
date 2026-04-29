@@ -17,6 +17,7 @@ const Rules = lazy(() => import('./pages/Rules'));
 const About = lazy(() => import('./pages/About'));
 const Guide = lazy(() => import('./pages/Guide'));
 const CompletedAuctions = lazy(() => import('./pages/CompletedAuctions'));
+const Players = lazy(() => import('./pages/Players'));
 
 
 function PageLoader() {
@@ -52,6 +53,7 @@ function AppRoutes() {
           <Route path="/rules" element={<Rules />} />
           <Route path="/about" element={<About />} />
           <Route path="/guide" element={<Guide />} />
+          <Route path="/players" element={<Players />} />
 
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="/lobby/:id" element={<ProtectedRoute><Lobby /></ProtectedRoute>} />
