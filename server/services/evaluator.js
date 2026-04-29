@@ -244,181 +244,149 @@ function calcPlayerXIScore(player) {
  *  - Prefer diverse bowling specializations
  */
 function generateBestXI(team) {
-  const players = team.players || [];
+  const rawPlayers = team.players || [];
+  // Convert Mongoose docs to plain objects so property access works reliably
+  const players = rawPlayers.map(p => (typeof p.toObject === 'function') ? p.toObject() : p);
+
   if (players.length <= 11) return players;
 
-  // Sort players by role
-  const wk = players.filter(p => p.role === 'Wicketkeeper')
-    .map(p => ({ ...p, xiScore: calcPlayerXIScore(p) }))
-    .sort((a, b) => b.xiScore - a.xiScore);
+  // Score every player once
+  players.forEach(p => { p.xiScore = calcPlayerXIScore(p); });
 
-  const bat = players.filter(p => p.role === 'Batsman')
-    .map(p => ({ ...p, xiScore: calcPlayerXIScore(p) }))
-    .sort((a, b) => b.xiScore - a.xiScore);
+  // Separate by role, sorted by score
+  const byRole = {
+    Wicketkeeper: players.filter(p => p.role === 'Wicketkeeper').sort((a, b) => b.xiScore - a.xiScore),
+    Batsman: players.filter(p => p.role === 'Batsman').sort((a, b) => b.xiScore - a.xiScore),
+    'All-Rounder': players.filter(p => p.role === 'All-Rounder').sort((a, b) => b.xiScore - a.xiScore),
+    Bowler: players.filter(p => p.role === 'Bowler').sort((a, b) => b.xiScore - a.xiScore),
+  };
 
-  const ar = players.filter(p => p.role === 'All-Rounder')
-    .map(p => ({ ...p, xiScore: calcPlayerXIScore(p) }))
-    .sort((a, b) => b.xiScore - a.xiScore);
-
-  const bowl = players.filter(p => p.role === 'Bowler')
-    .map(p => ({ ...p, xiScore: calcPlayerXIScore(p) }))
-    .sort((a, b) => b.xiScore - a.xiScore);
-
-  // ──── STEP 1: Pick initial candidates per slot ────
-  // Ideal template: 1 WK + 4 BAT + 2 AR + 4 BOWL = 11
-  // Flexible template: 1 WK + 3-5 BAT + 2-3 AR + 3-4 BOWL
+  // ──── Track XI via ID set ────
   const xi = [];
+  const xiIds = new Set();
   const MAX_OVERSEAS = 4;
 
-  // Helper: count overseas in current XI
+  const pid = (p) => (p._id || p.name || '').toString();
   const overseasInXI = () => xi.filter(p => p.isOverseas).length;
+  const isInXI = (p) => xiIds.has(pid(p));
 
-  // Helper: can we add this player without violating overseas limit?
-  const canAdd = (p) => !p.isOverseas || overseasInXI() < MAX_OVERSEAS;
-
-  // Helper: add player if possible, returns true if added
   const tryAdd = (p) => {
-    if (!p || xi.includes(p)) return false;
-    if (!canAdd(p)) return false;
+    if (!p || isInXI(p)) return false;
+    if (p.isOverseas && overseasInXI() >= MAX_OVERSEAS) return false;
     xi.push(p);
+    xiIds.add(pid(p));
     return true;
   };
 
   // 1a. Pick 1 wicketkeeper (mandatory)
-  for (const p of wk) {
+  for (const p of byRole.Wicketkeeper) {
     if (tryAdd(p)) break;
   }
-  // If no WK could be added (unlikely), we'll handle it in fill step
 
-  // 1b. Pick 4 batsmen (top order: explosive + anchor mix)
-  // Prefer at least one anchor (high avg, moderate SR) and one explosive (high SR)
+  // 1b. Pick 4 batsmen (explosive top order + anchor)
   let batsmenAdded = 0;
-  const targetBatsmen = Math.min(4, bat.length);
-  for (const p of bat) {
+  const targetBatsmen = Math.min(4, byRole.Batsman.length);
+  for (const p of byRole.Batsman) {
     if (batsmenAdded >= targetBatsmen) break;
     if (tryAdd(p)) batsmenAdded++;
   }
 
   // 1c. Pick 2 all-rounders (versatile depth)
   let arAdded = 0;
-  const targetAR = Math.min(2, ar.length);
-  for (const p of ar) {
+  const targetAR = Math.min(2, byRole['All-Rounder'].length);
+  for (const p of byRole['All-Rounder']) {
     if (arAdded >= targetAR) break;
     if (tryAdd(p)) arAdded++;
   }
 
   // 1d. Pick bowlers with bowling variety enforcement
-  // Need to fill to 11 with bowlers, ensuring pace + spin mix
-  const remainingSlots = 11 - xi.length;
+  const paceBowlers = byRole.Bowler.filter(p => getBowlingType(p) === 'pace' && !isInXI(p));
+  const spinBowlers = byRole.Bowler.filter(p => getBowlingType(p) === 'spin' && !isInXI(p));
 
-  // Separate pace and spin bowlers
-  const paceBowlers = bowl.filter(p => getBowlingType(p) === 'pace' && !xi.includes(p));
-  const spinBowlers = bowl.filter(p => getBowlingType(p) === 'spin' && !xi.includes(p));
-
-  // Also check all-rounders already in XI for bowling variety
+  // Count existing pace/spin from AR & WK already in XI
   const xiPaceCount = xi.filter(p => getBowlingType(p) === 'pace').length;
   const xiSpinCount = xi.filter(p => getBowlingType(p) === 'spin').length;
-
-  let bowlAdded = 0;
 
   // Ensure at least 2 pacers total (death overs specialists)
   let paceNeeded = Math.max(0, 2 - xiPaceCount);
   for (const p of paceBowlers) {
     if (paceNeeded <= 0) break;
-    if (tryAdd(p)) { bowlAdded++; paceNeeded--; }
+    if (tryAdd(p)) paceNeeded--;
   }
 
   // Ensure at least 1 spinner total (mystery/variety)
   let spinNeeded = Math.max(0, 1 - xiSpinCount);
   for (const p of spinBowlers) {
     if (spinNeeded <= 0) break;
-    if (tryAdd(p)) { bowlAdded++; spinNeeded--; }
+    if (tryAdd(p)) spinNeeded--;
   }
 
   // Fill remaining bowling slots with best available bowlers
-  const remainingBowlers = bowl.filter(p => !xi.includes(p));
-  for (const p of remainingBowlers) {
+  for (const p of byRole.Bowler) {
     if (xi.length >= 11) break;
     tryAdd(p);
   }
 
-  // ──── STEP 2: Fill any remaining slots ────
-  // If still under 11 (e.g., not enough bowlers), fill with best remaining players
+  // ──── STEP 2: Fill any remaining spots with best available ────
   if (xi.length < 11) {
-    const allRemaining = players
-      .filter(p => !xi.includes(p))
-      .map(p => ({ ...p, xiScore: calcPlayerXIScore(p) }))
-      .sort((a, b) => b.xiScore - a.xiScore);
-
-    for (const p of allRemaining) {
+    const remaining = players.filter(p => !isInXI(p)).sort((a, b) => b.xiScore - a.xiScore);
+    for (const p of remaining) {
       if (xi.length >= 11) break;
       tryAdd(p);
     }
   }
 
-  // ──── STEP 3: If overseas limit was hit and we have < 11, relax and add domestic ────
+  // ──── STEP 3: If overseas limit blocked additions, add domestic players ────
   if (xi.length < 11) {
     const domesticRemaining = players
-      .filter(p => !xi.includes(p) && !p.isOverseas)
-      .map(p => ({ ...p, xiScore: calcPlayerXIScore(p) }))
+      .filter(p => !isInXI(p) && !p.isOverseas)
       .sort((a, b) => b.xiScore - a.xiScore);
-
     for (const p of domesticRemaining) {
       if (xi.length >= 11) break;
       xi.push(p);
+      xiIds.add(pid(p));
     }
   }
 
-  // ──── STEP 4: Optimize — swap out weaker XI members if a better domestic option exists ────
-  // Only swap if it improves the XI without violating overseas limit
-  const inXI = new Set(xi.map(p => p._id?.toString() || p.name));
-  const outsideXI = players
-    .filter(p => !inXI.has(p._id?.toString() || p.name))
-    .map(p => ({ ...p, xiScore: calcPlayerXIScore(p) }));
+  // ──── STEP 4: Optimize — swap weaker XI members for stronger alternatives ────
+  const outsideXI = players.filter(p => !isInXI(p)).sort((a, b) => b.xiScore - a.xiScore);
 
   for (const candidate of outsideXI) {
-    if (xi.length < 11) break; // only optimize when full
+    if (xi.length < 11) break;
 
     // Find weakest XI player of the same role
-    const sameRoleInXI = xi
+    const sameRole = xi
       .filter(p => p.role === candidate.role)
-      .sort((a, b) => (a.xiScore || calcPlayerXIScore(a)) - (b.xiScore || calcPlayerXIScore(b)));
+      .sort((a, b) => a.xiScore - b.xiScore);
 
-    if (sameRoleInXI.length === 0) continue;
+    if (sameRole.length === 0) continue;
 
-    const weakest = sameRoleInXI[0];
-    const weakestScore = weakest.xiScore || calcPlayerXIScore(weakest);
-    const candidateScore = candidate.xiScore;
-
-    if (candidateScore <= weakestScore) continue;
+    const weakest = sameRole[0];
+    if (candidate.xiScore <= weakest.xiScore) continue;
 
     // Check overseas constraint after swap
-    const newOverseasCount = overseasInXI()
-      - (weakest.isOverseas ? 1 : 0)
-      + (candidate.isOverseas ? 1 : 0);
+    const newOverseas = overseasInXI() - (weakest.isOverseas ? 1 : 0) + (candidate.isOverseas ? 1 : 0);
+    if (newOverseas > MAX_OVERSEAS) continue;
 
-    if (newOverseasCount > MAX_OVERSEAS) continue;
-
-    // Check bowling variety after swap
-    const weakestBowlType = getBowlingType(weakest);
-    const candidateBowlType = getBowlingType(candidate);
-
-    // Don't remove the last pacer or last spinner
-    if (weakestBowlType === 'pace') {
-      const paceInXI = xi.filter(p => p !== weakest && getBowlingType(p) === 'pace').length;
-      if (paceInXI < 2 && candidateBowlType !== 'pace') continue;
+    // Protect bowling variety
+    const weakBowl = getBowlingType(weakest);
+    const candBowl = getBowlingType(candidate);
+    if (weakBowl === 'pace') {
+      const paceLeft = xi.filter(p => pid(p) !== pid(weakest) && getBowlingType(p) === 'pace').length;
+      if (paceLeft < 2 && candBowl !== 'pace') continue;
     }
-    if (weakestBowlType === 'spin') {
-      const spinInXI = xi.filter(p => p !== weakest && getBowlingType(p) === 'spin').length;
-      if (spinInXI < 1 && candidateBowlType !== 'spin') continue;
+    if (weakBowl === 'spin') {
+      const spinLeft = xi.filter(p => pid(p) !== pid(weakest) && getBowlingType(p) === 'spin').length;
+      if (spinLeft < 1 && candBowl !== 'spin') continue;
     }
 
     // Perform swap
-    const idx = xi.indexOf(weakest);
+    const idx = xi.findIndex(p => pid(p) === pid(weakest));
+    xiIds.delete(pid(weakest));
     xi[idx] = candidate;
+    xiIds.add(pid(candidate));
   }
 
-  // Return full player objects (not IDs) — sorted by batting order logic
   return sortByBattingOrder(xi.slice(0, 11));
 }
 
@@ -426,9 +394,9 @@ function generateBestXI(team) {
  * Sort the XI into a realistic IPL batting order:
  * 1-2: Explosive openers (high SR)
  * 3-4: Anchor batsmen (high avg)
- * 5-6: WK / batting AR
- * 7-8: All-rounders
- * 9-11: Bowlers
+ * 5: WK
+ * 6-7: All-rounders
+ * 8-11: Bowlers (spinners then pacers)
  */
 function sortByBattingOrder(xi) {
   const wk = xi.filter(p => p.role === 'Wicketkeeper');
@@ -436,17 +404,13 @@ function sortByBattingOrder(xi) {
   const ar = xi.filter(p => p.role === 'All-Rounder');
   const bowl = xi.filter(p => p.role === 'Bowler');
 
-  // Sort batsmen: explosive first (high SR), then anchors (high avg, lower SR)
-  bat.sort((a, b) => {
-    const aSR = a.stats?.strikeRate || 0;
-    const bSR = b.stats?.strikeRate || 0;
-    return bSR - aSR;
-  });
+  // Batsmen: explosive first (high SR)
+  bat.sort((a, b) => (b.stats?.strikeRate || 0) - (a.stats?.strikeRate || 0));
 
-  // Sort all-rounders: better batsmen first
+  // All-rounders: better batsmen first
   ar.sort((a, b) => (b.stats?.battingAvg || 0) - (a.stats?.battingAvg || 0));
 
-  // Sort bowlers: spinners in middle, death bowlers last
+  // Bowlers: spinners before pacers
   bowl.sort((a, b) => {
     const aType = getBowlingType(a);
     const bType = getBowlingType(b);
@@ -455,27 +419,13 @@ function sortByBattingOrder(xi) {
     return (b.stats?.wickets || 0) - (a.stats?.wickets || 0);
   });
 
-  // Build batting order
   const order = [];
-
-  // 1-2: Top 2 explosive batsmen (openers)
-  order.push(...bat.splice(0, 2));
-
-  // 3: Wicketkeeper (most WKs bat 3-5 in IPL)
-  order.push(...wk.splice(0, 1));
-
-  // 4-5: Remaining batsmen (anchors)
-  order.push(...bat);
-
-  // 5-6: Remaining WK (if any)
-  order.push(...wk);
-
-  // 7-8: All-rounders
-  order.push(...ar);
-
-  // 9-11: Bowlers (spinners before pacers for typical IPL order)
-  order.push(...bowl);
-
+  order.push(...bat.splice(0, 2));   // 1-2: Openers
+  order.push(...wk.splice(0, 1));    // 3: WK
+  order.push(...bat);                // 4-5: Anchors
+  order.push(...wk);                 // Remaining WK
+  order.push(...ar);                 // 6-7: All-rounders
+  order.push(...bowl);               // 8-11: Bowlers
   return order;
 }
 
