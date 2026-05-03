@@ -182,6 +182,29 @@ router.get('/:id', auth, async (req, res) => {
   }
 });
 
+// POST /api/lobby/:id/spectate — Super-admin: spectate any lobby without joining a team
+router.post('/:id/spectate', auth, async (req, res) => {
+  try {
+    if (!req.user.isAdmin) {
+      return res.status(403).json({ message: 'Admin access required' });
+    }
+
+    const lobby = await Lobby.findById(req.params.id)
+      .populate('admin', 'username avatar')
+      .populate('teams.user', 'username avatar')
+      .populate('teams.players');
+
+    if (!lobby) {
+      return res.status(404).json({ message: 'Lobby not found' });
+    }
+
+    res.json(lobby);
+  } catch (error) {
+    console.error('Spectate lobby error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 // POST /api/lobby/join — Join lobby by code
 router.post('/join', auth, async (req, res) => {
   try {

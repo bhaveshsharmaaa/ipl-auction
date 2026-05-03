@@ -49,6 +49,7 @@ export const lobbyAPI = {
   get: (id) => api.get(`/lobby/${id}`),
   join: (code) => api.post('/lobby/join', { code }),
   leave: (id) => api.delete(`/lobby/${id}/leave`),
+  spectate: (id) => api.post(`/lobby/${id}/spectate`),
   updateSettings: (id, data) => api.patch(`/lobby/${id}/settings`, data),
 };
 

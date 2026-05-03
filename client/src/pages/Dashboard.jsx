@@ -136,7 +136,7 @@ export default function Dashboard() {
             <div>
               <div style={{ fontWeight: 800, fontSize: 14, color: '#FF3B30' }}>Admin Mode Active</div>
               <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>
-                You can see and delete all lobbies across the platform. Total lobbies visible: {lobbies.length}
+                You can see, delete, and spectate all lobbies across the platform. Total lobbies visible: {lobbies.length}
               </div>
             </div>
           </div>
@@ -230,6 +230,29 @@ export default function Dashboard() {
                             title={isAdmin && lobby.admin?._id !== user?._id ? 'Admin delete' : 'Delete lobby'}
                           >
                             {isAdmin && lobby.admin?._id !== user?._id ? '🔑 Delete' : 'Delete'}
+                          </button>
+                        )}
+                        {isAdmin && !isMyLobby && (
+                          <button
+                            className="btn btn-sm"
+                            style={{
+                              fontWeight: 800,
+                              background: 'rgba(124,45,255,0.15)',
+                              color: 'var(--primary-300)',
+                              border: '1px solid rgba(124,45,255,0.3)'
+                            }}
+                            onClick={async () => {
+                              try {
+                                await lobbyAPI.spectate(lobby._id);
+                                localStorage.setItem('spectating', lobby._id);
+                                toast.success('Entering as spectator...');
+                                navigate(`/auction/${lobby._id}`);
+                              } catch (err) {
+                                toast.error(err.response?.data?.message || 'Failed to spectate');
+                              }
+                            }}
+                          >
+                            👁️ Spectate
                           </button>
                         )}
                         {isMyLobby ? (
@@ -342,6 +365,29 @@ export default function Dashboard() {
                           title={isAdmin && lobby.admin?._id !== user?._id ? 'Admin delete' : 'Delete lobby'}
                         >
                           {isAdmin && lobby.admin?._id !== user?._id ? '🔑 Delete' : 'Delete'}
+                        </button>
+                      )}
+                      {isAdmin && !lobby.teams.some(t => (t.user?._id || t.user) === user?._id) && (
+                        <button
+                          className="btn btn-sm"
+                          style={{
+                            fontWeight: 800,
+                            background: 'rgba(124,45,255,0.15)',
+                            color: 'var(--primary-300)',
+                            border: '1px solid rgba(124,45,255,0.3)'
+                          }}
+                          onClick={async () => {
+                            try {
+                              await lobbyAPI.spectate(lobby._id);
+                              localStorage.setItem('spectating', lobby._id);
+                              toast.success('Entering as spectator...');
+                              navigate(`/lobby/${lobby._id}`);
+                            } catch (err) {
+                              toast.error(err.response?.data?.message || 'Failed to spectate');
+                            }
+                          }}
+                        >
+                          👁️ Spectate
                         </button>
                       )}
                       {lobby.teams.some(t => (t.user?._id || t.user) === user?._id) && lobby.admin?._id !== user?._id && (

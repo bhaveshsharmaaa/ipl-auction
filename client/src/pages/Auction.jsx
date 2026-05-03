@@ -40,6 +40,7 @@ export default function Auction() {
   const [showAdminModal, setShowAdminModal] = useState(false);
   const [pauseNotification, setPauseNotification] = useState(null);
   const [bidPending, setBidPending] = useState(false); // optimistic bid lock
+  const [isSpectator, setIsSpectator] = useState(false);
 
 
 
@@ -214,12 +215,24 @@ export default function Auction() {
       const hasTeam = lobbyRes.data.teams.some(t =>
         t.user && ((t.user._id || t.user) === user?._id)
       );
+
+      // Check if super-admin is spectating (entered via spectate button)
+      const spectatingId = localStorage.getItem('spectating');
+      if (spectatingId === id && user?.isAdmin) {
+        setIsSpectator(true);
+      }
+
       if (!hasTeam && lobbyRes.data.status === 'in-progress') {
-        // Check if there are any vacant teams they can claim
-        const hasVacant = lobbyRes.data.teams.some(t => !t.user && !t.isAI);
-        if (hasVacant) {
-          toast.info('Please select a vacant team to join the auction');
-          navigate(`/lobby/${id}`);
+        // If super-admin is spectating, skip the redirect
+        if (spectatingId === id && user?.isAdmin) {
+          // Spectator mode — stay on the auction page
+        } else {
+          // Check if there are any vacant teams they can claim
+          const hasVacant = lobbyRes.data.teams.some(t => !t.user && !t.isAI);
+          if (hasVacant) {
+            toast.info('Please select a vacant team to join the auction');
+            navigate(`/lobby/${id}`);
+          }
         }
       }
     } catch (err) {
@@ -330,6 +343,13 @@ export default function Auction() {
   };
 
   const handleLeaveAuction = () => {
+    // If spectating, just leave — no confirmation needed, no team to vacate
+    if (isSpectator) {
+      localStorage.removeItem('spectating');
+      toast.info('Left spectator mode');
+      navigate('/dashboard');
+      return;
+    }
     setConfirmPrompt({
       title: 'Leave Auction?',
       message: '🚨 Are you sure you want to leave this auction? Your team will become vacant for others to claim. If you are the last human, the auction will end.',
@@ -338,6 +358,7 @@ export default function Auction() {
       onConfirm: async () => {
         try {
           await lobbyAPI.leave(id);
+          localStorage.removeItem('spectating');
           toast.success('Left auction room');
           navigate('/dashboard');
         } catch (err) {
@@ -364,6 +385,7 @@ export default function Auction() {
   if (!lobby) return null;
 
   const isAdmin = lobby.admin?._id === user?._id || lobby.admin === user?._id;
+  const isSuperAdmin = user?.isAdmin === true;
   const myTeam = lobby.teams.find(t =>
     !t.isAI && t.user && (t.user?._id || t.user) === user?._id
   );
@@ -470,6 +492,35 @@ export default function Auction() {
       )}
       <div className="auction-viewport">
         <div className="container">
+        {/* Spectator Mode Banner */}
+        {isSpectator && (
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: 12, padding: '10px 20px',
+            background: 'linear-gradient(135deg, rgba(124,45,255,0.12), rgba(124,45,255,0.04))',
+            border: '1px solid rgba(124,45,255,0.3)', borderRadius: 'var(--radius-lg)',
+            marginBottom: 12
+          }}>
+            <span style={{ fontSize: 22 }}>👁️</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontWeight: 900, fontSize: 13, color: 'var(--primary-300)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                Spectator Mode
+              </div>
+              <div style={{ fontSize: 11, color: 'var(--text-tertiary)' }}>
+                You are watching this auction as a Super Admin. Bidding is disabled.
+              </div>
+            </div>
+            <button
+              className="btn btn-outline btn-sm"
+              style={{ borderColor: 'var(--primary-400)', color: 'var(--primary-300)', fontWeight: 700 }}
+              onClick={() => {
+                localStorage.removeItem('spectating');
+                navigate('/dashboard');
+              }}
+            >
+              🚪 Exit Spectate
+            </button>
+          </div>
+        )}
         {/* Status Bar */}
         {/* Status Bar */}
         <div className="auction-status-bar" style={{ 
@@ -796,15 +847,17 @@ export default function Auction() {
               <button
                 className="bid-button"
                 onClick={handleBid}
-                disabled={isHighestBidder || isPaused || !currentPlayer || timer <= 0 || bidPending}
+                disabled={isSpectator || isHighestBidder || isPaused || !currentPlayer || timer <= 0 || bidPending}
               >
-                {isPaused 
-                  ? '⏸ AUCTION PAUSED'
-                  : isHighestBidder
-                    ? '✅ You are the highest bidder'
-                    : bidPending
-                      ? '⚡ Placing bid...'
-                      : `🏏 BID ${formatPrice(nextBidAmount)}`
+                {isSpectator
+                  ? '👁️ SPECTATING — Bidding Disabled'
+                  : isPaused 
+                    ? '⏸ AUCTION PAUSED'
+                    : isHighestBidder
+                      ? '✅ You are the highest bidder'
+                      : bidPending
+                        ? '⚡ Placing bid...'
+                        : `🏏 BID ${formatPrice(nextBidAmount)}`
                 }
               </button>
             </div>
@@ -814,15 +867,31 @@ export default function Auction() {
           <div className="auction-sidebar">
             {/* My Budget */}
             <div className="glass-card" style={{ padding: 16, textAlign: 'center' }}>
-              <div style={{ fontSize: 11, color: 'var(--text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                Your Budget
-              </div>
-              <div style={{ fontFamily: 'var(--font-heading)', fontSize: 28, fontWeight: 800, color: 'var(--accent-300)' }}>
-                {formatPrice(myTeam?.budget || 0)}
-              </div>
-              <div style={{ fontSize: 12, color: 'var(--text-tertiary)', marginTop: 4 }}>
-                {myTeam?.players?.length || 0} players • {myTeam?.overseasCount || 0} overseas
-              </div>
+              {isSpectator ? (
+                <>
+                  <div style={{ fontSize: 11, color: 'var(--primary-300)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 800 }}>
+                    👁️ Spectator
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-heading)', fontSize: 20, fontWeight: 800, color: 'var(--text-secondary)', marginTop: 6 }}>
+                    Watch Only
+                  </div>
+                  <div style={{ fontSize: 11, color: 'var(--text-tertiary)', marginTop: 4 }}>
+                    Super Admin viewing
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div style={{ fontSize: 11, color: 'var(--text-tertiary)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    Your Budget
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-heading)', fontSize: 28, fontWeight: 800, color: 'var(--accent-300)' }}>
+                    {formatPrice(myTeam?.budget || 0)}
+                  </div>
+                  <div style={{ fontSize: 12, color: 'var(--text-tertiary)', marginTop: 4 }}>
+                    {myTeam?.players?.length || 0} players • {myTeam?.overseasCount || 0} overseas
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Bid History */}

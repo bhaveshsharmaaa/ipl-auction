@@ -20,6 +20,7 @@ export default function Lobby() {
   const [chatInput, setChatInput] = useState('');
   const [confirmPrompt, setConfirmPrompt] = useState(null);
   const [isDestroyed, setIsDestroyed] = useState(false);
+  const [isSpectator, setIsSpectator] = useState(false);
   const chatEndRef = useRef(null);
 
 
@@ -49,6 +50,7 @@ export default function Lobby() {
 
     socket.on('auction:started', ({ lobby: updatedLobby }) => {
       toast.info('🏏 Auction is starting!');
+      // Spectators also navigate to auction when it starts
       navigate(`/auction/${id}`);
     });
 
@@ -89,11 +91,22 @@ export default function Lobby() {
       if (res.data.messages) {
         setMessages(res.data.messages);
       }
+
+      // Check if super-admin is spectating
+      const spectatingId = localStorage.getItem('spectating');
+      const isAdminSpectating = spectatingId === id && user?.isAdmin;
+      if (isAdminSpectating) {
+        setIsSpectator(true);
+      }
+
       // If auction is in progress, redirect
       if (res.data.status === 'in-progress') {
         // Only redirect to auction if user already has a team
         const hasTeam = res.data.teams.some(t => (t.user?._id || t.user) === user?._id);
         if (hasTeam) {
+          navigate(`/auction/${id}`);
+        } else if (isAdminSpectating) {
+          // Spectator admin goes straight to auction view
           navigate(`/auction/${id}`);
         }
       } else if (res.data.status === 'completed') {
@@ -344,6 +357,24 @@ export default function Lobby() {
               </div>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {isSpectator && (
+                  <div style={{
+                    display: 'flex', alignItems: 'center', gap: 8, padding: '10px 16px',
+                    background: 'linear-gradient(135deg, rgba(124,45,255,0.12), rgba(124,45,255,0.04))',
+                    border: '1px solid rgba(124,45,255,0.3)', borderRadius: 'var(--radius-lg)',
+                    marginBottom: 4
+                  }}>
+                    <span style={{ fontSize: 18 }}>👁️</span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 900, fontSize: 11, color: 'var(--primary-300)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                        Spectator Mode
+                      </div>
+                      <div style={{ fontSize: 10, color: 'var(--text-tertiary)' }}>
+                        Viewing as Super Admin
+                      </div>
+                    </div>
+                  </div>
+                )}
                 {isAdmin && (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                     <button className="btn btn-gold" onClick={handleStart} disabled={lobby.teams.length < 2} style={{ height: 50, fontWeight: 900, fontSize: 16 }}>
@@ -369,7 +400,14 @@ export default function Lobby() {
                     </div>
                   </div>
                 )}
-                <button className="btn btn-danger btn-sm" onClick={handleLeave}>Exit Lobby</button>
+                {isSpectator ? (
+                  <button className="btn btn-outline btn-sm" style={{ borderColor: 'var(--primary-400)', color: 'var(--primary-300)' }} onClick={() => {
+                    localStorage.removeItem('spectating');
+                    navigate('/dashboard');
+                  }}>🚪 Exit Spectate</button>
+                ) : (
+                  <button className="btn btn-danger btn-sm" onClick={handleLeave}>Exit Lobby</button>
+                )}
               </div>
             </div>
           </div>
