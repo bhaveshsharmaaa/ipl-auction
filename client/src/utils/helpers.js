@@ -72,3 +72,24 @@ export const TEAM_COLORS = [
   '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
   '#F0B27A', '#76D7C4', '#F1948A', '#82E0AA', '#D7BDE2'
 ];
+
+/**
+ * Convert a date to a human-friendly relative time string
+ * e.g., "just now", "5 min ago", "2 hrs ago", "3 days ago"
+ */
+export function timeAgo(date) {
+  if (!date) return '';
+  const now = Date.now();
+  const past = new Date(date).getTime();
+  const diffMs = now - past;
+  const diffSec = Math.floor(diffMs / 1000);
+  const diffMin = Math.floor(diffSec / 60);
+  const diffHr = Math.floor(diffMin / 60);
+  const diffDay = Math.floor(diffHr / 24);
+
+  if (diffSec < 60) return 'just now';
+  if (diffMin < 60) return `${diffMin} min ago`;
+  if (diffHr < 24) return `${diffHr} hr${diffHr > 1 ? 's' : ''} ago`;
+  if (diffDay < 30) return `${diffDay} day${diffDay > 1 ? 's' : ''} ago`;
+  return new Date(date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+}

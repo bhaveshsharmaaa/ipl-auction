@@ -3,7 +3,64 @@ import { useNavigate } from 'react-router-dom';
 import { lobbyAPI } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
-import { getInitial } from '../utils/helpers';
+import { getInitial, timeAgo } from '../utils/helpers';
+
+// ── Sorting options ──
+const SORT_OPTIONS = [
+  { key: 'newest', label: '🕐 Newest First' },
+  { key: 'oldest', label: '📅 Oldest First' },
+  { key: 'most-humans', label: '👥 Most Humans' },
+  { key: 'most-bots', label: '🤖 Most Bots' },
+  { key: 'most-players', label: '🏏 Most Players' },
+];
+
+function sortLobbies(lobbies, sortKey) {
+  const sorted = [...lobbies];
+  switch (sortKey) {
+    case 'oldest':
+      return sorted.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+    case 'most-humans':
+      return sorted.sort((a, b) => {
+        const aH = a.teams.filter(t => t.user && !t.isAI).length;
+        const bH = b.teams.filter(t => t.user && !t.isAI).length;
+        return bH - aH;
+      });
+    case 'most-bots':
+      return sorted.sort((a, b) => {
+        const aB = a.teams.filter(t => t.isAI).length;
+        const bB = b.teams.filter(t => t.isAI).length;
+        return bB - aB;
+      });
+    case 'most-players':
+      return sorted.sort((a, b) => {
+        const aP = a.teams.filter(t => t.user || t.isAI).length;
+        const bP = b.teams.filter(t => t.user || t.isAI).length;
+        return bP - aP;
+      });
+    case 'newest':
+    default:
+      return sorted.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  }
+}
+
+// ── Inline sort dropdown styling ──
+const sortBarStyle = {
+  display: 'flex', alignItems: 'center', gap: 8,
+  marginLeft: 'auto',
+};
+const sortSelectStyle = {
+  padding: '5px 12px', fontSize: 12, fontWeight: 700,
+  borderRadius: 'var(--radius-full)',
+  border: '1px solid var(--glass-border)',
+  background: 'rgba(255,255,255,0.05)',
+  color: 'var(--text-secondary)',
+  cursor: 'pointer', outline: 'none',
+  appearance: 'none', WebkitAppearance: 'none',
+  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='%239999aa'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E")`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'right 10px center',
+  paddingRight: 28,
+};
 
 export default function Dashboard() {
   const [lobbies, setLobbies] = useState([]);
@@ -19,6 +76,8 @@ export default function Dashboard() {
   const [joining, setJoining] = useState(false);
   const [confirmPrompt, setConfirmPrompt] = useState(null);
   const [auctionType, setAuctionType] = useState('mini');
+  const [liveSort, setLiveSort] = useState('newest');
+  const [waitingSort, setWaitingSort] = useState('newest');
 
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -165,11 +224,11 @@ export default function Dashboard() {
 
         {/* ── Live Auctions Section ── */}
         {(() => {
-          const liveLobbies = lobbies.filter(l => l.status === 'in-progress');
+          const liveLobbies = sortLobbies(lobbies.filter(l => l.status === 'in-progress'), liveSort);
           if (liveLobbies.length === 0) return null;
           return (
             <div className="lobbies-section" style={{ marginBottom: 32 }}>
-              <h2 style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <h2 style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
                 <span style={{ 
                   display: 'inline-block', width: 10, height: 10, borderRadius: '50%', 
                   background: 'var(--danger-500)', animation: 'pulse 1.5s infinite',
@@ -180,6 +239,17 @@ export default function Dashboard() {
                   fontSize: 11, fontWeight: 800, padding: '2px 10px', borderRadius: 'var(--radius-full)',
                   background: 'rgba(255,59,48,0.15)', color: 'var(--danger-400)', border: '1px solid rgba(255,59,48,0.3)'
                 }}>{liveLobbies.length}</span>
+                <div style={sortBarStyle}>
+                  <select
+                    value={liveSort}
+                    onChange={e => setLiveSort(e.target.value)}
+                    style={sortSelectStyle}
+                  >
+                    {SORT_OPTIONS.map(o => (
+                      <option key={o.key} value={o.key}>{o.label}</option>
+                    ))}
+                  </select>
+                </div>
               </h2>
               <div className="lobby-list">
                 {liveLobbies.map(lobby => {
@@ -219,6 +289,7 @@ export default function Dashboard() {
                               </span>
                             )}
                             <span>🏏 By {lobby.admin?.username}</span>
+                            <span style={{ color: 'var(--text-tertiary)', fontSize: 11 }}>🕐 {timeAgo(lobby.createdAt)}</span>
                           </div>
                         </div>
                       </div>
@@ -293,9 +364,22 @@ export default function Dashboard() {
 
         {/* ── Public Lobbies Section ── */}
         <div className="lobbies-section">
-          <h2>{isAdmin ? '🛡️ All Waiting Lobbies' : '🌐 Public Lobbies'}</h2>
+          <h2 style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+            {isAdmin ? '🛡️ All Waiting Lobbies' : '🌐 Public Lobbies'}
+            <div style={sortBarStyle}>
+              <select
+                value={waitingSort}
+                onChange={e => setWaitingSort(e.target.value)}
+                style={sortSelectStyle}
+              >
+                {SORT_OPTIONS.map(o => (
+                  <option key={o.key} value={o.key}>{o.label}</option>
+                ))}
+              </select>
+            </div>
+          </h2>
           {(() => {
-            const waitingLobbies = lobbies.filter(l => l.status === 'waiting');
+            const waitingLobbies = sortLobbies(lobbies.filter(l => l.status === 'waiting'), waitingSort);
             if (loading) {
               return <div className="page-loader"><div className="spinner"></div></div>;
             }
@@ -354,6 +438,7 @@ export default function Dashboard() {
                           }}>
                             {lobby.teams.filter(t => t.user || t.isAI).length < lobby.maxTeams ? '● Open' : '● Full'}
                           </span>
+                          <span style={{ color: 'var(--text-tertiary)', fontSize: 11 }}>🕐 {timeAgo(lobby.createdAt)}</span>
                         </div>
                       </div>
                     </div>
