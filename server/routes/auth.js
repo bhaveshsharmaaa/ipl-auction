@@ -87,7 +87,7 @@ router.post('/admin-login', async (req, res) => {
   try {
     const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
     const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
-    const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@gmail.com';
+    const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 
     const { username, password } = req.body;
 
