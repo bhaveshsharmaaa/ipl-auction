@@ -9,6 +9,15 @@ const router = express.Router();
 // GET /api/auction/:lobbyId — Get current auction state
 router.get('/:lobbyId', auth, async (req, res) => {
   try {
+    // Check if the lobby is expired first
+    const lobby = await Lobby.findById(req.params.lobbyId, 'status');
+    if (!lobby) {
+      return res.status(404).json({ message: 'Lobby not found' });
+    }
+    if (lobby.status === 'expired') {
+      return res.status(410).json({ message: 'This room has expired and is no longer available' });
+    }
+
     const auction = await AuctionState.findOne({ lobby: req.params.lobbyId })
       .populate('currentPlayer')
       .populate('playerPool')

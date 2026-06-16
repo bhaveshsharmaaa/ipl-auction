@@ -1,18 +1,28 @@
 import Lobby from '../models/Lobby.js';
+import AuctionState from '../models/AuctionState.js';
 import { IPL_FRANCHISES, getFranchiseColor } from '../utils/franchises.js';
+import { clearBidTimer } from './auctionHandler.js';
+import { clearPendingBotBids } from '../services/botService.js';
 
 export function setupLobbyHandlers(io, socket) {
   // Join a lobby room
   socket.on('lobby:join', async ({ lobbyId }) => {
     try {
-      socket.join(`lobby:${lobbyId}`);
       const lobby = await Lobby.findById(lobbyId)
         .populate('admin', 'username avatar')
         .populate('teams.user', 'username avatar');
 
-      if (lobby) {
-        io.to(`lobby:${lobbyId}`).emit('lobby:updated', lobby);
+      if (!lobby) {
+        return socket.emit('error', { message: 'This room has been deleted or does not exist' });
       }
+
+      // Block joining expired rooms
+      if (lobby.status === 'expired') {
+        return socket.emit('error', { message: 'This room has expired and is no longer available' });
+      }
+
+      socket.join(`lobby:${lobbyId}`);
+      io.to(`lobby:${lobbyId}`).emit('lobby:updated', lobby);
     } catch (error) {
       socket.emit('error', { message: 'Failed to join lobby room' });
     }
@@ -263,8 +273,22 @@ export function setupLobbyHandlers(io, socket) {
         return socket.emit('error', { message: 'Only admin can delete this lobby' });
       }
 
+      // Clear in-memory timers to prevent memory leaks
+      clearBidTimer(lobbyId);
+      clearPendingBotBids(lobbyId);
+
+      // Delete associated auction state (temporary data)
+      await AuctionState.deleteOne({ lobby: lobbyId });
+
+      // Delete the lobby itself
       await Lobby.findByIdAndDelete(lobbyId);
       io.to(`lobby:${lobbyId}`).emit('lobby:deleted');
+
+      // Force all sockets to leave the room
+      const socketsInRoom = await io.in(`lobby:${lobbyId}`).fetchSockets();
+      for (const s of socketsInRoom) {
+        s.leave(`lobby:${lobbyId}`);
+      }
     } catch (error) {
       socket.emit('error', { message: 'Failed to delete lobby' });
     }

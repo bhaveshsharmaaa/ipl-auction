@@ -29,7 +29,7 @@ const lobbySchema = new mongoose.Schema({
   teams: [teamSchema],
   status: {
     type: String,
-    enum: ['waiting', 'in-progress', 'completed'],
+    enum: ['waiting', 'in-progress', 'completed', 'expired'],
     default: 'waiting'
   },
   maxTeams: { type: Number, default: 10 },
@@ -38,6 +38,7 @@ const lobbySchema = new mongoose.Schema({
     enum: ['small', 'mini', 'mega'],
     default: 'mini'
   },
+  expiresAt: { type: Date, index: true },
   settings: {
     budget: { type: Number, default: 12000 },
     maxPlayers: { type: Number, default: 25 },
@@ -54,7 +55,15 @@ const lobbySchema = new mongoose.Schema({
   }]
 }, { timestamps: true });
 
+// Auto-compute expiresAt (24 hours from creation) for new lobbies
+lobbySchema.pre('save', function(next) {
+  if (this.isNew && !this.expiresAt) {
+    this.expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000);
+  }
+  next();
+});
 
 lobbySchema.index({ status: 1, isPublic: 1 });
+lobbySchema.index({ status: 1, expiresAt: 1 });
 
 export default mongoose.model('Lobby', lobbySchema);

@@ -18,6 +18,7 @@ import { Server } from 'socket.io';
 import connectDB from './config/db.js';
 import { setupSocket } from './socket/index.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
+import { startCleanupJob } from './services/cleanupService.js';
 
 // Route imports
 import authRoutes from './routes/auth.js';
@@ -115,5 +116,6 @@ connectDB().then(() => {
     console.log(`\n🚀 Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
     console.log(`📡 Socket.IO ready`);
     console.log(`🏏 IPL Auction API ready!\n`);
+    startCleanupJob(io);
   });
 });

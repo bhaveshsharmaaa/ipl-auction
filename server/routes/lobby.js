@@ -1,8 +1,11 @@
 import express from 'express';
 import Lobby from '../models/Lobby.js';
 import User from '../models/User.js';
+import AuctionState from '../models/AuctionState.js';
 import auth from '../middleware/auth.js';
 import { IPL_FRANCHISES } from '../utils/franchises.js';
+import { clearBidTimer } from '../socket/auctionHandler.js';
+import { clearPendingBotBids } from '../services/botService.js';
 
 const router = express.Router();
 
@@ -81,9 +84,9 @@ router.get('/', auth, async (req, res) => {
   try {
     console.log('Fetching lobbies for user:', req.user._id);
 
-    // Super admin sees ALL non-completed lobbies
+    // Super admin sees ALL non-completed, non-expired lobbies
     const query = req.user.isAdmin
-      ? { status: { $ne: 'completed' } }
+      ? { status: { $nin: ['completed', 'expired'] } }
       : {
           $or: [
             { 
@@ -99,8 +102,8 @@ router.get('/', auth, async (req, res) => {
                 { $expr: { $lt: [{ $size: "$teams" }, "$maxTeams"] } }
               ]
             },
-            { admin: req.user._id, status: { $ne: 'completed' } },
-            { 'teams.user': req.user._id, status: { $ne: 'completed' } }
+            { admin: req.user._id, status: { $nin: ['completed', 'expired'] } },
+            { 'teams.user': req.user._id, status: { $nin: ['completed', 'expired'] } }
           ]
         };
 
@@ -118,7 +121,6 @@ router.get('/', auth, async (req, res) => {
 });
 
 import { evaluateTeams } from '../services/evaluator.js';
-import AuctionState from '../models/AuctionState.js';
 
 // GET /api/lobby/completed — List completed lobbies for the user
 router.get('/completed', auth, async (req, res) => {
@@ -176,6 +178,11 @@ router.get('/:id', auth, async (req, res) => {
       return res.status(404).json({ message: 'Lobby not found' });
     }
 
+    // Block access to expired rooms
+    if (lobby.status === 'expired') {
+      return res.status(410).json({ message: 'This room has expired and is no longer available' });
+    }
+
     res.json(lobby);
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
@@ -218,6 +225,11 @@ router.post('/join', auth, async (req, res) => {
 
     if (!lobby) {
       return res.status(404).json({ message: 'Lobby not found' });
+    }
+
+    // Block joining expired rooms
+    if (lobby.status === 'expired') {
+      return res.status(410).json({ message: 'This room has expired and is no longer available' });
     }
 
     if (lobby.status === 'in-progress') {
@@ -356,6 +368,13 @@ router.delete('/:id', auth, async (req, res) => {
     if (!isLobbyAdmin && !isSuperAdmin) {
       return res.status(403).json({ message: 'Only the lobby admin or super-admin can delete this lobby' });
     }
+
+    // Clear in-memory timers to prevent memory leaks
+    clearBidTimer(lobby._id.toString());
+    clearPendingBotBids(lobby._id.toString());
+
+    // Delete associated auction state (temporary data)
+    await AuctionState.deleteOne({ lobby: lobby._id });
 
     await Lobby.findByIdAndDelete(lobby._id);
     

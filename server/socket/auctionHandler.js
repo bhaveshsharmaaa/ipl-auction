@@ -305,7 +305,7 @@ function startBidTimer(io, lobbyId, duration) {
   scheduleBotBids(io, lobbyId);
 }
 
-function clearBidTimer(lobbyId) {
+export function clearBidTimer(lobbyId) {
   const existingTimer = auctionTimers.get(lobbyId.toString());
   if (existingTimer) {
     clearTimeout(existingTimer);
