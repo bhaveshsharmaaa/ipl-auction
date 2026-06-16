@@ -83,13 +83,12 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// POST /api/auth/admin-login — Special admin login (credentials from env)
-const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@gmail.com';
-
 router.post('/admin-login', async (req, res) => {
   try {
+    const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
+    const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+    const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@gmail.com';
+
     const { username, password } = req.body;
 
     if (!ADMIN_USERNAME || !ADMIN_PASSWORD) {
