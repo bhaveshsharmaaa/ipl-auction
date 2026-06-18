@@ -59,7 +59,25 @@ export async function cleanupRoom(io, lobbyId) {
 async function runCleanupSweep(io) {
   try {
     const now = new Date();
+    const cutoff24h = new Date(now.getTime() - 24 * 60 * 60 * 1000);
     let totalCleaned = 0;
+
+    // --- Phase 0: Old lobbies with no expiresAt set (legacy data) ---
+    const legacyStaleLobbies = await Lobby.find({
+      $or: [{ expiresAt: null }, { expiresAt: { $exists: false } }],
+      status: { $in: ['waiting', 'in-progress'] },
+      createdAt: { $lte: cutoff24h }
+    }).select('_id name status createdAt');
+
+    if (legacyStaleLobbies.length > 0) {
+      console.log(`🧹 Cleanup sweep: found ${legacyStaleLobbies.length} legacy room(s) with no expiresAt`);
+      for (const lobby of legacyStaleLobbies) {
+        console.log(`  → Removing legacy room "${lobby.name}" (${lobby._id}) | status: ${lobby.status} | created: ${lobby.createdAt?.toISOString()}`);
+        await Lobby.updateOne({ _id: lobby._id }, { $set: { status: 'expired' } });
+        await cleanupRoom(io, lobby._id);
+      }
+      totalCleaned += legacyStaleLobbies.length;
+    }
 
     // --- Phase 1: Stale active lobbies (waiting / in-progress past their 24h expiresAt) ---
     const staleActiveLobbies = await Lobby.find({

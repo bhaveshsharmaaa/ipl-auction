@@ -85,16 +85,27 @@ router.get('/', auth, async (req, res) => {
     console.log('Fetching lobbies for user:', req.user._id);
 
     const now = new Date();
+    const cutoff24h = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+
+    // Filter: only show lobbies that are still within their 24h window.
+    // - If expiresAt exists: must be in the future
+    // - If expiresAt is missing (old data): fallback to createdAt within last 24h
+    const notExpiredFilter = {
+      $or: [
+        { expiresAt: { $gt: now } },
+        { expiresAt: { $exists: false }, createdAt: { $gt: cutoff24h } },
+        { expiresAt: null, createdAt: { $gt: cutoff24h } }
+      ]
+    };
 
     // Super admin sees ALL non-completed, non-expired lobbies (that haven't passed expiresAt)
     const query = req.user.isAdmin
       ? { 
           status: { $nin: ['completed', 'expired'] },
-          $or: [{ expiresAt: { $gt: now } }, { expiresAt: null }]
+          ...notExpiredFilter
         }
       : {
-          // Only show lobbies that haven't expired yet (expiresAt in the future or not set)
-          $or: [{ expiresAt: { $gt: now } }, { expiresAt: null }],
+          ...notExpiredFilter,
           $and: [{
             $or: [
               { 
