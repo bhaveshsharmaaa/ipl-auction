@@ -3,15 +3,18 @@ import AuctionState from '../models/AuctionState.js';
 import { clearBidTimer } from '../socket/auctionHandler.js';
 import { clearPendingBotBids } from './botService.js';
 
-const CLEANUP_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
+const CLEANUP_INTERVAL_MS = 2 * 60 * 1000; // 2 minutes
 let cleanupIntervalId = null;
 
 /**
- * Clean up a single expired room:
+ * Clean up a single stale room:
  * 1. Notify connected sockets and force them to leave the room
  * 2. Clear all in-memory timers (auction timers, bot bids)
- * 3. Delete AuctionState document
+ * 3. Delete AuctionState document (auction data for this lobby)
  * 4. Delete Lobby document
+ *
+ * NOTE: This is ONLY called for waiting/in-progress lobbies.
+ *       Completed lobbies and their auction results are NEVER deleted.
  */
 export async function cleanupRoom(io, lobbyId) {
   const lobbyIdStr = lobbyId.toString();
@@ -20,7 +23,7 @@ export async function cleanupRoom(io, lobbyId) {
     // 1. Notify all connected sockets in this room and force-disconnect them from the room
     const roomName = `lobby:${lobbyIdStr}`;
     io.to(roomName).emit('lobby:expired', {
-      message: '⏰ This room has expired after 24 hours of inactivity. The lobby has been automatically removed.'
+      message: '⏰ This room has expired after 24 hours. The lobby has been automatically removed.'
     });
 
     // Force all sockets to leave the room
@@ -39,37 +42,59 @@ export async function cleanupRoom(io, lobbyId) {
     // 4. Delete the Lobby document itself
     await Lobby.findByIdAndDelete(lobbyId);
 
-    console.log(`🧹 Cleaned up expired room: ${lobbyIdStr}`);
+    console.log(`🧹 Cleaned up stale room: ${lobbyIdStr}`);
   } catch (error) {
     console.error(`❌ Failed to clean up room ${lobbyIdStr}:`, error);
   }
 }
 
 /**
- * Run the periodic cleanup sweep:
- * Find all lobbies where expiresAt has passed and status is NOT 'completed' or 'expired',
- * then clean each one up.
+ * Run the periodic cleanup sweep.
+ *
+ * Rules:
+ *  - DELETE lobbies with status 'waiting' or 'in-progress' whose expiresAt (24h after creation) has passed.
+ *  - DELETE any orphaned lobbies stuck in 'expired' status (failed deletion from a previous sweep).
+ *  - NEVER touch 'completed' lobbies — they and their AuctionState are kept forever.
  */
 async function runCleanupSweep(io) {
   try {
     const now = new Date();
+    let totalCleaned = 0;
 
-    // Find expired lobbies that are NOT completed (and NOT already marked expired)
-    const expiredLobbies = await Lobby.find({
+    // --- Phase 1: Stale active lobbies (waiting / in-progress past their 24h expiresAt) ---
+    const staleActiveLobbies = await Lobby.find({
       expiresAt: { $lte: now },
-      status: { $nin: ['completed', 'expired'] }
+      status: { $in: ['waiting', 'in-progress'] }
     }).select('_id name status createdAt expiresAt');
 
-    if (expiredLobbies.length === 0) return;
+    if (staleActiveLobbies.length > 0) {
+      console.log(`🧹 Cleanup sweep: found ${staleActiveLobbies.length} stale active room(s)`);
 
-    console.log(`🧹 Cleanup sweep: found ${expiredLobbies.length} expired room(s)`);
-
-    for (const lobby of expiredLobbies) {
-      console.log(`  → Expiring room "${lobby.name}" (${lobby._id}) | status: ${lobby.status} | created: ${lobby.createdAt?.toISOString()} | expired: ${lobby.expiresAt?.toISOString()}`);
-      await cleanupRoom(io, lobby._id);
+      for (const lobby of staleActiveLobbies) {
+        console.log(`  → Removing stale room "${lobby.name}" (${lobby._id}) | status: ${lobby.status} | created: ${lobby.createdAt?.toISOString()} | expiresAt: ${lobby.expiresAt?.toISOString()}`);
+        // Mark as expired first so it won't show in listings even if deletion fails
+        await Lobby.updateOne({ _id: lobby._id }, { $set: { status: 'expired' } });
+        await cleanupRoom(io, lobby._id);
+      }
+      totalCleaned += staleActiveLobbies.length;
     }
 
-    console.log(`🧹 Cleanup sweep complete: ${expiredLobbies.length} room(s) removed`);
+    // --- Phase 2: Orphaned expired lobbies that somehow weren't fully deleted ---
+    const orphanedExpired = await Lobby.find({
+      status: 'expired'
+    }).select('_id name');
+
+    if (orphanedExpired.length > 0) {
+      console.log(`🧹 Cleanup sweep: found ${orphanedExpired.length} orphaned expired room(s)`);
+      for (const lobby of orphanedExpired) {
+        await cleanupRoom(io, lobby._id);
+      }
+      totalCleaned += orphanedExpired.length;
+    }
+
+    if (totalCleaned > 0) {
+      console.log(`🧹 Cleanup sweep complete: ${totalCleaned} room(s) removed`);
+    }
   } catch (error) {
     console.error('❌ Cleanup sweep error:', error);
   }
@@ -77,7 +102,7 @@ async function runCleanupSweep(io) {
 
 /**
  * Start the periodic cleanup job.
- * Runs immediately on start, then every CLEANUP_INTERVAL_MS (5 minutes).
+ * Runs immediately on start, then every CLEANUP_INTERVAL_MS.
  */
 export function startCleanupJob(io) {
   // Run an initial sweep on startup (catches rooms that expired while server was down)

@@ -84,27 +84,36 @@ router.get('/', auth, async (req, res) => {
   try {
     console.log('Fetching lobbies for user:', req.user._id);
 
-    // Super admin sees ALL non-completed, non-expired lobbies
+    const now = new Date();
+
+    // Super admin sees ALL non-completed, non-expired lobbies (that haven't passed expiresAt)
     const query = req.user.isAdmin
-      ? { status: { $nin: ['completed', 'expired'] } }
+      ? { 
+          status: { $nin: ['completed', 'expired'] },
+          $or: [{ expiresAt: { $gt: now } }, { expiresAt: null }]
+        }
       : {
-          $or: [
-            { 
-              status: 'waiting', 
-              isPublic: true,
-              $expr: { $lt: [{ $size: "$teams" }, "$maxTeams"] }
-            },
-            { 
-              status: 'in-progress', 
-              isPublic: true,
-              $or: [
-                { teams: { $elemMatch: { user: null, isAI: false } } },
-                { $expr: { $lt: [{ $size: "$teams" }, "$maxTeams"] } }
-              ]
-            },
-            { admin: req.user._id, status: { $nin: ['completed', 'expired'] } },
-            { 'teams.user': req.user._id, status: { $nin: ['completed', 'expired'] } }
-          ]
+          // Only show lobbies that haven't expired yet (expiresAt in the future or not set)
+          $or: [{ expiresAt: { $gt: now } }, { expiresAt: null }],
+          $and: [{
+            $or: [
+              { 
+                status: 'waiting', 
+                isPublic: true,
+                $expr: { $lt: [{ $size: "$teams" }, "$maxTeams"] }
+              },
+              { 
+                status: 'in-progress', 
+                isPublic: true,
+                $or: [
+                  { teams: { $elemMatch: { user: null, isAI: false } } },
+                  { $expr: { $lt: [{ $size: "$teams" }, "$maxTeams"] } }
+                ]
+              },
+              { admin: req.user._id, status: { $nin: ['completed', 'expired'] } },
+              { 'teams.user': req.user._id, status: { $nin: ['completed', 'expired'] } }
+            ]
+          }]
         };
 
     const lobbies = await Lobby.find(query)
